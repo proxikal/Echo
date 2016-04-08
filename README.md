@@ -60,3 +60,10 @@ You have just made a custom @Echo command! You can make custom commands with any
 <br>
 <b><font color="red">WARNING: If you add a trigger that's the same as one of his commands. it could cause your server data to get erased. and he won't respond. IF echo doesn't respond in your server. Private message him `--help` and he will walk your through
 fixing your server database.</font></b>
+<Br>
+# Word filtering and Link filtering.
+You can use Echo's auto response system for word filtering or anti-link system.<br>
+From there you can decide to add {kick} in the response or not. but here's some images to show you<br>
+<br>
+<img src="https://github.com/proxikal/Echo/blob/master/word_filter_howto.PNG"><br>
+<img src="https://github.com/proxikal/Echo/blob/master/word_filter_kick_howto.PNG">
