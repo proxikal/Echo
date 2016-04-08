@@ -85,7 +85,9 @@ You can use Echo's auto response system for word filtering or anti-link system.<
 From there you can decide to add {kick} in the response or not. but here's some images to show you<br>
 <br>
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_howto.PNG"><br>
-<img src="https://github.com/proxikal/Echo/blob/master/word_filter_kick_howto.PNG">
+<img src="https://github.com/proxikal/Echo/blob/master/word_filter_kick_howto.PNG"><br>
+<img src="https://github.com/proxikal/Echo/blob/master/antilink_howto.PNG"><br>
+<img src="https://github.com/proxikal/Echo/blob/master/antilink2_howto.PNG">
 <br>
 <br>
 # How to make a `--joke` or `--meme`.
