@@ -38,7 +38,7 @@ if you add {pm} at the beginning of the response. it will message the user the r
 <br>
 <b>{pm=USERID}</b>:<br>
 You can have Echo private message up to three people to "Alert" you when someone says the trigger word.<br>
-To do multiple ID's you use <b>{pm=USERID,USERID,USERID}</b><br>
+To do multiple ID's you use <b>{pm=USERID,USERID,USERID}</b><i>You can get someones id by typing</i> `--getid @user`<br>
 <br>
 <b>{pref}</b>:<br>
 Echo will replace this key with his prefix in your server.<br>
