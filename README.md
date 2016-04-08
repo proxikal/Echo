@@ -46,10 +46,10 @@ If you add {kick} into the response it will kick anyone who said your trigger!<b
 this can be used for a word filter. we will explain more below.<br>
 <br>
 <b>{pm}</b>:<br>
-if you add {pm} at the beginning of the response. it will message the user the response instead of in server.<br>
+<b>This key needs to be at the beginning of the response!</b> if you add {pm} at the beginning of the response. it will message the user the response instead of in server.<br>
 <br>
 <b>{pm=USERID}</b>:<br>
-You can have Echo private message up to three people to "Alert" you when someone says the trigger word.<br>
+<b>This key needs to be at the beginning of the response!</b> You can have Echo private message up to three people to "Alert" you when someone says the trigger word.<br>
 To do multiple ID's you use <b>{pm=USERID,USERID,USERID}</b><i>You can get someones id by typing</i> `--getid @user`<br>
 <br>
 <b>{pref}</b>:<br>
