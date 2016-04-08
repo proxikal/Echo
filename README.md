@@ -21,6 +21,8 @@ This usually get's replaced with data. or a function. read below<br>
   <li>{pm=USERID}</li>
   <li>{pm=USERID,USERID,USERID}</li>
   <li>{pref}</li>
+  <li>{rand1}</li>
+  <li>{meme1}</li>
 </ul>
 
 <b>{user}</b>:<br>
@@ -43,6 +45,13 @@ To do multiple ID's you use <b>{pm=USERID,USERID,USERID}</b><i>You can get someo
 <b>{pref}</b>:<br>
 Echo will replace this key with his prefix in your server.<br>
 <br>
+<b>{rand1}</b>:<br>
+Echo will say a random joke in your response.<Br>
+<br>
+<b>{meme1}</b>:<br>
+Echo will post a random meme in your response.<br>
+<br>
+
 <b>Accepted Trigger Key's</b>
 <ul>
   <li>{find=word}</li>
@@ -67,3 +76,11 @@ From there you can decide to add {kick} in the response or not. but here's some 
 <br>
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_howto.PNG"><br>
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_kick_howto.PNG">
+<br>
+<br>
+# How to make a `--joke` command.
+First type `start::`<br>
+Now for a trigger type `--joke` or `--meme` whatever you want to add.<br>
+Now in his response type `{rand1}` for joke. and `{meme1}` for a random meme!<br>
+<br>
+Now you have made the joke or meme command. enjoy!
