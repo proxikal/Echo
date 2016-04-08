@@ -1,3 +1,16 @@
+#Echo's commands
+<i>
+--addmaster, --delmaster, --autorole
+--byemsg, --getid, --rolecolor
+--greet, --setprefix, --youtube
+--ban, --kick, --give
+--giveme, --take, --t
+--giphy, --sticker, --flush
+--coinflip, --8ball, --rolemonitor
+--auto, --mute, --unmute
+</i><Br>
+You can get help on any command by typing <b>--help cmdname</b><br>
+
 # Echo Documentation
 Echo was originally named `Paradox` until he was completelly re-written for the new API.<br>
 <Br>
