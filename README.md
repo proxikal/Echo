@@ -20,6 +20,7 @@ You can get help on any command by typing <b>--help cmdname</b><br>
 `--giveme` Example: `--giveme Role Name`<br>
 `--rolemonitor` Description: Alerts you when a role has been edited in your server.<br>
 `--auto` Description: Toggles `ON\OFF` Echo's Auto Response System.<br>
+`--t` Example: `--t en-fr Hello how are you?` translates text from english to french.<br>
 <br>
 to add a new auto response type: `start::`<br>
 to delete an auto response type `delete::trigger word here`<br>
