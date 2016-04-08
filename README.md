@@ -78,7 +78,7 @@ From there you can decide to add {kick} in the response or not. but here's some 
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_kick_howto.PNG">
 <br>
 <br>
-# How to make a `--joke` command.
+# How to make a `--joke` or `--meme`.
 First type `start::`<br>
 Now for a trigger type `--joke` or `--meme` whatever you want to add.<br>
 Now in his response type `{rand1}` for joke. and `{meme1}` for a random meme!<br>
