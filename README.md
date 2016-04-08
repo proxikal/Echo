@@ -1,5 +1,17 @@
 # Echo Documentation
 Echo was originally named `Paradox` until he was completelly re-written for the new API.<br>
+<Br>
+A key is text surrounded by obraces. <b>{key}</b><br>
+This usually get's replaced with data. or a function. read below<br>
+# Greeting system
+<b>Accepted Key's</b>
+<ul>
+  <li>{user}</li>
+  <li>{/user}</li>
+</ul>
+<br>
+Example 1: `--greet Welcome {user}` will mention the user.<br>
+Example 2: `--greet Welcome {/user}` will just say the users name.<br>
 <br>
 # Auto Response System
 The command is only for `Server Owners` no one else has access to add triggers.<br>
@@ -10,8 +22,6 @@ to delete a trigger type `delete::the trigger word`<br>
 to list all triggers\responses type `list::`<br>
 </b>
 <br>
-A key is text surrounded by obraces. <b>{key}</b><br>
-This usually get's replaced with data. or a function. read below<br>
 <b>Accepted Response Key's</b>
 <ul>
   <li>{user}</li>
