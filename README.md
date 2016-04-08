@@ -1,3 +1,6 @@
+#Need help?
+You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL
+<Br>
 #Echo's commands
 <i>
 --addmaster, --delmaster, --autorole
