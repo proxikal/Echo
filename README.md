@@ -67,6 +67,10 @@ to list all triggers\responses type `list::`<br>
   <li>{pref}</li>
   <li>{rand1}</li>
   <li>{meme1}</li>
+  <li>{date1}</li>
+  <li>{date2}</li>
+  <li>{time}</li>
+  <li>{del}</li>
 </ul>
 
 <b>{mock}</b>:<br>
@@ -100,6 +104,18 @@ Echo will say a random joke in your response.<Br>
 <br>
 <b>{meme1}</b>:<br>
 Echo will post a random meme in your response.<br>
+<br>
+<b>{date1}</b>:<br>
+Displays Echo's current date like `March 10, 2001, 5:16 pm`<br>
+<br>
+<b>{date2}</b>:<br>
+Displays Echo's current date like `03.10.01`<br>
+<br>
+<b>{time}</b>:<br>
+Displays Echo's current time like `5:16 pm`<Br>
+<br>
+<b>{del}</b>:<br>
+This will delete the user's message when it triggers your response. (<b>Perfect for Word Filter</b>)<br>
 <br>
 
 <b>Accepted Trigger Key's</b>
