@@ -128,6 +128,8 @@ From there you can decide to add {kick} in the response or not. but here's some 
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_kick_howto.PNG"><br>
 <img src="https://github.com/proxikal/Echo/blob/master/antilink_howto.PNG"><br>
 <img src="https://github.com/proxikal/Echo/blob/master/antilink2_howto.PNG"><br>
+# Delete an Auto Response.
+
 <img src="https://github.com/proxikal/Echo/blob/master/delete_example.PNG">
 <br>
 <br>
