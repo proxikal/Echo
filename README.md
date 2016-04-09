@@ -73,7 +73,7 @@ to list all triggers\responses type `list::`<br>
   <li>{del}</li>
 </ul>
 
-<b>{exc=USERID}</b>:<Br>
+<b>{exc=USERID}</b>: (Image example: <a href="https://github.com/proxikal/Echo#excluding-people-from-a-trigger">Click Here</a>)<Br>
 Excludes user(s) from the auto response. Example 1: `{exc=USERID}` or `{exc=USERID,USERID,USERID}`<br>
 Echo can get a user's id by typing `--getid @User`<br>
 <br>
