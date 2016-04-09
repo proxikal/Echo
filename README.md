@@ -1,5 +1,8 @@
 #Need help?
-You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL
+You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL <Br>
+You can try to fix him yourself. but make sure you're typing an existing command just type `--help` in the server.<br>
+Still not responding? <b>Use this as a last resort. Echo backs your database up every 2 hours <u>on the hour</u></b><br>
+Private message `--help` to echo and he will walk you through grabbing your last working configuration.<br>
 <Br>
 #Echo's commands
 <i>
