@@ -23,11 +23,12 @@ You can get help on any command by typing <b>--help cmdname</b><br>
 `--giveme` Example: `--giveme Role Name`<br>
 `--rolemonitor` Description: Alerts you when a role has been edited in your server.<br>
 `--auto` Description: Toggles `ON\OFF` Echo's Auto Response System.<br>
-`--t` Example: `--t en-fr Hello how are you?` translates text from english to french.<br>
+`--t` Example: `--t en-fr Hello how are you?` translates text from one language to another.<br>
 <br>
 to add a new auto response type: `start::`<br>
 to delete an auto response type `delete::trigger word here`<br>
-to list all your responses type `list::`<br><br>
+to list all your responses type `list::`<br>
+to wipe your Auto Response Database type `wipe::`<br>
 
 # Echo Documentation
 Echo was originally named `Paradox` until he was completelly re-written for the new API.<br>
