@@ -73,7 +73,7 @@ to list all triggers\responses type `list::`<br>
   <li>{date1}</li>
   <li>{date2}</li>
   <li>{time}</li>
-  <li>{del}</li>
+  <li>{del} <i>(THIS KEY IS CURRENTLY BUGGY)</i></li>
 </ul>
 
 <b>{exc=USERID}</b>: (Image example: <a href="https://github.com/proxikal/Echo#excluding-people-from-a-trigger">Click Here</a>)<Br>
@@ -123,6 +123,7 @@ Displays Echo's current time like `5:16 pm`<Br>
 <br>
 <b>{del}</b>:(<b>Currently Buggy</b>}<br>
 This will delete the user's message when it triggers your response. (<b>Perfect for Word Filter</b>)<br>
+<i>The api is currently bugging this feature out. we're working hard to get it fixed.</i><br>
 <br>
 
 <b>Accepted Trigger Key's</b>
