@@ -56,6 +56,7 @@ to list all triggers\responses type `list::`<br>
 <br>
 <b>Accepted Response Key's</b>
 <ul>
+  <li>{exc=USERID}</li>
   <li>{mock}</li>
   <li>{greet}</li>
   <li>{user}</li>
@@ -63,7 +64,6 @@ to list all triggers\responses type `list::`<br>
   <li>{kick}</li>
   <li>{pm}</li>
   <li>{pm=USERID}</li>
-  <li>{pm=USERID,USERID,USERID}</li>
   <li>{pref}</li>
   <li>{rand1}</li>
   <li>{meme1}</li>
@@ -73,6 +73,10 @@ to list all triggers\responses type `list::`<br>
   <li>{del}</li>
 </ul>
 
+<b>{exc=USERID}</b>:<Br>
+Excludes user(s) from the auto response. Example 1: `{exc=USERID}` or `{exc=USERID,USERID,USERID}`<br>
+Echo can get a user's id by typing `--getid @User`<br>
+<br>
 <b>{mock}</b>:<br>
 Echo will repeat whatever the user said.<br>
 <br>
@@ -148,6 +152,8 @@ From there you can decide to add {kick} in the response or not. but here's some 
 <img src="https://github.com/proxikal/Echo/blob/master/delete_example.PNG">
 # Word filter with Remove offending word.
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_del_howto.PNG"><br>
+# Excluding people from a trigger.
+<img src="https://github.com/proxikal/Echo/blob/master/autoresp_exclude_howto.PNG"><br>
 <br>
 <br>
 # How to make a `--joke` or `--meme`.
