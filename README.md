@@ -56,6 +56,7 @@ to list all triggers\responses type `list::`<br>
 <br>
 <b>Accepted Response Key's</b>
 <ul>
+  <li>{greet}</li>
   <li>{user}</li>
   <li>{/user}</li>
   <li>{kick}</li>
@@ -67,6 +68,9 @@ to list all triggers\responses type `list::`<br>
   <li>{meme1}</li>
 </ul>
 
+<b>{greet}</b>:<br>
+Echo will replace this key with your current greet message.<br>
+<br>
 <b>{user}</b>:<br>
 if you use {user} it will mention the user in the response. <i>example @Username</i><br>
 <br>
