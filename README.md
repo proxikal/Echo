@@ -74,6 +74,7 @@ to list all triggers\responses type `list::`<br>
   <li>{date2}</li>
   <li>{time}</li>
   <li>{del} <i>(THIS KEY IS CURRENTLY BUGGY)</i></li>
+  <li>{cmd=} <i>More details: <a href="https://github.com/proxikal/Echo/blob/master/README.md#replace-echos-commands-with-custom-ones">Click Here</a></i></li>
 </ul>
 
 <b>{exc=USERID}</b>: (Image example: <a href="https://github.com/proxikal/Echo#excluding-people-from-a-trigger">Click Here</a>)<Br>
@@ -125,7 +126,11 @@ Displays Echo's current time like `5:16 pm`<Br>
 This will delete the user's message when it triggers your response. (<b>Perfect for Word Filter</b>)<br>
 <i>The api is currently bugging this feature out. we're working hard to get it fixed.</i><br>
 <br>
-
+<b>{cmd=}</b>:<br>
+This allows Echo to use his commands in a custom trigger.<br>
+Examples: `{cmd=addmaster}`, `{cmd=help}`, `{cmd=setprefix}`<br>
+This will let you rename Echo's command. more info <a href="https://github.com/proxikal/Echo/blob/master/README.md#replace-echos-commands-with-custom-ones">Here!</a>
+<br><br>
 <b>Accepted Trigger Key's</b>
 <ul>
   <li>{find=word}</li>
@@ -158,8 +163,6 @@ From there you can decide to add {kick} in the response or not. but here's some 
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_del_howto.PNG"><br>
 # Excluding people from a trigger.
 <img src="https://github.com/proxikal/Echo/blob/master/autoresp_exclude_howto.PNG"><br>
-# Replace echo's commands with custom ones!
-<img src="https://github.com/proxikal/Echo/blob/master/customcmds_addmaster_howto.PNG"><br>
 <br>
 <br>
 # How to make a `--joke` or `--meme`.
