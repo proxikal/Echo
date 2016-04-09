@@ -74,7 +74,7 @@ to list all triggers\responses type `list::`<br>
   <li>{date2}</li>
   <li>{time}</li>
   <li>{del} <i>(THIS KEY IS CURRENTLY BUGGY)</i></li>
-  <li>{cmd=} <i>More details: <a href="https://github.com/proxikal/Echo/blob/master/README.md#replace-echos-commands-with-custom-ones">Click Here</a></i></li>
+  <li>{cmd=} <i>More details: <a href="https://github.com/proxikal/Echo/blob/master/README.md#remake-echos-commands-with-custom-triggers">Click Here</a></i></li>
 </ul>
 
 <b>{exc=USERID}</b>: (Image example: <a href="https://github.com/proxikal/Echo#excluding-people-from-a-trigger">Click Here</a>)<Br>
@@ -129,7 +129,7 @@ This will delete the user's message when it triggers your response. (<b>Perfect 
 <b>{cmd=}</b>:<br>
 This allows Echo to use his commands in a custom trigger.<br>
 Examples: `{cmd=addmaster}`, `{cmd=help}`, `{cmd=setprefix}`<br>
-This will let you rename Echo's command. more info <a href="https://github.com/proxikal/Echo/blob/master/README.md#replace-echos-commands-with-custom-ones">Here!</a>
+This will let you rename Echo's command. more info <a href="https://github.com/proxikal/Echo/blob/master/README.md#remake-echos-commands-with-custom-triggers">Here!</a>
 <br><br>
 <b>Accepted Trigger Key's</b>
 <ul>
