@@ -56,6 +56,7 @@ to list all triggers\responses type `list::`<br>
 <br>
 <b>Accepted Response Key's</b>
 <ul>
+  <li>{mock}</li>
   <li>{greet}</li>
   <li>{user}</li>
   <li>{/user}</li>
@@ -68,6 +69,9 @@ to list all triggers\responses type `list::`<br>
   <li>{meme1}</li>
 </ul>
 
+<b>{mock}</b>:<br>
+Echo will repeat whatever the user said.<br>
+<br>
 <b>{greet}</b>:<br>
 Echo will replace this key with your current greet message.<br>
 <br>
