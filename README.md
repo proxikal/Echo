@@ -163,6 +163,8 @@ From there you can decide to add {kick} in the response or not. but here's some 
 <img src="https://github.com/proxikal/Echo/blob/master/word_filter_del_howto.PNG"><br>
 # Excluding people from a trigger.
 <img src="https://github.com/proxikal/Echo/blob/master/autoresp_exclude_howto.PNG"><br>
+# Replace echo's commands with custom ones!
+<img src="https://github.com/proxikal/Echo/blob/master/customcmds_addmaster_howto.PNG"><br>
 <br>
 <br>
 # How to make a `--joke` or `--meme`.
