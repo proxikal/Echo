@@ -61,6 +61,7 @@ to list all triggers\responses type `list::`<br>
 <ul>
   <li>{exc=USERID}</li>
   <li>{mock}</li>
+  <li>{mock2}</li>
   <li>{greet}</li>
   <li>{user}</li>
   <li>{/user}</li>
@@ -83,6 +84,9 @@ Echo can get a user's id by typing `--getid @User`<br>
 <br>
 <b>{mock}</b>:<br>
 Echo will repeat whatever the user said.<br>
+<br>
+<b>{mock2}</b>:<br>
+Echo will repeat the user's text in reverse<br>
 <br>
 <b>{greet}</b>:<br>
 Echo will replace this key with your current greet message.<br>
