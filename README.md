@@ -5,16 +5,7 @@ Still not responding? <b>Use this as a last resort. Echo backs your database up 
 Private message `--help` to echo and he will walk you through grabbing your last working configuration.<br>
 <Br>
 #Echo's commands
-<i>
---addmaster, --delmaster, --autorole
---byemsg, --getid, --rolecolor
---greet, --setprefix, --youtube
---ban, --kick, --give
---giveme, --take, --t
---giphy, --sticker, --flush
---coinflip, --8ball, --rolemonitor
---auto, --mute, --unmute
-</i><Br>
+<img src="https://github.com/proxikal/Echo/blob/master/commands.PNG"><Br>
 You can get help on any command by typing <b>--help cmdname</b><br>
 
 `--rolecolor`: Example: `--rolecolor #FF0000 Role Name`<br>
