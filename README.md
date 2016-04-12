@@ -32,7 +32,7 @@ You can get help on any command by typing <b>--help cmdname</b><br>
 `--t` Example: `--t en-fr Hello how are you?` translates text from one language to another.<br>
 `--roletime` Example: `--roletime 1d Role Name` gives a user the role after a given time.<br>
 <br>
-#New Auto Role (Time based)
+# New Autorole based on time
 <pre>
 5m, 10m, 15m, 20m, 25m, 30m, 35m, 40m, 45m, 50m, 55m
 1h, 2h, 3h, 4h, 5h, 6h, 7h, 8h, 9h, 10h, 11h, 12h, 13h, 14h, 15h, 16h, 17h
