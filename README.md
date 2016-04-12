@@ -5,7 +5,19 @@ Still not responding? <b>Use this as a last resort. Echo backs your database up 
 Private message `--help` to echo and he will walk you through grabbing your last working configuration.<br>
 <Br>
 #Echo's commands
-<img src="https://github.com/proxikal/Echo/blob/master/commands.PNG"><Br>
+<i><b>
+<pre>
+--addmaster, --delmaster, --autorole
+--byemsg, --getid, --rolecolor
+--greet, --setprefix, --youtube
+--ban, --kick, --give
+--giveme, --take, --t
+--giphy, --sticker, --flush
+--coinflip, --8ball, --rolemonitor
+--auto, --mute, --unmute
+--roletime
+</pre></b></i>
+<br>
 You can get help on any command by typing <b>--help cmdname</b><br>
 
 `--rolecolor`: Example: `--rolecolor #FF0000 Role Name`<br>
@@ -18,6 +30,15 @@ You can get help on any command by typing <b>--help cmdname</b><br>
 `--rolemonitor` Description: Alerts you when a role has been edited in your server.<br>
 `--auto` Description: Toggles `ON\OFF` Echo's Auto Response System.<br>
 `--t` Example: `--t en-fr Hello how are you?` translates text from one language to another.<br>
+`--roletime` Example: `--roletime 1d Role Name` gives a user the role after a given time.<br>
+<br>
+# New Auto Role (Time based)
+<pre>
+5m, 10m, 15m, 20m, 25m, 30m, 35m, 40m, 45m, 50m, 55m
+1h, 2h, 3h, 4h, 5h, 6h, 7h, 8h, 9h, 10h, 11h, 12h, 13h, 14h, 15h, 16h, 17h
+18h, 19h, 20h, 21h, 22h, 23h, 1d, 2d, 3d, 4d, 5d, 6d, 7d, 8d, 9d, 10d, 11d, 12d, 13d
+14d, 15d, 16d, 17d, 18d, 19d, 20d, 21d, 22d, 23d, 24d, 25d, 26d, 27d, 28d, 29d, 30d
+</pre>
 <br>
 to add a new auto response type: `start::`<br>
 to delete an auto response type `delete::trigger word here`<br>
