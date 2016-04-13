@@ -15,7 +15,8 @@ Private message `--help` to echo and he will walk you through grabbing your last
 --giphy, --sticker, --flush
 --coinflip, --8ball, --rolemonitor
 --auto, --mute, --unmute
---roletime
+--roletime, --spell, --locateip
+--cats
 </pre></b></i>
 <br>
 You can get help on any command by typing <b>--help cmdname</b><br>
@@ -31,8 +32,12 @@ You can get help on any command by typing <b>--help cmdname</b><br>
 `--auto` Description: Toggles `ON\OFF` Echo's Auto Response System.<br>
 `--t` Example: `--t en-fr Hello how are you?` translates text from one language to another.<br>
 `--roletime` Example: `--roletime 1d Role Name` gives a user the role after a given time.<br>
+`--spell` Example: `--spell obfuscrated` Spell checks a word and possiblt a sentence<br>
+`--cats` Example: `--cats` displays random cat photos or animations.
+<b><u>Hidden Command: Watch Free movies and TV. (You have to build it yourself)</u></b> <a href="https://github.com/proxikal/Echo/blob/master/hiddencmd_watch_movies.PNG">Learn how Here!</a>
 <br>
-# New Autorole based on time
+New Autorole based on time
+------
 <pre>
 5m, 10m, 15m, 20m, 25m, 30m, 35m, 40m, 45m, 50m, 55m
 1h, 2h, 3h, 4h, 5h, 6h, 7h, 8h, 9h, 10h, 11h, 12h, 13h, 14h, 15h, 16h, 17h
