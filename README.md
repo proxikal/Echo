@@ -75,7 +75,7 @@ to list all triggers\responses type `list::`<br>
 <br>
 <b>Accepted Response Key's</b>
 <ul>
-  <li>{exc=USERID}</li>
+  <li>{exc=USERID} Or {exc=USERID,role name,USERID,another role}</li>
   <li>{mock}</li>
   <li>{mock2}</li>
   <li>{greet}</li>
@@ -96,6 +96,7 @@ to list all triggers\responses type `list::`<br>
 
 <b>{exc=USERID}</b>: (Image example: <a href="https://github.com/proxikal/Echo#excluding-people-from-a-trigger">Click Here</a>)<Br>
 Excludes user(s) from the auto response. Example 1: `{exc=USERID}` or `{exc=USERID,USERID,USERID}`<br>
+Also you can block roles alongside users! `{exc=Role Name}` or alongside users `{exc=USERID,role name, role name}`<br>
 Echo can get a user's id by typing `--getid @User`<br>
 <br>
 <b>{mock}</b>:<br>
