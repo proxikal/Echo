@@ -32,10 +32,10 @@ You can get help on any command by typing <b>--help cmdname</b><br>
 `--auto` Description: Toggles `ON\OFF` Echo's Auto Response System.<br>
 `--t` Example: `--t en-fr Hello how are you?` translates text from one language to another.<br>
 `--roletime` Example: `--roletime 1d Role Name` gives a user the role after a given time.<br>
-`--spell` Example: `--spell obfuscrated` Spell checks a word and possiblt a sentence<br>
+`--spell` Example: `--spell obfuscrated` Spell checks a word and possibly a sentence<br>
 `--cats` Example: `--cats` displays random cat photos or animations.<br>
-<b><u>Hidden Command: Watch Free movies and TV. (You have to build it yourself)</u></b> <a href="https://github.com/proxikal/Echo/blob/master/hiddencmd_watch_movies.PNG">Learn how Here!</a>
 
+<b>Hidden Command:</b> Watch Free movies and TV. (You have to build it yourself)</u> <a href="https://github.com/proxikal/Echo/blob/master/hiddencmd_watch_movies.PNG">Learn how Here!</a>
 
 <pre>
 5m, 10m, 15m, 20m, 25m, 30m, 35m, 40m, 45m, 50m, 55m
