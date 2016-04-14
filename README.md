@@ -90,7 +90,7 @@ to list all triggers\responses type `list::`<br>
   <li>{date1}</li>
   <li>{date2}</li>
   <li>{time}</li>
-  <li>{del} <i>(THIS KEY IS CURRENTLY BUGGY)</i></li>
+  <li>{del} <i>(THIS WORKS AGAIN)</i></li>
   <li>{cmd=} <i>More details: <a href="https://github.com/proxikal/Echo/blob/master/README.md#remake-echos-commands-with-custom-triggers">Click Here</a></i></li>
 </ul>
 
@@ -145,7 +145,6 @@ Displays Echo's current time like `5:16 pm`<Br>
 <br>
 <b>{del}</b>:(<b>Currently Buggy</b>}<br>
 This will delete the user's message when it triggers your response. (<b>Perfect for Word Filter</b>)<br>
-<i>The api is currently bugging this feature out. we're working hard to get it fixed.</i><br>
 <br>
 <b>{cmd=}</b>:<br>
 This allows Echo to use his commands in a custom trigger.<br>
