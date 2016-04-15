@@ -143,7 +143,7 @@ Displays Echo's current date like `03.10.01`<br>
 <b>{time}</b>:<br>
 Displays Echo's current time like `5:16 pm`<Br>
 <br>
-<b>{del}</b>:(<b>Currently Buggy</b>}<br>
+<b>{del}</b>:<br>
 This will delete the user's message when it triggers your response. (<b>Perfect for Word Filter</b>)<br>
 <br>
 <b>{cmd=}</b>:<br>
