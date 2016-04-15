@@ -154,6 +154,7 @@ This will let you rename Echo's command. more info <a href="https://github.com/p
 <b>Accepted Trigger Key's</b>
 <ul>
   <li>{find=word}</li>
+  <li>{find=word,word2,word3,word4,etc..}</li>
   <li>Any text</li>
 </ul>
 <br>
