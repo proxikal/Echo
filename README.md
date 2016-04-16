@@ -75,6 +75,7 @@ to list all triggers\responses type `list::`<br>
 <br>
 <b>Accepted Response Key's</b>
 <ul>
+  <li>{try=num} <i>Only works if {kick} key is detected.</i></li>
   <li>{exc=USERID} Or {exc=USERID,role name,USERID,another role}</li>
   <li>{mock}</li>
   <li>{mock2}</li>
@@ -93,7 +94,11 @@ to list all triggers\responses type `list::`<br>
   <li>{del} <i>(THIS WORKS AGAIN)</i></li>
   <li>{cmd=} <i>More details: <a href="https://github.com/proxikal/Echo/blob/master/README.md#remake-echos-commands-with-custom-triggers">Click Here</a></i></li>
 </ul>
-
+<b>{try=num}</b>: (Image example: <a href="https://github.com/proxikal/Echo/blob/master/kick_tries_howto.PNG" target="_NEW">Click Here</a>)<br>
+Only works if you have added the <b>{kick}</b> key in the response.<br>
+This will kick a user after a certain amount of tries.<br>
+You can show the user how many tries they have left by using the <b>{tries}</b> key!<br>
+<br>
 <b>{exc=USERID}</b>: (Image example: <a href="https://github.com/proxikal/Echo#excluding-people-from-a-trigger">Click Here</a>)<Br>
 Excludes user(s) from the auto response. Example 1: `{exc=USERID}` or `{exc=USERID,USERID,USERID}`<br>
 Also you can block roles alongside users! `{exc=Role Name}` or alongside users `{exc=USERID,role name, role name}`<br>
