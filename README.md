@@ -62,6 +62,9 @@ Here's a list:
 {bye}               // Says your current bye message if set.
 {ismaster}          // True or False if the user is a Bot Commander.
 {listroles}         // lists the users roles.
+{allroles}          // lists all roles in your server.
+{joined}            // shows the date and time when someone joined your server.
+{channels}          // lists all channels in your server.
 ```
   
 Will add more every day!
@@ -78,7 +81,8 @@ SERVER INFO
 prefix: {pref}
 greet: {greet}
 bye: {bye}
-channel: {chan}
+roles: {allroles}
+channels: {channels}
 --------------
 ```
 Now when you type **.server** Echo will display your prefix, greet and bye message also the curent channel.  
