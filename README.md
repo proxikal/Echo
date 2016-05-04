@@ -107,5 +107,5 @@ in this example we'll use @Proxy as the trigger.
 ```php
 --auto &<@146046383726657536>={alert:146046383726657536}I have alerted proxy that you need help.
 ```
-You can either get your id with `--getid @User` or you can add the @Echo first, and than add the & symbol after.  
+You can either get your id with `--getid @User` or you can add the @Proxy first, and than add the & symbol after.  
 
