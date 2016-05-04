@@ -65,3 +65,30 @@ Here's a list:
 ```
   
 Will add more every day!
+  
+# Some cool stuff!
+Alright let's make a **"Server Info"** command  
+the purpose is to keep you updated on what your greet\bye or prefix is.  
+  
+in your server type this exactly:  
+```php
+--auto .server=
+SERVER INFO
+--------------
+prefix: {pref}
+greet: {greet}
+bye: {bye}
+channel: {chan}
+--------------
+```
+Now when you type **.server** Echo will display your prefix, greet and bye message also the curent channel.  
+  
+  
+Let's make a **whoami?** command  
+```php
+--auto &whoami=
+you: {/user}
+commander: {ismaster}
+channel: {chan}
+roles: {listroles}
+```
