@@ -92,3 +92,20 @@ commander: {ismaster}
 channel: {chan}
 roles: {listroles}
 ```
+pretty neat huh? :)  
+  
+# Some other examples:
+
+Let's filter the word `fuck` and have Echo delete the msg, pm the user and than kick them.  
+We're going to exclude 3 roles `Staff` `Owner` and `Bots` for this example  
+```php
+--auto &fuck={del}{pm}{kick}You've been kicked for swearing.{exc:Staff,Owner,Bots}
+```
+  
+Let's have Echo PM you everytime someone uses your trigger.  
+in this example we'll use @Proxy as the trigger.  
+```php
+--auto &<@146046383726657536>={alert:146046383726657536}I have alerted proxy that you need help.
+```
+You can either get your id with `--getid @User` or you can add the @Echo first, and than add the & symbol after.  
+
