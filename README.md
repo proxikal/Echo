@@ -14,6 +14,7 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 --cats, --allowlinks, --denylinks
 --setpunish, --channelid, --botrole
 --mkchan, --invites, --mkinvite
+--allowauto
 </pre>
   
 <pre>
@@ -27,8 +28,8 @@ greet Example: --greet Welcome {user} if you need any help ask Proxy! you can us
 give Example: --give @user Role Name<br>
 take Example: --take @user Role Name<br>
 giveme Example: --giveme Role Name<br>
-auto Creates your auto response file.<br>
-after your ars file is built. you type: --auto trigger=response<br>
+auto Creates your auto response file. after your ars file is built. you type: --auto trigger=response<br>
+allowauto - true or false (true: bot commanders can add\edit your A.R.S)
 </pre>
 
 # Auto Response System Keys
