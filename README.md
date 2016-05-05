@@ -38,6 +38,11 @@ allowauto - true or false (true: bot commanders can add\edit your A.R.S)
 Ok first let's look at the trigger section.  
 You want to set this to whatever word/sentence you want Echo to respond to.  
 <b>You can't use keys in the trigger. Only the response!</b>  
+<b>NEW: You can use the {params} key in the trigger to catch their text!  
+`--auto &giveme {params}={role:{params}}{req:Owner}You've assumed the role {params}`  
+The example above `requires` you to have the role `Owner` and will give you  
+whatever role you type (*As long as the role exists*) for example: `giveme Staff`  
+
 If you want to use regex you add the <b>&</b> key before the word Example Below:  
 `--auto &word=The Response here!`  
 Want to add a work like `ass` to the word filter? but don't want to catch `mass`?  
@@ -68,6 +73,8 @@ Here's a list:
 {channels}          // lists all channels in your server.
 {meme}              // shows a random meme.
 {joke}              // shows a random joke.
+{params}            // catches the users text. REQUIRES: {params} key in the trigger as well!
+{req:Role Name}     // Requires the user to have the role to use the trigger.
 ```
   
 Will add more every day!
@@ -124,3 +131,18 @@ You can either get your id with `--getid @User` or you can add the @Proxy first,
 ```php
 --auto --joke={joke}
 ```
+  
+# Build the `--giphy` command in your server.
+```php
+--auto &--giphy {params}={giphy}
+```
+let's explain the code above a little. as you see the new `{params}` key  
+you can add the `{params}` key to catch text. and than you could use the key in the response  
+to make echo say their text back. **this is not required for the {giphy} key**  
+
+# Build the `--giveme` command in your server.
+```php
+--auto &--giveme {params}={role:{params}}{req:Owner}You've assumed the role **{params}**
+```
+the above code gives you any role you type. requires you to have the role `Owner`  
+example of above: `--giveme Staff` will give you the role `Staff`  
