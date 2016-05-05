@@ -21,7 +21,7 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 rolecolor: Example: --rolecolor #FF0000 Role Name<br>
 bye: Example: --bye {user} has left the server<br>
 autorole Example: --autorole Role Name auto assigns role to new members.<br>
-autorole (<b>Silent:</b>) --autorole -s Role Bame auto assigns a role to a new member silently.<br>
+autorole (<b>Silent:</b>) --autorole -s Role Name auto assigns a role to a new member silently.<br>
 botrole Example: --botrole Role Name auto assigns a role to new bot accounts that join your server.<br>
 botrole (<b>Silent:</b>) --botrole -s Role Name auto assigns roles to new bots silently.<br>
 greet Example: --greet Welcome {user} if you need any help ask Proxy! you can use {/user} for non-mentions.<br>
