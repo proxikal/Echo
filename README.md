@@ -66,6 +66,8 @@ Here's a list:
 {allroles}          // lists all roles in your server.
 {joined}            // shows the date and time when someone joined your server.
 {channels}          // lists all channels in your server.
+{meme}              // shows a random meme.
+{joke}              // shows a random joke.
 ```
   
 Will add more every day!
@@ -114,3 +116,11 @@ in this example we'll use @Proxy as the trigger.
 ```
 You can either get your id with `--getid @User` or you can add the @Proxy first, and than add the & symbol after.  
 
+# Build the `--meme` or `--jokes` command
+```php
+--auto --meme={meme}
+```
+  
+```php
+--auto --joke={joke}
+```
