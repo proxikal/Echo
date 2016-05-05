@@ -132,6 +132,11 @@ You can either get your id with `--getid @User` or you can add the @Proxy first,
 --auto --joke={joke}
 ```
   
+# Build the `--cats` command in your server.
+```php
+--auto --cats={cats}
+```
+
 # Build the `--giphy` command in your server.
 ```php
 --auto &--giphy {params}={giphy}
