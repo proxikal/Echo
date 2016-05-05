@@ -79,7 +79,7 @@ Here's a list:
   
 Will add more every day!
   
-# Some cool stuff!
+### Some cool stuff!
 Alright let's make a **"Server Info"** command  
 the purpose is to keep you updated on what your greet\bye or prefix is.  
   
@@ -108,7 +108,7 @@ roles: {listroles}
 ```
 pretty neat huh? :)  
   
-# Some other examples:
+### Some other examples:
 
 Let's filter the word `fuck` and have Echo delete the msg, pm the user and than kick them.  
 We're going to exclude 3 roles `Staff` `Owner` and `Bots` for this example  
@@ -123,7 +123,7 @@ in this example we'll use @Proxy as the trigger.
 ```
 You can either get your id with `--getid @User` or you can add the @Proxy first, and than add the & symbol after.  
 
-# Build the `--meme` or `--jokes` command
+### Build the `--meme` or `--jokes` command
 ```php
 --auto --meme={meme}
 ```
@@ -132,12 +132,12 @@ You can either get your id with `--getid @User` or you can add the @Proxy first,
 --auto --joke={joke}
 ```
   
-# Build the `--cats` command in your server.
+### Build the `--cats` command in your server.
 ```php
 --auto --cats={cats}
 ```
 
-# Build the `--giphy` command in your server.
+### Build the `--giphy` command in your server.
 ```php
 --auto &--giphy {params}={giphy}
 ```
@@ -145,7 +145,7 @@ let's explain the code above a little. as you see the new `{params}` key
 you can add the `{params}` key to catch text. and than you could use the key in the response  
 to make echo say their text back. **this is not required for the {giphy} key**  
 
-# Build the `--giveme` command in your server.
+### Build the `--giveme` command in your server.
 ```php
 --auto &--giveme {params}={role:{params}}{req:Owner}You've assumed the role **{params}**
 ```
