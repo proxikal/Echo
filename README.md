@@ -182,3 +182,13 @@ example of above: `--giveme Staff` will give you the role `Staff`
 the above code will delete the user's message. Warn twice with "**You have been warned**"  
 and than kick the user if their warns exceed or equal to 2.  
 You can change the **{kick}** key to the **{ban}** key if you want.
+  
+### Allow\Deny `--auto` for Bot Commanders
+**TO ALLOW:**
+```php
+--allowauto true
+``
+**TO DENY(DEFAULT)**
+```php
+--allowauto false
+```
