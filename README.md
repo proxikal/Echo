@@ -86,6 +86,8 @@ Here's a list:
 {req:Role Name}     // Requires the user to have the role to use the trigger.
 {ass}               // shows random images of asses.
 {boobs}             // shows random images of boobs.
+{warn:number}       // warns user x amount of times before kicking\banning: {warn:3}
+{msg:warn msg}      // only works with {warn} key: The warning message before Echo kicks\Bans.
 ```
   
 Will add more every day!
@@ -171,3 +173,11 @@ example of above: `--giveme Staff` will give you the role `Staff`
 ```php
 --auto --boobs={boobs}
 ```
+  
+### Set Warning for kick\ban
+```php
+--auto &fuck={del}{warn:2}{msg:You have been warned!}{kick}I have kicked {user} for swearing.
+```
+the above code will delete the user's message. Warn twice with "**You have been warned**"  
+and than kick the user if their warns exceed or equal to 2.  
+You can change the **{kick}** key to the **{ban}** key if you want.
