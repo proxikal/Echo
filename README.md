@@ -90,7 +90,7 @@ Here's a list:
 {req:Role Name}     // Requires the user to have the role to use the trigger.
 {ass}               // shows random images of asses.
 {boobs}             // shows random images of boobs.
-{warn:number}       // warns user x amount of times before kicking\banning: {warn:3}
+{warn:number}       // warns x amount of times before kicking\banning: only works with {ban} or {kick}
 {msg:warn msg}      // only works with {warn} key: The warning message before Echo kicks\Bans.
 ```
   
