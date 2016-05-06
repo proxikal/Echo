@@ -189,7 +189,7 @@ let's Bot Commanders `add\edit` the A.R.S
 **TO ALLOW:**
 ```php
 --allowauto true
-``
+```
 **TO DENY(DEFAULT)**
 ```php
 --allowauto false
