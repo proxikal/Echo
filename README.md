@@ -38,9 +38,11 @@ botrole (<b>Silent:</b>) --botrole -s Role Name auto assigns roles to new bots s
 greet Example: --greet Welcome {user} if you need any help ask Proxy! you can use {/user} for non-mentions.<br>
 give Example: --give @user Role Name<br>
 take Example: --take @user Role Name<br>
-giveme Example: --giveme Role Name<br>
 auto Creates your auto response file. after your ars file is built. you type: --auto trigger=response<br>
 allowauto - true or false (true: bot commanders can add\edit your A.R.S)
+delauto - deletes your auto response. if you added {params} you need to add it in the --delauto as well.
+viewauto - views a list of your auto responses
+wipeauto - deletes your A.R.S File.
 </pre>
 
 # Auto Response System Keys
