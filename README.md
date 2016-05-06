@@ -10,6 +10,7 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 [Giveme Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---giveme-command-in-your-server)  
 [NSFW Commands](https://github.com/proxikal/Echo/blob/master/README.md#build-the-nsfw-commands)  
 [Kick\Ban Warning](https://github.com/proxikal/Echo/blob/master/README.md#set-warning-for-kickban)  
+[Let Bot Commanders add\edit the A.R.S](https://github.com/proxikal/Echo/blob/master/README.md#allowdeny---auto-for-bot-commanders)  
   
   
 ### Echo's commands
@@ -184,6 +185,7 @@ and than kick the user if their warns exceed or equal to 2.
 You can change the **{kick}** key to the **{ban}** key if you want.
   
 ### Allow\Deny `--auto` for Bot Commanders
+let's Bot Commanders `add\edit` the A.R.S  
 **TO ALLOW:**
 ```php
 --allowauto true
