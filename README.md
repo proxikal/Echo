@@ -2,13 +2,14 @@
 You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL <Br>
 <Br>
 <br>
-# Index
+## Index
 [Word Filter Examples](https://github.com/proxikal/Echo/blob/master/README.md#some-other-examples)  
 [Meme and Joke Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---meme-or---jokes-command)  
 [Cats Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---cats-command-in-your-server)  
 [Giphy Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---giphy-command-in-your-server)  
 [Giveme Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---giveme-command-in-your-server)  
 [NSFW Commands](https://github.com/proxikal/Echo/blob/master/README.md#build-the-nsfw-commands)  
+[Kick\Ban Warning](https://github.com/proxikal/Echo/blob/master/README.md#set-warning-for-kickban)  
   
   
 ### Echo's commands
