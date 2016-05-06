@@ -48,12 +48,14 @@ allowauto - true or false (true: bot commanders can add\edit your A.R.S)
   
 Ok first let's look at the trigger section.  
 You want to set this to whatever word/sentence you want Echo to respond to.  
-<b>You can't use keys in the trigger. Only the response!</b>  
+  
+  
 <b>NEW: You can use the {params} key in the trigger to catch their text!</b>  
 `--auto &giveme {params}={role:{params}}{req:Owner}You've assumed the role {params}`  
 The example above `requires` you to have the role `Owner` and will give you  
 whatever role you type (*As long as the role exists*) for example: `giveme Staff`  
-
+  
+  
 If you want to use regex you add the <b>&</b> key before the word Example Below:  
 `--auto &word=The Response here!`  
 Want to add a work like `ass` to the word filter? but don't want to catch `mass`?  
