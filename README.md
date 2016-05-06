@@ -29,16 +29,16 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 </pre>
   
 <pre>
-rolecolor: Example: --rolecolor #FF0000 Role Name<br>
-bye: Example: --bye {user} has left the server<br>
-autorole Example: --autorole Role Name auto assigns role to new members.<br>
-autorole (<b>Silent:</b>) --autorole -s Role Name auto assigns a role to a new member silently.<br>
-botrole Example: --botrole Role Name auto assigns a role to new bot accounts that join your server.<br>
-botrole (<b>Silent:</b>) --botrole -s Role Name auto assigns roles to new bots silently.<br>
-greet Example: --greet Welcome {user} if you need any help ask Proxy! you can use {/user} for non-mentions.<br>
-give Example: --give @user Role Name<br>
-take Example: --take @user Role Name<br>
-auto Creates your auto response file. after your ars file is built. you type: --auto trigger=response<br>
+rolecolor- Example: --rolecolor #FF0000 Role Name
+bye - Example: --bye {user} has left the server
+autorole - Example: --autorole Role Name auto assigns role to new members.
+autorole - (<b>Silent:</b>) --autorole -s Role Name auto assigns a role to a new member silently.
+botrole - Example: --botrole Role Name auto assigns a role to new bot accounts that join your server.
+botrole - (<b>Silent:</b>) --botrole -s Role Name auto assigns roles to new bots silently.
+greet - Example: --greet Welcome {user} if you need any help ask Proxy! you can use {/user} for non-mentions.
+give - Gives user a role. Example: --give @user Role Name
+take - Takes a role away from someone. Example: --take @user Role Name
+auto - Creates your auto response file. after your ars file is built. you type: --auto trigger=response
 allowauto - true or false (true: bot commanders can add\edit your A.R.S)
 delauto - deletes your auto response. if you added {params} you need to add it in the --delauto as well.
 viewauto - views a list of your auto responses
