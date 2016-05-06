@@ -75,6 +75,8 @@ Here's a list:
 {joke}              // shows a random joke.
 {params}            // catches the users text. REQUIRES: {params} key in the trigger as well!
 {req:Role Name}     // Requires the user to have the role to use the trigger.
+{ass}               // shows random images of asses.
+{boobs}             // shows random images of boobs.
 ```
   
 Will add more every day!
@@ -151,3 +153,12 @@ to make echo say their text back. **this is not required for the {giphy} key**
 ```
 the above code gives you any role you type. requires you to have the role `Owner`  
 example of above: `--giveme Staff` will give you the role `Staff`  
+
+### Build the NSFW commands
+```php
+--auto --ass={ass}
+```
+  
+```php
+--auto --boobs={boobs}
+```
