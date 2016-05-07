@@ -25,7 +25,7 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 --cats, --allowlinks, --denylinks
 --setpunish, --channelid, --botrole
 --mkchan, --invites, --mkinvite
---allowauto
+--allowauto, --nsfw
 </pre>
   
 <pre>
@@ -43,6 +43,7 @@ allowauto - true or false (true: bot commanders can add\edit your A.R.S)
 delauto - deletes your auto response. if you added {params} you need to add it in the --delauto as well.
 viewauto - views a list of your auto responses
 wipeauto - deletes your A.R.S File.
+nsfw - true or false. Allows NSFW commands like --space, --sky
 </pre>
 
 # Auto Response System Keys
