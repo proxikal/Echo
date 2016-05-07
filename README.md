@@ -38,7 +38,7 @@ botrole - (<b>Silent:</b>) --botrole -s Role Name auto assigns roles to new bots
 greet - Example: --greet Welcome {user} if you need any help ask Proxy! you can use {/user} for non-mentions.
 give - Gives user a role. Example: --give @user Role Name
 take - Takes a role away from someone. Example: --take @user Role Name
-auto - Creates your auto response file. after your ars file is built. you type: --auto trigger=response
+auto - --auto trigger=response{keys}{keys} or: --auto &trigger=response{keys}{keys}
 allowauto - true or false (true: bot commanders can add\edit your A.R.S)
 delauto - deletes your auto response. if you added {params} you need to add it in the --delauto as well.
 viewauto - views a list of your auto responses
@@ -46,7 +46,8 @@ wipeauto - deletes your A.R.S File.
 </pre>
 
 # Auto Response System Keys
-> this is basic at the moment. Will be updating the system every day!  
+> <b>You no longer need to initiate by typing `--auto`  
+you can just start adding keys!  
   
 Ok first let's look at the trigger section.  
 You want to set this to whatever word/sentence you want Echo to respond to.  
