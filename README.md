@@ -46,7 +46,7 @@ wipeauto - deletes your A.R.S File.
 </pre>
 
 # Auto Response System Keys
-> <b>You no longer need to initiate by typing `--auto`  
+> <b>You no longer need to initiate by typing</b> `--auto`  
 you can just start adding keys!  
   
 Ok first let's look at the trigger section.  
