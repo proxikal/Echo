@@ -240,3 +240,5 @@ let's Bot Commanders `add\edit` the A.R.S
 ```php
 --allowauto false
 ```
+  
+### Emojis Guide
