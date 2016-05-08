@@ -13,6 +13,7 @@ We're working on any role issues we're still having. However **Most should be fi
 [NSFW Commands](https://github.com/proxikal/Echo/blob/master/README.md#build-the-nsfw-commands)  
 [Kick\Ban Warning](https://github.com/proxikal/Echo/blob/master/README.md#set-warning-for-kickban)  
 [Let Bot Commanders add\edit the A.R.S](https://github.com/proxikal/Echo/blob/master/README.md#allowdeny---auto-for-bot-commanders)  
+[Emoji Guide](https://github.com/proxikal/Echo/blob/master/README.md#emojis-guide)  
   
   
   
@@ -54,7 +55,7 @@ More coming soon.
 :elegigiggle: :minglee: :feelsgoodman: :feelsbadman:
 :pogchamp: :swiftrage: :rip: :gaben: :wutface:
 ```
-check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis) For the full list.  
+check out [The Emoji Guide](https://github.com/proxikal/Echo/blob/master/README.md#emojis-guide) For the full list (In Progress)  
 Will be updating the readme to better explain how to use!  
   
 ### Submit your own emoji!
