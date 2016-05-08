@@ -48,6 +48,7 @@ the emoji has to be `transparent` `.png` extension only. and `100x100` pixels in
 These images will be seen by everyone. So no NSFW content, nothing vulgar.  
 Pm me the name you want. No ascii characters.  
 acceptable names: `:yournamehere:` or `:your name here:`, `:your-name-here:`, `:your_name_here:`  
+**__HINT:__** make sure discord doesn't have an emoji with your name. or i'll shift the naming.  
   
   
 <pre>
