@@ -13,6 +13,7 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 [Let Bot Commanders add\edit the A.R.S](https://github.com/proxikal/Echo/blob/master/README.md#allowdeny---auto-for-bot-commanders)  
   
   
+
 ### Echo's commands
 <pre>
 --addmaster, --delmaster, --autorole, --bye, --getid, --rolecolor
@@ -24,6 +25,29 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 --putars, --upskirt, --lesbians, --celebs, --twinks, --fatgirls
 --space, --sky, --cars, --trucks
 </pre>
+  
+## Echo's Emojis [*BETA*]
+```php
+:adults: :alienangry: :ambient1: :angelface:
+:argh: :biglaugh: :biglick: :bigsmile: :bigtounge:
+:bigwink: :bitchplease: :boo: :burger: :callme:
+:catburglar: :catface: :chabra: :coolalien:
+:cooldude: :deleteall: :derp: :derpcry: :derplove:
+:devil: :emoguy: :evilalien: :facepalm: :fightmode:
+:flyguy: :foodpls: :fuck: :fuckyeah: :gamer:
+:giveme: :grr: :guyman: :help: :influence: :kiss:
+:kittyluv: :letmein: :lmao: :lol: :loopy: :love:
+:madlove: :matey: :murderface: :nope: :ohyeah:
+:party: :phys: :pikacat: :piratesmile: :puke:
+:pumpkin: :puppy: :pwease: :queenbee: :really:
+:rip: :ripakiara: :ripdoorstop: :ripedible:
+:ripproxy: :ripkenson: :rubadub: :salty:
+:scaredguy: :screams: :shh: :shifu: :shitface:
+:shucks: :skull1: :sleep: :smileydude: :sosad:
+:stars1: :superguy: :tears: :uberface: :ugh:
+:umm: :wow: :wtf: :yawnface: :yes: 
+```
+This is beta and they will be scaled down some.  
   
 <pre>
 rolecolor- Example: --rolecolor #FF0000 Role Name
