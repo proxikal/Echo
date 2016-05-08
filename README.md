@@ -28,12 +28,14 @@ We're working on any role issues we're still having. However **Most should be fi
 --space, --sky, --cars, --trucks
 </pre>
   
-## Echo's Emojis [*BETA*]
+### Admin\Staff Emojis
 ```php
 :ripakiara: :ripdoorstop: :ripedible:
 :ripproxy: :ripkenson:
---
-League of Legends Emojis Below:
+```
+   
+### League of Legends Emojis
+```php
 :score: :told you: :baby please: :yummy:
 :gotcha: :no more: :hell yeah: :deal with it:
 :love you: :ffs: :haha: :too hot:
