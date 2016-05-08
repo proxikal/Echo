@@ -42,6 +42,7 @@ League of Legends Emojis Below:
 :yeah ok: :hey ladies: :vengeance:
 :happy birthday: :seriously: :peekaboo:
 :omfg: :solotop: :jungle: :toplane:
+:save a life:
 More coming soon.
 ```
 check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis) For the full list.  
