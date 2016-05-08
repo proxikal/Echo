@@ -13,7 +13,7 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 [Let Bot Commanders add\edit the A.R.S](https://github.com/proxikal/Echo/blob/master/README.md#allowdeny---auto-for-bot-commanders)  
   
   
-
+  
 ### Echo's commands
 <pre>
 --addmaster, --delmaster, --autorole, --bye, --getid, --rolecolor
@@ -38,19 +38,16 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 :cooldude: :deleteall: :derp: :derpcry: :derplove:
 :devil: :emoguy: :evilalien: :facepalm: :fightmode:
 :flyguy: :foodpls: :fuck: :fuckyeah: :gamer:
-:giveme: :grr: :guyman: :help: :influence: :kiss:
-:kittyluv: :letmein: :lmao: :lol: :loopy: :love:
-:madlove: :matey: :murderface: :nope: :ohyeah:
-:party: :phys: :pikacat: :piratesmile: :puke:
-:pumpkin: :puppy: :pwease: :queenbee: :really:
-:rubadub: :salty: :rip: :scaredguy: :screams:
-:shh: :shifu: :shitface: :shucks: :skull1:
-:sleep: :smileydude: :sosad: :stars1: :superguy:
-:tears: :uberface: :ugh: :umm: :wow: :wtf:
-:yawnface: :yes: 
 ```
-check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis)  
+check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis) For the full list.  
 Will be updating the readme to better explain how to use!  
+  
+### Submit your own emoji!
+Join our server [Click Here!](https://discord.gg/0pTKzt2BDInBOrxL) Private Message Proxy  
+the emoji has to be `transparent` `.png` extension only. and `100x100` pixels in size.  
+These images will be seen by everyone. So no NSFW content, nothing vulgar.  
+Pm me the name you want. No ascii characters. like `:yournamehere:` or `:your name here:`  
+  
   
 <pre>
 rolecolor- Example: --rolecolor #FF0000 Role Name
