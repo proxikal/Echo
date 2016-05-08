@@ -28,6 +28,9 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
   
 ## Echo's Emojis [*BETA*]
 ```php
+:ripakiara: :ripdoorstop: :ripedible:
+:ripproxy: :ripkenson:
+--
 :adults: :alienangry: :ambient1: :angelface:
 :argh: :biglaugh: :biglick: :bigsmile: :bigtounge:
 :bigwink: :bitchplease: :boo: :burger: :callme:
@@ -40,12 +43,11 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 :madlove: :matey: :murderface: :nope: :ohyeah:
 :party: :phys: :pikacat: :piratesmile: :puke:
 :pumpkin: :puppy: :pwease: :queenbee: :really:
-:rip: :ripakiara: :ripdoorstop: :ripedible:
-:ripproxy: :ripkenson: :rubadub: :salty:
-:scaredguy: :screams: :shh: :shifu: :shitface:
-:shucks: :skull1: :sleep: :smileydude: :sosad:
-:stars1: :superguy: :tears: :uberface: :ugh:
-:umm: :wow: :wtf: :yawnface: :yes: 
+:rubadub: :salty: :rip: :scaredguy: :screams:
+:shh: :shifu: :shitface: :shucks: :skull1:
+:sleep: :smileydude: :sosad: :stars1: :superguy:
+:tears: :uberface: :ugh: :umm: :wow: :wtf:
+:yawnface: :yes: 
 ```
 This is beta and they will be scaled down some.  
   
