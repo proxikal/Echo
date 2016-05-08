@@ -49,7 +49,8 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 :tears: :uberface: :ugh: :umm: :wow: :wtf:
 :yawnface: :yes: 
 ```
-This is beta and they will be scaled down some.  
+check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis)  
+Will be updating the readme to better explain how to use!  
   
 <pre>
 rolecolor- Example: --rolecolor #FF0000 Role Name
