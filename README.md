@@ -1,5 +1,7 @@
 # Need help?
 You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL <Br>
+**__ISSUES:__** Make sure to give Echo the full permissions he asks for.  
+We're working on any role issues we're still having. However **Most should be fixed!**  
 <Br>
 <br>
 ## Index
