@@ -15,19 +15,14 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
   
 ### Echo's commands
 <pre>
---addmaster, --delmaster, --autorole
---bye, --getid, --rolecolor
---greet, --prefix, --ban
---kick, --give, --giveme
---take, --giphy, --auto
---delauto --viewauto, --wipeauto
---mute, --unmute, --locateip
---cats, --allowlinks, --denylinks
+--addmaster, --delmaster, --autorole, --bye, --getid, --rolecolor
+--greet, --prefix, --ban, --kick, --give, --giveme
+--take, --giphy, --auto, --delauto --viewauto, --wipeauto
+--mute, --unmute, --locateip, --cats, --allowlinks, --denylinks
 --setpunish, --channelid, --botrole
---mkchan, --invites, --mkinvite
---allowauto, --nsfw, --grabars
---putars, --upskirt, --lesbians
---celebs, --twinks, --fatgirls
+--mkchan, --invites, --mkinvite, --allowauto, --nsfw, --grabars
+--putars, --upskirt, --lesbians, --celebs, --twinks, --fatgirls
+--space, --sky, --cars, --trucks
 </pre>
   
 <pre>
