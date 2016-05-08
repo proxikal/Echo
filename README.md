@@ -47,6 +47,13 @@ We're working on any role issues we're still having. However **Most should be fi
 :save a life:
 More coming soon.
 ```
+  
+### Twitch Emojis
+```php
+:seemsgood: :biblethump: :kappa: :frankerz:
+:elegigiggle: :minglee: :feelsgoodman: :feelsbadman:
+:pogchamp: :swiftrage: :rip: :gaben: :wutface:
+```
 check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis) For the full list.  
 Will be updating the readme to better explain how to use!  
   
