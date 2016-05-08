@@ -46,7 +46,7 @@ Will be updating the readme to better explain how to use!
 Join our server [Click Here!](https://discord.gg/0pTKzt2BDInBOrxL) Private Message Proxy  
 the emoji has to be `transparent` `.png` extension only. and `100x100` pixels in size.  
 These images will be seen by everyone. So no NSFW content, nothing vulgar.  
-Pm me the name you want. No ascii characters. 
+Pm me the name you want. No ascii characters.  
 acceptable names: `:yournamehere:` or `:your name here:`, `:your-name-here:`, `:your_name_here:`  
   
   
