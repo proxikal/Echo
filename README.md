@@ -33,13 +33,16 @@ We're working on any role issues we're still having. However **Most should be fi
 :ripakiara: :ripdoorstop: :ripedible:
 :ripproxy: :ripkenson:
 --
-:adults: :alienangry: :ambient1: :angelface:
-:argh: :biglaugh: :biglick: :bigsmile: :bigtounge:
-:bigwink: :bitchplease: :boo: :burger: :callme:
-:catburglar: :catface: :chabra: :coolalien:
-:cooldude: :deleteall: :derp: :derpcry: :derplove:
-:devil: :emoguy: :evilalien: :facepalm: :fightmode:
-:flyguy: :foodpls: :fuck: :fuckyeah: :gamer:
+League of Legends Emojis Below:
+:score: :told you: :baby please: :yummy:
+:gotcha: :no more: :hell yeah: :deal with it:
+:love you: :ffs: :haha: :too hot:
+:why: :sleep zzz: :oh my god:
+:ouch: :cmon guys: :sleepy time:
+:yeah ok: :hey ladies: :vengeance:
+:happy birthday: :seriously: :peekaboo:
+:omfg: :solotop: :jungle: :toplane:
+More coming soon.
 ```
 check out [The Emoji Section](https://github.com/proxikal/Echo/tree/master/emojis) For the full list.  
 Will be updating the readme to better explain how to use!  
