@@ -244,5 +244,6 @@ let's Bot Commanders `add\edit` the A.R.S
   
 ### Emojis Guide
 <img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis1.png">  
+<img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis2.png">  
   
 Working on the rest now!
