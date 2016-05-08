@@ -25,9 +25,9 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 --cats, --allowlinks, --denylinks
 --setpunish, --channelid, --botrole
 --mkchan, --invites, --mkinvite
---allowauto, --nsfw, --upskirt
---lesbians, --celebs, --twinks
---fatgirls
+--allowauto, --nsfw, --grabars
+--putars, --upskirt, --lesbians
+--celebs, --twinks, --fatgirls
 </pre>
   
 <pre>
@@ -46,6 +46,8 @@ delauto - deletes your auto response. if you added {params} you need to add it i
 viewauto - views a list of your auto responses
 wipeauto - deletes your A.R.S File.
 nsfw - true or false. Allows NSFW commands like --upskirt, --lesbian etc..
+grabars - Echo will send you your autoresponse.json file to edit manually.
+putars - you need to link directly to your autoresponse.json file. (updates your ars file!)
 </pre>
 
 # Auto Response System Keys
