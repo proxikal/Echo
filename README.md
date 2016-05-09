@@ -52,6 +52,8 @@ right now we're running a small server. so all help is appreciated! <a href="htt
 :save a life:
 More coming soon.
 ```
+  **If the emoji is not at the beginning of your message and has a space  
+  Replace with an underscore `_` so `:baby girl:` would be `:baby_girl:`**
   
 ### Twitch Emojis
 ```php
