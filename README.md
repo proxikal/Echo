@@ -16,7 +16,6 @@ right now we're running a small server. so all help is appreciated! <a href="htt
 [Giveme Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---giveme-command-in-your-server)  
 [NSFW Commands](https://github.com/proxikal/Echo/blob/master/README.md#build-the-nsfw-commands)  
 [Kick\Ban Warning](https://github.com/proxikal/Echo/blob/master/README.md#set-warning-for-kickban)  
-[Let Bot Commanders add\edit the A.R.S](https://github.com/proxikal/Echo/blob/master/README.md#allowdeny---auto-for-bot-commanders)  
 [Emoji Guide](https://github.com/proxikal/Echo/blob/master/README.md#emojis-guide)  
   
   
@@ -28,8 +27,8 @@ right now we're running a small server. so all help is appreciated! <a href="htt
 --take, --giphy, --auto, --delauto --viewauto, --wipeauto
 --mute, --unmute, --locateip, --cats, --allowlinks, --denylinks
 --setpunish, --channelid, --botrole
---mkchan, --invites, --mkinvite, --allowauto, --nsfw, --grabars
---putars, --upskirt, --lesbians, --celebs, --twinks, --fatgirls
+--mkchan, --invites, --mkinvite, --nsfw, --grabars --putars
+--upskirt, --lesbians, --celebs, --twinks, --fatgirls
 --space, --sky, --cars, --trucks
 </pre>
   
@@ -234,17 +233,6 @@ example of above: `--giveme Staff` will give you the role `Staff`
 the above code will delete the user's message. Warn twice with "**You have been warned**"  
 and than kick the user if their warns exceed or equal to 2.  
 You can change the **{kick}** key to the **{ban}** key if you want.
-  
-### Allow\Deny `--auto` for Bot Commanders
-let's Bot Commanders `add\edit` the A.R.S  
-**TO ALLOW:**
-```php
---allowauto true
-```
-**TO DENY(DEFAULT)**
-```php
---allowauto false
-```
   
 ### Emojis Guide
 <img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis1.png">  
