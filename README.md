@@ -29,7 +29,8 @@ right now we're running a small server. so all help is appreciated! <a href="htt
 --setpunish, --channelid, --botrole
 --mkchan, --invites, --mkinvite, --nsfw, --grabars --putars
 --upskirt, --lesbians, --celebs, --twinks, --fatgirls
---space, --sky, --cars, --trucks
+--space, --sky, --cars, --trucks, --warn, --setwarnings
+--delwarn
 </pre>
   
 ### Admin\Staff Emojis
@@ -59,7 +60,6 @@ More coming soon.
 :pogchamp: :swiftrage: :rip: :gaben: :wutface:
 ```
 check out [The Emoji Guide](https://github.com/proxikal/Echo/blob/master/README.md#emojis-guide) For the full list (In Progress)  
-Will be updating the readme to better explain how to use!  
   
 ### Submit your own emoji!
 Join our server [Click Here!](https://discord.gg/0pTKzt2BDInBOrxL) Private Message Proxy  
@@ -88,6 +88,9 @@ wipeauto - deletes your A.R.S File.
 nsfw - true or false. Allows NSFW commands like --upskirt, --lesbian etc..
 grabars - Echo will send you your autoresponse.json file to edit manually.
 putars - you need to link directly to your autoresponse.json file. (updates your ars file!)
+warn - Warns a user x amount of times until kick (default) can change by --setpunish kick\ban `--warn @User`
+setwarning - sets how many times users will be warned before getting kicked.
+delwarn - Deletes the users warnings `--delwarn @User`
 </pre>
 
 # Auto Response System Keys
@@ -140,9 +143,10 @@ Here's a list:
 {boobs}             // shows random images of boobs.
 {warn:number}       // warns x amount of times before kicking\banning: only works with {ban} or {kick}
 {msg:warn msg}      // only works with {warn} key: The warning message before Echo kicks\Bans.
+{getid}             // grabs the users ID.
 ```
   
-Will add more every day!
+Will update constantly!
   
 ### Some cool stuff!
 Alright let's make a **"Server Info"** command  
@@ -226,7 +230,7 @@ example of above: `--giveme Staff` will give you the role `Staff`
 --auto --boobs={boobs}
 ```
   
-### Set Warning for kick\ban
+### Set Warning for kick\ban [ARS]
 ```php
 --auto &fuck={del}{warn:2}{msg:You have been warned!}{kick}I have kicked {user} for swearing.
 ```
@@ -240,3 +244,18 @@ You can change the **{kick}** key to the **{ban}** key if you want.
 <img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis3.png">  
 <img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis4.png">
 More updated daily!
+
+### Set Warning for kick\ban [COMMAND]
+```php
+--setwarning 3
+```
+and than we do
+```php
+--setpunish kick
+```
+alright. Now we can warn people.
+```php
+--warn @User
+```
+  
+### Both Warning systems work off the same DB.
