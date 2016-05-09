@@ -191,7 +191,13 @@ in this example we'll use @Proxy as the trigger.
 --auto &<@146046383726657536>={alert:146046383726657536}I have alerted proxy that you need help.
 ```
 You can either get your id with `--getid @User` or you can add the @Proxy first, and than add the & symbol after.  
-
+  
+Some people want to make their own `--getid` command or just collect someones Raw ID  
+```php
+--auto &grabid {params}={rawid}The user's ID: {params}
+```
+**{rawid}** is required along with **{params}** to display another users ID.  
+  
 ### Build the `--meme` or `--jokes` command
 ```php
 --auto --meme={meme}
