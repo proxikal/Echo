@@ -4,6 +4,10 @@ You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBO
 We're working on any role issues we're still having. However **Most should be fixed!**  
 <Br>
 <br>
+## Want to donate?
+We could always use any support to help keep our server up.  
+right now we're running a small server. so all help is appreciated! <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=proxikal2%40gmail%2ecom&lc=US&item_name=Echo%20Bot&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_new">Donate to Echo Today!</a>  
+  
 ## Index
 [Word Filter Examples](https://github.com/proxikal/Echo/blob/master/README.md#some-other-examples)  
 [Meme and Joke Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---meme-or---jokes-command)  
