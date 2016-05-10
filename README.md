@@ -1,11 +1,14 @@
 # Need help?
-You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL <Br>
-**__ISSUES:__** Make sure to give Echo the full permissions still having issues?  
+You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL  
+  
+**__Issues:__** Make sure to give Echo the full permissions still having issues?  
 Go into your server settings > Roles and Drag Echo [BETA] to the top. this fixes most problems.  
-Also be sure he has Manage Roles permissions.
+Also be sure he has Manage Roles permissions.  
+  
   **If the emoji is not at the beginning of your message and has a space  
   Replace with an underscore `:baby girl:` would be `:baby_girl:`**
   
+ 
 ## Want to donate?
 We could always use any support to help keep our server up.  
 right now we're running a small server. so all help is appreciated! <a href="https://www.paypal.me/EchoBot/5" target="_new">Donate to Echo Today!</a>  
@@ -89,8 +92,9 @@ Ok first let's look at the trigger section.
 You want to set this to whatever word/sentence you want Echo to respond to.  
   
   
-<b>NEW: You can use the {params} key in the trigger to catch their text!</b>  
-`--auto &giveme {params}={role:{params}}{req:Owner}You've assumed the role {params}`  
+<b>NEW: You can use the {params} key in the trigger to catch their text!</b> 
+`--auto &--giveme {params}={role:{params}}{req:Owner}You've assumed the role {params}`
+  
 The example above `requires` you to have the role `Owner` and will give you  
 whatever role you type (*As long as the role exists*) for example: `giveme Staff`  
   
@@ -104,39 +108,51 @@ Add a space after the word. this will assure it only triggers on the word! Examp
 Ok, now let's look at the <b>Response</b> section and all the keys you can use!  
 <b>Keys</b> are surrounded by obraces. `{key}` Echo will replace these keys with data!  
 Here's a list:  
-```php
-{pm}                // Private messages the response instead of in the server.
-{user}              // Mentions the users name.
-{/user}             // Just says the users name (without mention)
-{del}               // deletes the users message.
-{kick}              // Kicks the user. (Won't kick bot commanders or the owner)
-{ban}               // Bans the user. (Won't ban bot commanders or the owner)
-{role:Role Name}    // Gives the user a specific role.
-{exc:Role Name}     // Excludes One or more roles from a trigger. {exc:Role1,Role2,Role3}
-{alert:YOURID}      // Alerts one or more people via pm. to get id: --getid @User
-{chan}              // Says the current channel name.
-{pref}              // Says Echo's current prefix.
-{greet}             // Says your current greet message if set.
-{bye}               // Says your current bye message if set.
-{ismaster}          // True or False if the user is a Bot Commander.
-{listroles}         // lists the users roles.
-{allroles}          // lists all roles in your server.
-{joined}            // shows the date and time when someone joined your server.
-{channels}          // lists all channels in your server.
-{meme}              // shows a random meme.
-{joke}              // shows a random joke.
-{params}            // catches the users text. REQUIRES: {params} key in the trigger as well!
-{req:Role Name}     // Requires the user to have the role to use the trigger.
-{ass}               // shows random images of asses.
-{boobs}             // shows random images of boobs.
-{warn:number}       // warns x amount of times before kicking\banning: only works with {ban} or {kick}
-{msg:warn msg}      // only works with {warn} key: The warning message before Echo kicks\Bans.
-{getid}             // grabs the users ID.
-```
+  
+| Command  | Usage  | Information  |
+| :---: | :---: | :---: |
+| {pm}  | {pm}  | Echo will private message the response.  |
+| {user}  | {user}  | Echo will mention the user.  |
+| {/user}  | {/user}  | Echo will say the user's name  |
+| {del}  | {del}  | Echo will delete the user's message.  |
+| {kick}  | {kick}  | Echo will kick Non-Commanders  |
+| {ban}  | {ban}  | Echo will ban Non-Commanders  |
+| {role}  | {role:Role Name}  | Gives a user a specific role.  |
+| {alert}  | {alert:YOURID}  | Alerts you if someone triggers reponse<Br>You can also do multiple alerts<Br>{alert:YourID,AnotherID}  |
+| {exc}  | {exc:Role Name}  | Excludes a role from your trigger.!<br>You can exclude multiple roles!<br>{exc:Role name,Role Name}  |
+| {chan}  | {chan}  | Returns the current channel.  |
+| {pref}  | {pref}  | Displays echo's current prefix.  |
+| {greet}  | {greet}  | Displays echo's current greeting.  |
+| {bye}  | {bye}  | Displays echo's current bye message.  |
+| {ismaster}  | {ismaster}  | Displays if the user is master or not `True` or `False`  |
+| {listroles}  | {listroles}  | Displays all the users roles.  |
+| {allroles}  | {allroles}  | Displays all roles in server.  |
+| {joined}  | {joined}  | Shows the date and time a user has joined.  |
+| {channels}  | {channels}  | Shows all channels in the server.  |
+| {meme}  | {meme}  | Shows random memes.  |
+| {joke}  | {joke}  | Shows random jokes.  |
+| {params}  | {params}  | if you have this key in your trigger and response<br>you can catch their text!<br>`--auto &--announce {params}=**ANNOUNCEMENT:**{params}`  |
+| {req}  | {req:Role Name}  | Requires a user to have a role. you can also require multiple roles like `{exc}`  |
+| {ass}  | {ass}  | Shows random ass.  |
+| {boobs}  | {boobs}  | Shows random boobs.  |
+| {warn}  | {warn:5}  | Adds a warning point to a user.<Br>be default `--setpunish` is set to `kick`  |
+| {msg}  | {msg:Text Here}  | The warning message before he kicks\bans. Only works if`{warn}` key is found.  |
+| {getid}  | {getid}  | Grabs the users id.
+| {redirect}  | {redirect:CHANNELID}  | Redirects users text to a specific channel.  |
+  
+  
   
 Will update constantly!
   
-### Some cool stuff!
+### USING THE {PARAMS} KEY
+Some people seem to be confused by this key. so i will try to lighten this confusion below:  
+When you use {params} you don't replace **params** with your own word. that won't work!!  
+`--auto &--sayhi {params}=Your Message: {params}`  
+From the code above if you type `--sayhi Hello How are you` the response will be  
+**Your Message:** *Hello How are you*  
+  
+  
+### SERVER INFO COMMAND
 Alright let's make a **"Server Info"** command  
 the purpose is to keep you updated on what your greet\bye or prefix is.  
   
@@ -155,7 +171,7 @@ channels: {channels}
 Now when you type **.server** Echo will display your prefix, greet and bye message also the curent channel.  
   
   
-Let's make a **whoami?** command  
+### WHOAMI COMMAND
 ```php
 --auto &whoami=
 you: {/user}
@@ -165,21 +181,22 @@ roles: {listroles}
 ```
 pretty neat huh? :)  
   
-### Some other examples:
-
+### WORD FILTER EXAMPLE:
 Let's filter the word `fuck` and have Echo delete the msg, pm the user and than kick them.  
 We're going to exclude 3 roles `Staff` `Owner` and `Bots` for this example  
 ```php
 --auto &fuck={del}{pm}{kick}You've been kicked for swearing.{exc:Staff,Owner,Bots}
 ```
   
+### GET ALERTS ON TRIGGERS
 Let's have Echo PM you everytime someone uses your trigger.  
 in this example we'll use @Proxy as the trigger.  
 ```php
---auto &<@146046383726657536>={alert:146046383726657536}I have alerted proxy that you need help.
+--auto &<@YOURIDHERE>={alert:YOURIDHERE}I have alerted proxy that you need help.
 ```
 You can either get your id with `--getid @User` or you can add the @Proxy first, and than add the & symbol after.  
   
+### CUSTOM `--getid` COMMAND:
 Some people want to make their own `--getid` command or just collect someones Raw ID  
 ```php
 --auto &grabid {params}={rawid}The user's ID: {params}
@@ -215,7 +232,7 @@ to make echo say their text back. **this is not required for the {giphy} key**
 the above code gives you any role you type. requires you to have the role `Owner`  
 example of above: `--giveme Staff` will give you the role `Staff`  
 
-### Build the NSFW commands
+### Build the `--boobs` and `--ass` commands
 ```php
 --auto --ass={ass}
 ```
@@ -231,6 +248,18 @@ example of above: `--giveme Staff` will give you the role `Staff`
 the above code will delete the user's message. Warn twice with "**You have been warned**"  
 and than kick the user if their warns exceed or equal to 2.  
 You can change the **{kick}** key to the **{ban}** key if you want.
+  
+### MAKE AN ANNOUNCE COMMAND:
+Want to announce text to another channel? Let's look at the code below:  
+`--auto &--announce {params}={redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  
+  
+
+### CUSTOM LEAGUE OF LEGENDS BANNERS!
+`--teemo Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
+`--ekko Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
+`--zed Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
+`--vayne Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
+Much more coming soon!  
   
 ### Emojis Guide
 <img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis1.png">  
