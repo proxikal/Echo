@@ -252,8 +252,8 @@ You can change the **{kick}** key to the **{ban}** key if you want.
 ### MAKE AN ANNOUNCE COMMAND:
 Want to announce text to another channel? Let's look at the code below:  
 `--auto &--announce {params}={redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  
+You can grab a channels id by typing `--channelid` in the channel.  
   
-
 ### CUSTOM LEAGUE OF LEGENDS BANNERS!
 `--teemo Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
 `--ekko Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
