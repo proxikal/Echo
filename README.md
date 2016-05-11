@@ -145,11 +145,10 @@ Here's a list:
 Will update constantly!
   
 ### USING THE {PARAMS} KEY
-Some people seem to be confused by this key. so i will try to lighten this confusion below:  
-When you use {params} you don't replace **params** with your own word. that won't work!!  
-`--auto &--sayhi {params}=Your Message: {params}`  
-From the code above if you type `--sayhi Hello How are you` the response will be  
-**Your Message:** *Hello How are you*  
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | --auto &--sayhi {params}=Your Message: {params}  |
+| Use Command:  | `--sayhi hey guys!`  |
   
   
 ### SERVER INFO COMMAND
@@ -182,84 +181,102 @@ roles: {listroles}
 pretty neat huh? :)  
   
 ### WORD FILTER EXAMPLE:
-Let's filter the word `fuck` and have Echo delete the msg, pm the user and than kick them.  
-We're going to exclude 3 roles `Staff` `Owner` and `Bots` for this example  
-```php
---auto &fuck={del}{pm}{kick}You've been kicked for swearing.{exc:Staff,Owner,Bots}
-```
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &fuck={del}{pm}{kick}You've been kicked for swearing.`  |
+| If Typed  | The message gets deleted and echo will send a pm of the above message.  |
+  
   
 ### GET ALERTS ON TRIGGERS
-Let's have Echo PM you everytime someone uses your trigger.  
-in this example we'll use @Proxy as the trigger.  
-```php
---auto &<@YOURIDHERE>={alert:YOURIDHERE}I have alerted proxy that you need help.
-```
-You can either get your id with `--getid @User` or you can add the @Proxy first, and than add the & symbol after.  
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &<@YOURIDHERE>={alert:YOURIDHERE}I have alerted Proxy!`  |
+| If Typed  | Echo will private message you and let the user know.<br>You can get your id with `--getid @User`  |
+  
   
 ### CUSTOM `--getid` COMMAND:
-Some people want to make their own `--getid` command or just collect someones Raw ID  
-```php
---auto &grabid {params}={rawid}The user's ID: {params}
-```
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &--grabid {params}={rawid}The user's ID: {params}`  |
+| Use Command  | `--grabdid @User`  |
+  
+  
 **{rawid}** is required along with **{params}** to display another users ID.  
   
 ### Build the `--meme` or `--jokes` command
-```php
---auto --meme={meme}
-```
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto --meme={meme}`  |
+| Use Command  | `--meme`  |
   
-```php
---auto --joke={joke}
-```
+  
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `auto --joke={joke}`  |
+| Use Command  | `--joke`  |
+  
   
 ### Build the `--cats` command in your server.
-```php
---auto --cats={cats}
-```
-
-### Build the `--giphy` command in your server.
-```php
---auto &--giphy {params}={giphy}
-```
-let's explain the code above a little. as you see the new `{params}` key  
-you can add the `{params}` key to catch text. and than you could use the key in the response  
-to make echo say their text back. **this is not required for the {giphy} key**  
-
-### Build the `--giveme` command in your server.
-```php
---auto &--giveme {params}={role:{params}}{req:Owner}You've assumed the role **{params}**
-```
-the above code gives you any role you type. requires you to have the role `Owner`  
-example of above: `--giveme Staff` will give you the role `Staff`  
-
-### Build the `--boobs` and `--ass` commands
-```php
---auto --ass={ass}
-```
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto --cats={cats}`  |
+| Use Command  | `--cats`  |
   
-```php
---auto --boobs={boobs}
-```
+  
+### Build the `--giphy` command in your server.
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &--giphy {params}={giphy}`<br>**(Does not require `{params}` key)**  |
+| Use Command  | `--giphy keyword here`  |
+  
+  
+### Build the `--giveme` command in your server.
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &--giveme {params}={role:{params}}{req:Owner}You've assumed the role **{params}**`  |
+| Use Command  | `--giveme Role Name` the **{req}** key is requiring the user to have the role `Owner` to use!  |
+  
+  
+### Build the `--boobs` and `--ass` commands
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto --ass={ass}`  |
+| Use Command  | `--ass`  |
+  
+  
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto --boobs={boobs}`  |
+| Use Command  | `--boobs`  |
+  
   
 ### Set Warning for kick\ban [ARS]
-```php
---auto &fuck={del}{warn:2}{msg:You have been warned!}{kick}I have kicked {user} for swearing.
-```
-the above code will delete the user's message. Warn twice with "**You have been warned**"  
-and than kick the user if their warns exceed or equal to 2.  
-You can change the **{kick}** key to the **{ban}** key if you want.
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &fuck={del}{warn:2}{msg:You have been warned!}{kick}I have kicked {user} for swearing.`  |
+| If Typed  | the above code will delete the user's message. Warn twice with "**You have been warned**"<br>and than kick the user if their warns exceed or equal to 2.  |
+  
+  
+**Change the {kick} key to {ban}** if you want Echo to ban users.  
   
 ### MAKE AN ANNOUNCE COMMAND:
-Want to announce text to another channel? Let's look at the code below:  
-`--auto &--announce {params}={redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  
+| Steps  | You Type  |
+| :---:  | :---:  |
+| Make Command  | `--auto &--announce {params}={redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  |
+| Use Command  | `--announce What's up!`  |
+  
+  
 You can grab a channels id by typing `--channelid` in the channel.  
   
 ### CUSTOM LEAGUE OF LEGENDS BANNERS!
-`--teemo Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
-`--ekko Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
-`--zed Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
-`--vayne Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  
-Much more coming soon!  
+| You Type  |
+| :---:  |
+| `--teemo Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  |
+| `--ekko Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  |
+| `--zed Header Text=Sub Header Text Here{br}More Sub Header Text Here!`  |
+| `--vayne Header Text=Sub Header Text Here{br}More Sub Header Text Here!` | 
+| Much more coming soon!  |
+  
   
 ### Emojis Guide
 <img src="https://raw.githubusercontent.com/proxikal/Echo/master/emojis1.png">  
