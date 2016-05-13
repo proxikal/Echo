@@ -1,3 +1,8 @@
+# ECHO HAS A WEBSITE!!
+Github will no longer be updated since we have a website.  
+View the website for `A.R.S Builder` and much more!  
+[Echo's Website Click Here!](http://echobot.tk)  
+  
 # Need help?
 You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL  
   
