@@ -109,6 +109,8 @@ Ok, now let's look at the <b>Response</b> section and all the keys you can use!
 <b>Keys</b> are surrounded by obraces. `{key}` Echo will replace these keys with data!  
 Here's a list:  
   
+Check out the New **Auto Response Builder** [Click Here!](http://echobot.tk/)  
+  
 | Command  | Usage  | Information  |
 | :---: | :---: | :---: |
 | {pm}  | {pm}  | Echo will private message the response.  |
