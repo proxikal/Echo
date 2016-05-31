@@ -4,7 +4,8 @@ View the website for `A.R.S Builder` and much more!
 [Echo's Website Click Here!](http://echobot.tk)  
   
 # Need help?
-You can visit our server and ask any questions: https://discord.gg/0pTKzt2BDInBOrxL  
+Our server was accidentally deleted. the new invite link is below.  
+You can visit our server and ask any questions: https://discord.gg/012s8wmCkDVgdn7yo  
   
 **__Issues:__** Make sure to give Echo the full permissions still having issues?  
 Go into your server settings > Roles and Drag Echo [BETA] to the top. this fixes most problems.  
