@@ -1,13 +1,14 @@
 {
-   "\u0026--cats": "{if:channel!=general}{cats}",
-   "\u0026.gg/": "{if:channel!=server-invite-room}{redirect:180669403833040896}{del}{msg:I have redirected your message to \u003c#180669403833040896\u003e }",
-   "\u0026Gronkh": "{twitch:gronkh}\n```ruby\nplaying: {game}\nviewers: {views}\nfps: {fps}\n```",
-   "\u0026announce": "{redirect:163382836169015298}{msg:Your message was redirected to \u003c#163382836169015298\u003e}**HERE:**",
-   "\u0026announce {params}": "{redirect:163382836169015298}{params}",
-   "\u0026beta tester": "{role:Beta Test Crew}{pm}You've been given the role `Beta Test Crew`",
-   "\u0026kripp": "{twitch:nl_kripp}\n```ruby\nplaying: {game}\nviewers: {views}\nfps: {fps}\n```\n{url}",
-   "\u0026whoami": "```ruby\nyou: {/user}\ncommander: {ismaster}\nchannel: {chan}\nroles: {listroles}\njoined: {joined}\n```",
-   ".server": "```ruby\nSERVER INFO\n--------------\nprefix: {pref}\ngreet: {greet}\nbye: {bye}\nroles: {allroles}\nchannels: {channels}\n--------------\n```",
-   "goofy": "{redirect:163382836169015298}Your message =\u003e",
-   "gotcha":   "this command was added manually and than thrown back into Echo via `PUTARS`"
+   "\u0026--giphy {params}": "{giphy}",
+   "\u0026--showinfo": "{greet}\n{bye}\n{prefix}",
+   "\u0026--slap {params}": "*Slaps the shit out of {params}*",
+   "\u0026.gg/": "{exc:Echo Bots,Administrator}{if:channel!=server-invites}{redirect:187325123806756864}{del}{msg:{user},\u003c#187325123806756864\u003e - your message has been moved.}",
+   "\u0026nigger": "{req:Helpers}{take:Helpers}{del} {user}, we do not tolerate racism here! You have been removed of your helper role.",
+   "\u0026play music": "{role:Controller}{pm}I have given you the role `Controller` you can control Echo [DJ] in this server. Remember to respect other peoples songs in queue **if they are present** when skipping or clearing a queue.",
+   "\u0026whoami": "```ruby\nyou: {/user}\ncommander: {ismaster}\nchannel: {chan}\nroles: {listroles}\n```",
+   "--slap {params}": "{del}_{user} has slapped {params}",
+   "cats": "{cats}",
+   "inv": "{if:user==ＰａｒａｄｏｘｕＭ} Send ParadoxuM an invite to your server via PM.",
+   "joke": "{joke}",
+   "pleb": "{req:Big Idiot}{user} I'm testing something"
 }
