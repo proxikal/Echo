@@ -20,7 +20,7 @@ Hover Color: #22593E; */
     background-size: cover !important;
 }
 .Select-control {
-    background: rgba(0, 0, 0, 0.62);
+    background: rgba(0, 0, 0, 0.75);
     border: #69A989;
     border-color: #69A989 #69A989 #69A989;
 }
@@ -95,7 +95,7 @@ Hover Color: #22593E; */
     border-radius: 5px;
 }
 .chat .new-messages-bar button:last-child {
-    color: #fff;
+    color: #69A989;
 }
 .download-apps .platforms .platform.active .download-button,
 .change-log .changelog-fixed,
@@ -272,7 +272,7 @@ Hover Color: #22593E; */
     color: #22593E;
 }
 .modal-content .form-inner p {
-    color: #E6E6E6;
+    color: #69A989;
 }
 .form .form-header {
     background: rgba(0,0,0,0.85);
@@ -730,7 +730,7 @@ Hover Color: #22593E; */
     margin-left: 6px;
 }
 .message-group h2 strong {
-    color: #aaaba7;
+    color: #69A989;
 }
 #emote-menu,
 #tc-settings-panel,
@@ -801,7 +801,7 @@ textarea {
     box-shadow: inset -10px 0px 20px -10px rgba(0, 0, 0, 0.2);
 }
 .guild-header ul {
-    background: rgba(0, 0, 0, 0.52) !important;
+    background: rgba(0, 0, 0, 0.95) !important;
     transition: transform .5s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
     padding-top: 100px;
     top: -56px;
@@ -1019,6 +1019,7 @@ textarea {
 .channel-textarea-inner {
     border: 2px solid rgba(255, 255, 255, 0.1) !important;
     background: rgba(0, 0, 0, 0.6) !important;
+    color: 69A989;
 }
 .typing {
     font-size: 11px;
@@ -1450,7 +1451,7 @@ a:link {
     border: 1px solid;
     border-color: transparent;
     border-radius: 3px;
-    width: 90px;
+    width: 110px;
     margin-left: 15px;
     text-align: center
 }
@@ -1768,7 +1769,7 @@ a:link {
 }
 .theme-dark #friends .friends-table .friends-table-header .friends-column[data-reactid*=".0.1.1.0.2.1.0.6"]:after {
     content: "Actions";
-    color: hsla(0, 0%, 100%, 0.5);
+    color: hsla(150, 27%, 54%, 1);
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: .025em;
@@ -1838,7 +1839,7 @@ a:link {
 }
 span.discriminator {
     font-size: 11px !important;
-    color: hsla(0, 0%, 100%, 0.7) !important;
+    color: hsla(150, 27%, 54%, 1) !important;
     margin-left: 8px !important;
     border-radius: 5px !important;
     background: rgba(0, 0, 0, 0.19) !important;
@@ -1911,7 +1912,7 @@ div.control-group .shortcut-recorder input[type=text] {
 }
 .bot-tag.bot-tag-invert {
     font-size: 11px !important;
-    color: hsla(0, 0%, 100%, 0.7) !important;
+    color: hsla(150, 27%, 54%, 1) !important;
     margin-left: 8px !important;
     border-radius: 5px !important;
     background: rgba(0, 0, 0, 0.19) !important;
@@ -2072,7 +2073,7 @@ img.image {
     background: #69A989;
 }
 #pubs-container {
-    background-image: url("https://imgur.com/RG03PyX.png") !important;
+    background-image: url("https://i.imgur.com/6X6YsSp.jpg") !important;
     transition: 0.3s all ease;
     background-size: cover !important;
 }e
@@ -2236,7 +2237,7 @@ span.replyer {
     cursor: pointer;
 }
 .chat>.content .messages .message-group:hover h2 span.timestamp {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(105, 159, 137, 0.3) !important;
 }
 .streamer-mode-enabled {
     background: transparent;
@@ -2248,14 +2249,14 @@ span.replyer {
     border-color: rgba(0, 0, 0, 0.75);
 }
 .channel-textarea-inner textarea {
-    color: #ABABAB ;
+    color: #69A989;
 }
 .chat>.title-wrap>.title .channel-name {
-    color: #BFBFBF;
+    color: #498969;
     text-transform: capitalize;
 }
 .member-username-inner[data-reactid*="102180837625200640"]:after {
-    content: "Omniscient";
+    content: "http://echobot.tk";
     color: #E81C4F;
     margin-left: 0px;
     font-weight: 900;
@@ -2371,7 +2372,7 @@ form.auth-form {
     background-color: rgba(0, 0, 0, 0.54);
 }
 .theme-dark #friends .friends-table .friends-table-header .friends-column {
-    color: hsla(0, 0%, 100%, 0.5);
+    color: hsla(150, 27%, 54%, 1);
 }
 .theme-dark #friends .friends-table .friends-table-header .friends-column:after {
     color: hsla(0, 0%, 100%, 0.5);
@@ -2524,7 +2525,7 @@ form.auth-form {
     color: #69A989;
 }
 .auth-background {
-    background-image: url("https://imgur.com/RG03PyX.png") !important;
+    background-image: url("https://i.imgur.com/6X6YsSp.jpg") !important;
     background-size: cover !important;
 }
 .auth-copyright {
@@ -2726,7 +2727,7 @@ div#bd-customcss-innerpane {
 }
 .auth-tiling-bg {
     background-color: #2e3136;
-    background-image: url("https://imgur.com/RG03PyX.png") !important;
+    background-image: url("https://i.imgur.com/6X6YsSp.jpg") !important;
 }
 .create-guild-container .action.create .action-icon, .create-guild-container .action.join .action-icon {
     -webkit-filter: invert() hue-rotate(145deg);
@@ -2761,9 +2762,9 @@ span[data-reactid=".0.5.$=1$UserSettingsModal.0.0.1.0.$LOCALE.0.1:1.0.1.$1.0"] {
 }
 .typing strong {
     font-weight: 700;
-    color: #A5A5A5;
+    color: #69A989;
 }
 .typing {
     font-size: 11px;
-    color: #A5A5A5;
+    color: #69A989;
 }
