@@ -4,7 +4,7 @@
 Color : #4B83BC;
 Hover Color: #325A84;
 original echo bg image
-https://i.imgur.com/6X6YsSp.jpg
+https://i.imgur.com/LABCcao.jpg
 
 dark blue: 325A84
 light blue: 4B83BC
@@ -18,12 +18,12 @@ light blue: 4B83BC
 
 
 .app {
-    background-image: url("https://i.imgur.com/LABCcao.jpg") !important;
+    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
     background-size: cover !important;
 }
 .callout-backdrop {
     background-color: rgb(0, 0, 0) !important;
-    background-image: url("https://i.imgur.com/LABCcao.jpg") !important;
+    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -837,7 +837,7 @@ textarea {
 }
 .guild-channels header h2,
 .guild-channels ul .channel a {
-    color: #4B83BC;
+    color: #4B83BC !important;
 }
 .guilds {
     padding: 18px 20px 85px 20px;
@@ -1210,7 +1210,7 @@ textarea {
     border-left: 4px solid #4B83BC;
 }
 .guild-channels ul .channel-text.selected:before {
-    border-left: 4px solid #4B83BC;
+    border-left: 4px solid #4B83BC !important;
 }
 .guilds li.active .guild-inner,
 .guilds li:hover .guild-inner {
@@ -2089,7 +2089,7 @@ img.image {
     background: #4B83BC;
 }
 #pubs-container {
-    background-image: url("https://i.imgur.com/LABCcao.jpg") !important;
+    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
     transition: 0.3s all ease;
     background-size: cover !important;
 }e
@@ -2541,7 +2541,7 @@ form.auth-form {
     color: #4B83BC;
 }
 .auth-background {
-    background-image: url("https://i.imgur.com/LABCcao.jpg") !important;
+    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
     background-size: cover !important;
 }
 .auth-copyright {
@@ -2743,7 +2743,7 @@ div#bd-customcss-innerpane {
 }
 .auth-tiling-bg {
     background-color: #2e3136;
-    background-image: url("https://i.imgur.com/LABCcao.jpg") !important;
+    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
 }
 .create-guild-container .action.create .action-icon, .create-guild-container .action.join .action-icon {
     -webkit-filter: invert() hue-rotate(145deg);
