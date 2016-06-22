@@ -1,4 +1,4 @@
-//META{"name":"Echo_Discord","description":"Theme built for Echobot","author":"Proxy","version":"1.00"}*// 
+//META{"name":"BetterEcho","description":"Theme built for Echo bot","author":"Proxy","version":"1.00"}*// 
 /* EVERY LINK HAS TO BE HTTPS:// IN ORDER TO WORK IN DISCORD */
 /* IMPORTANT: Default Colors to change are
 Color : #69A989;
@@ -6,6 +6,10 @@ Hover Color: #22593E; */
 .DummyClass {
     background: #fff;
 }
+
+
+
+
 .app {
     background-image: url("https://i.imgur.com/6X6YsSp.jpg") !important;
     background-size: cover !important;
@@ -19,6 +23,11 @@ Hover Color: #22593E; */
     transition: 0.3s all ease;
     background-size: cover !important;
 }
+
+.theme-dark .chat>.content .messages .message-group .comment .markup{
+    color: #69a989;
+}
+
 .Select-control {
     background: rgba(0, 0, 0, 0.75);
     border: #69A989;
@@ -41,7 +50,7 @@ Hover Color: #22593E; */
     background-color: rgb(21, 21, 21);
 }
 .form .control-group .Select-control .Select-placeholder {
-    color: #787A7B;
+    color: #296949;
 }
 .tab-bar.SIDE {
     overflow-y: hidden;
@@ -545,15 +554,15 @@ Hover Color: #22593E; */
     background: transparent;
 }
 .chat .divider>span {
-    color: #F1F1F1;
+    color: #69C798;
 }
 .message-group .comment .markup pre {
-    background: #282B30;
-    border: 2px solid #282B30;
+    background: #36674E;
+    border: 2px solid #69A989;
 }
 .message-group .comment .markup pre code {
-    background: #282B30;
-    color: #D4D4D4;
+    background: #36674E;
+    color: #6EB994;
 }
 .theme-dark .chat .title-wrap .topic a {
     color: #69A989;
@@ -821,7 +830,7 @@ textarea {
 }
 .guild-channels header h2,
 .guild-channels ul .channel a {
-    color: #116464;
+    color: #69A989;
 }
 .guilds {
     padding: 18px 20px 85px 20px;
@@ -867,7 +876,7 @@ textarea {
 }
 .guild-channels header h2,
 .private-channels header {
-    opacity: .6;
+    opacity: .2;
 }
 .private-channels .search-bar {
     background: rgba(10, 13, 16, 0) !important;
@@ -885,7 +894,7 @@ textarea {
 .private-channels .channel.selected,
 .private-channels .search-result.selected,
 .private-channels .search-result:hover {
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6) 85%, rgba(46, 49, 54, 0)) !important;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6) 85%, rgba(105, 169, 137, 0)) !important;
 }
 .guild-channels ul .channel:not(.selected):hover,
 .private-channels .channel:not(.selected):hover {
