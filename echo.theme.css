@@ -14,16 +14,18 @@ light blue: 4B83BC
     background: #fff;
 }
 
-
+.message-group-blocked {
+    display: none !important;
+}
 
 
 .app {
-    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
+    background-image: url("https://i.imgur.com/1uGm82X.jpg") !important;
     background-size: cover !important;
 }
 .callout-backdrop {
     background-color: rgb(0, 0, 0) !important;
-    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
+    background-image: url("https://i.imgur.com/1uGm82X.jpg") !important;
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -2089,7 +2091,7 @@ img.image {
     background: #4B83BC;
 }
 #pubs-container {
-    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
+    background-image: url("https://i.imgur.com/1uGm82X.jpg") !important;
     transition: 0.3s all ease;
     background-size: cover !important;
 }e
@@ -2194,7 +2196,7 @@ img.image {
 .checkbox .checkbox-inner {
     width: 40px;
     height: 20px;
-	background-color: black !important;
+    background-color: black !important;
     border-radius: 40px;
 }
 
@@ -2490,8 +2492,8 @@ form.auth-form {
     transition: 0.4s ease-in-out opacity;
 }
 .guilds li:not(.active):not(:first-of-type):hover {
-	opacity:1;
-	transition:0.2s ease-in-out opacity;
+    opacity:1;
+    transition:0.2s ease-in-out opacity;
 
 }
 .guild-settings-modal-members {
@@ -2541,7 +2543,7 @@ form.auth-form {
     color: #4B83BC;
 }
 .auth-background {
-    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
+    background-image: url("https://i.imgur.com/1uGm82X.jpg") !important;
     background-size: cover !important;
 }
 .auth-copyright {
@@ -2743,7 +2745,7 @@ div#bd-customcss-innerpane {
 }
 .auth-tiling-bg {
     background-color: #2e3136;
-    background-image: url("https://i.imgur.com/1zWPlEH.png") !important;
+    background-image: url("https://i.imgur.com/1uGm82X.jpg") !important;
 }
 .create-guild-container .action.create .action-icon, .create-guild-container .action.join .action-icon {
     -webkit-filter: invert() hue-rotate(145deg);
