@@ -1,4 +1,4 @@
-//META{"name":"Blue Matrix","description":"A theme for Echo Bot that was written from Immortals theme.","author":"Proxy","version":"1.0"}*//
+//META{"name":"Blue Matrix","description":"A theme for Echo Bot that was written from Immortals theme.","author":"Proxy","version":"1.2"}*//
 /* Based on "Discord Reborn v4.30" by @Omniscient and "Discord Reborn v1.15 - Sapphire" by @Zerthox*/
 
 /* EVERY LINK HAS TO BE HTTPS:// IN ORDER TO WORK IN DISCORD */
@@ -2370,7 +2370,7 @@ form.auth-form {
 
 }
 .guild-settings-modal-members {
-    background-color: transparent;
+     background: rgba(2, 46, 61, .5) !important;
 }
 .guild-settings-modal-members .member-buttons .btn:hover {
     background: #178282;
@@ -3368,10 +3368,6 @@ button:active{
 .bda-dark #bda-qem-twitch-container .scroller::-webkit-scrollbar-thumb, 
 .bda-dark #pubs-container .scroller::-webkit-scrollbar-thumb, 
 .bda-dark .emoji-picker .scroller::-webkit-scrollbar-thumb {
-    border: 1px solid #3DA9A9 !important;
-    background: #3DA9A9 !important;
-}
-.guild-settings-modal-members {
     border: 1px solid #3DA9A9 !important;
     background: #3DA9A9 !important;
 }
