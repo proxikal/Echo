@@ -1,4 +1,4 @@
-//META{"name":"The Final Fight","description":"A theme for Echo Bot that was written from Immortals theme.","author":"Proxy","version":"1.0"}*//
+//META{"name":"New World","description":"A theme for Echo Bot that was written from Immortals theme.","author":"Proxy","version":"1.0"}*//
 /* Based on "Discord Reborn v4.30" by @Omniscient and "Discord Reborn v1.15 - Sapphire" by @Zerthox*/
 
 /* EVERY LINK HAS TO BE HTTPS:// IN ORDER TO WORK IN DISCORD */
@@ -9,7 +9,7 @@ Hover Color: rgba(59, 104, 143, 0.6); */
     background: #fff;
 }
 .app {
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/0YCHso0.png") !important;
     background-size: cover !important;
 }
 
@@ -29,6 +29,14 @@ Hover Color: rgba(59, 104, 143, 0.6); */
     font-size: 12px;
 }
 
+.chat>.content .messages .message-group:not(.has-divider) {
+    border-bottom-color: hsla(0, 0%, 100%, .04) !important;
+    border-bottom-width: 5px !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+.message-group.has-divider {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
 
 .chat .jump-to-present-bar button {
     background: rgba(59, 104, 143, 0.7) !important;
@@ -43,7 +51,7 @@ Hover Color: rgba(59, 104, 143, 0.6); */
 }
 
 #user-profile-modal .header {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/0YCHso0.png") !important;
   background-position: 50% 50%;
   background-size: cover !important;
 }
@@ -74,15 +82,15 @@ Hover Color: rgba(59, 104, 143, 0.6); */
 
 
 .user-popout .header {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/0YCHso0.png") !important;
 }
 
 .theme-dark .channel-pins-wrap .header {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/0YCHso0.png") !important;
 }
 
 .channel-pins {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/0YCHso0.png") !important;
 }
 
 .message-group .sink-interactions.clickable {
@@ -155,7 +163,7 @@ Hover Color: rgba(59, 104, 143, 0.6); */
 
 .callout-backdrop {
     background-color: rgb(0, 0, 0, 0.6) !important;
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/0YCHso0.png") !important;
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -1083,9 +1091,6 @@ textarea {
     font-size: 12px;
     margin-top: 5px;
     color: #AFAFAF !important;
-}
-.chat>.content .messages .message-group:not(.has-divider) {
-    border-bottom-color: hsla(0, 0%, 100%, .04) !important;
 }
 
 
@@ -2232,7 +2237,7 @@ img.image {
     background: #3B688F;
 }
 #pubs-container {
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/0YCHso0.png") !important;
     transition: 0.3s all ease;
     background-size: cover !important;
 }
@@ -2636,7 +2641,7 @@ form.auth-form {
     color: #3B688F;
 }
 .auth-background {
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/0YCHso0.png") !important;
     background-size: cover !important;
 }
 .auth-copyright {
@@ -2860,7 +2865,7 @@ div#bd-customcss-innerpane {
 }
 .auth-tiling-bg {
     background-color: #2e3136;
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/0YCHso0.png") !important;
 }
 .create-guild-container .action.create .action-icon, .create-guild-container .action.join .action-icon {
     -webkit-filter: invert() hue-rotate(145deg);
@@ -3143,7 +3148,7 @@ div#bd-pub-button:hover {
     background-color: rgba(0, 0, 0, 0.3) !important;
 }
 #bd-customcss-detach-container {
-  background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background-image: url("https://i.imgur.com/0YCHso0.png") !important;
   background-color: rgba(0, 0, 0, 0.7) !important;
   background-size: cover !important;
   background-position: 70% 50%;

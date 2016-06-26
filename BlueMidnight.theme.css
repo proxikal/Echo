@@ -1,4 +1,4 @@
-//META{"name":"The Final Fight","description":"A theme for Echo Bot that was written from Immortals theme.","author":"Proxy","version":"1.0"}*//
+//META{"name":"Blue Midnight","description":"A theme for Echo Bot that was written from Immortals theme.","author":"Proxy","version":"1.0"}*//
 /* Based on "Discord Reborn v4.30" by @Omniscient and "Discord Reborn v1.15 - Sapphire" by @Zerthox*/
 
 /* EVERY LINK HAS TO BE HTTPS:// IN ORDER TO WORK IN DISCORD */
@@ -9,7 +9,7 @@ Hover Color: rgba(59, 104, 143, 0.6); */
     background: #fff;
 }
 .app {
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/LFXWSD1.jpg") !important;
     background-size: cover !important;
 }
 
@@ -24,11 +24,46 @@ Hover Color: rgba(59, 104, 143, 0.6); */
     background: rgba(0, 0, 0, 0.70)
 }
 
+.mentioned .highlight:hover {
+    color: #3B688F;
+    text-decoration: underline;
+}
+
+.message-group .mentioned .message-text:after {
+    border-left: 4px solid #60B0DB !important;
+}
+
+
+
+.message-group .mentioned .message-text {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* placeholder for post message form */
+.theme-dark .channel-textarea-inner textarea::-webkit-input-placeholder {
+    color: rgba(96, 176, 219, 0.4) !important;
+}
+/* text for post message form */
+.theme-dark .channel-textarea-inner textarea {
+    color: #60B0DB !important;
+}
+
+.theme-dark .channel-textarea-inner {
+    border: 1px dotted #3B688F !important;
+}
 
 .channel-members .member .member-username {
     font-size: 12px;
 }
 
+.chat>.content .messages .message-group:not(.has-divider) {
+    border-bottom-color: hsla(0, 0%, 100%, .04) !important;
+    border-bottom-width: 5px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+.message-group.has-divider {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
 
 .chat .jump-to-present-bar button {
     background: rgba(59, 104, 143, 0.7) !important;
@@ -43,9 +78,25 @@ Hover Color: rgba(59, 104, 143, 0.6); */
 }
 
 #user-profile-modal .header {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/LFXWSD1.jpg") !important;
   background-position: 50% 50%;
   background-size: cover !important;
+}
+
+
+
+/* Scrollbar and Track */
+.scroller-wrap .scroller::-webkit-scrollbar-thumb {
+    background-color: #2E4F6C !important;
+    border: 3px solid rgba(211, 5, 5, 0) !important;
+}
+/* What happens when someone clicks the scroll bar */
+.scroller-wrap .scroller:active::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 104, 143, 0.3) !important;
+}
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+    background-color: #2E4F6C !important;
+    border: 3px solid rgba(211, 5, 5, 0) !important;
 }
 
 
@@ -74,15 +125,15 @@ Hover Color: rgba(59, 104, 143, 0.6); */
 
 
 .user-popout .header {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/LFXWSD1.jpg") !important;
 }
 
 .theme-dark .channel-pins-wrap .header {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/LFXWSD1.jpg") !important;
 }
 
 .channel-pins {
-  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, .3),  rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/LFXWSD1.jpg") !important;
 }
 
 .message-group .sink-interactions.clickable {
@@ -155,7 +206,7 @@ Hover Color: rgba(59, 104, 143, 0.6); */
 
 .callout-backdrop {
     background-color: rgb(0, 0, 0, 0.6) !important;
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/LFXWSD1.jpg") !important;
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -293,10 +344,6 @@ Hover Color: rgba(59, 104, 143, 0.6); */
     background-color: #3B688F;
     color: #fff;
     border-color: #3B688F;
-}
-.mentioned .highlight:hover {
-    color: #3B688F;
-    text-decoration: underline;
 }
 .highlight:hover {
     cursor: pointer;
@@ -1084,9 +1131,6 @@ textarea {
     margin-top: 5px;
     color: #AFAFAF !important;
 }
-.chat>.content .messages .message-group:not(.has-divider) {
-    border-bottom-color: hsla(0, 0%, 100%, .04) !important;
-}
 
 
 .chat>.content .messages .message-group .markup .highlight {
@@ -1098,9 +1142,6 @@ textarea {
     line-height: 185% !important;
 }
 
-.message-group .mentioned .message-text:after {
-    border-left: 4px solid #60B0DB !important;
-}
 /*
 .guilds .guild.unread {
     -webkit-animation: mentionpulse 1.5s infinite;
@@ -1448,19 +1489,6 @@ textarea {
     background-color: rgba(59, 104, 143, 0.6);
 }
 
-/* Scrollbar code and active code */
-.scroller-wrap .scroller::-webkit-scrollbar-thumb {
-    background-color: #3B688F !important;
-    border: 3px solid rgba(211, 5, 5, 0) !important;
-}
-/* What happens when someone clicks the scroll bar */
-.scroller-wrap .scroller:active::-webkit-scrollbar-thumb {
-    background-color: rgba(59, 104, 143, 0.7) !important;
-}
-.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
-    background-color: #3B688F !important;
-    border: 3px solid rgba(211, 5, 5, 0) !important;
-}
 .tab-bar.SIDE .tab-bar-item:before {
     border-left: none;
 }
@@ -2232,7 +2260,7 @@ img.image {
     background: #3B688F;
 }
 #pubs-container {
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/LFXWSD1.jpg") !important;
     transition: 0.3s all ease;
     background-size: cover !important;
 }
@@ -2636,7 +2664,7 @@ form.auth-form {
     color: #3B688F;
 }
 .auth-background {
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/LFXWSD1.jpg") !important;
     background-size: cover !important;
 }
 .auth-copyright {
@@ -2860,7 +2888,7 @@ div#bd-customcss-innerpane {
 }
 .auth-tiling-bg {
     background-color: #2e3136;
-    background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+    background-image: url("https://i.imgur.com/LFXWSD1.jpg") !important;
 }
 .create-guild-container .action.create .action-icon, .create-guild-container .action.join .action-icon {
     -webkit-filter: invert() hue-rotate(145deg);
@@ -3143,7 +3171,7 @@ div#bd-pub-button:hover {
     background-color: rgba(0, 0, 0, 0.3) !important;
 }
 #bd-customcss-detach-container {
-  background-image: url("https://i.imgur.com/ZhRv7ys.png") !important;
+  background-image: url("https://i.imgur.com/LFXWSD1.jpg") !important;
   background-color: rgba(0, 0, 0, 0.7) !important;
   background-size: cover !important;
   background-position: 70% 50%;
@@ -3507,23 +3535,6 @@ button:active{
     to {
     box-shadow: 0 0 0 0 rgba(96, 176, 219, 1)
     }
-}
-
-.message-group .mentioned .message-text {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
-/* placeholder for post message form */
-.theme-dark .channel-textarea-inner textarea::-webkit-input-placeholder {
-    color: rgba(96, 176, 219, 0.4) !important;
-}
-/* text for post message form */
-.theme-dark .channel-textarea-inner textarea {
-    color: #60B0DB !important;
-}
-
-.theme-dark .channel-textarea-inner {
-    border: 1px dotted #3B688F !important;
 }
 #rmenu {
     background: rgba(59, 104, 143, 0.6) !important;
