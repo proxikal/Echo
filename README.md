@@ -1,19 +1,13 @@
-# AutoGo HAS A WEBSITE!!
-Github will no longer be updated since we have a website.  
-[AutoGo's Website Click Here!](https://xtclabs.net)  
-  
-# Need help?
-Our server was accidentally deleted. the new invite link is below.  
-You can visit our server and ask any questions: https://discord.gg/CMtW45h 
-  
-**__Issues:__** Make sure to give Echo the full permissions still having issues?  
-Go into your server settings > Roles and Drag Echo [BETA] to the top. this fixes most problems.  
-Also be sure he has Manage Roles permissions.  
-  
-  **If the emoji is not at the beginning of your message and has a space  
-  Replace with an underscore `:baby girl:` would be `:baby_girl:`**
+# Discord Themes \ AutoGo Bot Website
+[https://xtclabs.net](https://xtclabs.net)  
+   
+   
+   
    
-  
+   
+   
+   
+# This is old documentation for AutoGo references.
 ## Index
 [Word Filter Examples](https://github.com/proxikal/Echo/blob/master/README.md#some-other-examples)  
 [Meme and Joke Command](https://github.com/proxikal/Echo/blob/master/README.md#build-the---meme-or---jokes-command)  
