@@ -479,15 +479,6 @@ You've assumed the role **{params}**
 | Use Command  | `.boobs`  |
   
   
-### Set Warning for kick\ban [ARS]
-| Steps  | You Type  |
-| :--:  | :--:  |
-| Make Command  | `.auto &fuck={del}{warn:2}{msg:You have been warned!}{kick}I have kicked {user} for swearing.`  |
-| If Typed  | the above code will delete the user's message. Warn twice with "**You have been warned**"<br>and than kick the user if their warns exceed or equal to 2.  |
-  
-  
-**Change the {kick} key to {ban}** if you want Echo to ban users.  
-  
 ### MAKE AN ANNOUNCE COMMAND:
 | Steps  | You Type  |
 | :--:  | :--:  |
