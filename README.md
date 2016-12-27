@@ -2,7 +2,7 @@
 [https://xtclabs.net](https://xtclabs.net)  
 
 ### Echo Official Website:
-[https://xtclabs.net](https://echo.xtclabs.net)  
+[https://echo.xtclabs.net](https://echo.xtclabs.net)  
 
 ### AutoGo Official Website:
 [https://autogo.xtclabs.net](https://autogo.xtclabs.net)  
@@ -15,6 +15,7 @@
    
    
 ## This page is being converted to the new Echo Documentation
+*On Dec. 27th 2016*  
 ### Index
 
   
