@@ -187,6 +187,39 @@ Entire Guild object through, which has channels, roles, members inside.
 // Sends a json object of just your roles.  
 ```
 
+# Multiple A.R.S Profiles!!
+We've made it so you can store multiple A.R.S Profiles  
+And than load, save at any time.  
+By default you have no profiles. just your normal A.R.S File.  
+you can check by typing **.profiles**  
+  
+Alright let's save your current A.R.S File to a profile.  
+```
+.save -p profile-name
+```
+change **profile-name** to whatever.  
+Now if you type **.profiles** you will see it listed!  
+Now, type **.wipeauto** to clear your current A.R.S File.  
+And let's create one more for testing.  
+```
+.save -p beta
+```
+Now add whatever you want, play around as you wish.  
+None of the keys from your original will be available until you switch back!  
+You can switch back by typing:
+```
+.load -p profile-name
+```
+Type **.viewauto** and there's all your original rules!  
+As of now you can have unlimited amounts of profiles.  
+  
+# Grabbing your A.R.S File
+Bot Masters can grab the server A.R.S File and than configure it!  
+Once you're done just drag the `autoresponse.json` file into your server.  
+Echo will do the rest! `^.^`  
+  
+  
+  
 # Auto Response System **101**
   
 First i'd like to introduce **A.R.S Etiquette**.
