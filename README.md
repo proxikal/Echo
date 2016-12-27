@@ -254,7 +254,7 @@ Alright let's make a **"Server Info"** command
   
 in your server type this exactly:  
 ```php
-.auto &.server={embed:
+.auto .server={embed:
     {title:Information for {guild|name}}
     {type:rich}
     {author|name:{owner|name}}
@@ -314,6 +314,32 @@ Roles: *{listroles}*
 }
 ```
 pretty neat huh? :)  
+  
+### Using IF Statements with Echo.
+The IF statements are very basic at the moment.  
+However there are plans to make it more dynamic.  
+Below we are going to use an if sstatement to block  
+a command from the **#general** Channel.
+```
+.auto .boobs=
+{if:
+	channel!=general
+}{boobs}
+```
+Basically what we're doing above is..  
+People will be able to use **.boobs** in any channel.  
+Except for #general channel.  
+  
+Alright now let's do the same but for a user.  
+Let's make it so No One BUT **Proxy** Can use a command.
+```
+.auto .boobs=
+{if:
+	user==Proxy
+}{boobs}
+```
+Alright! Now you understand the If statements.  
+However, Make sure to keep checking back as this will change.  
   
 ### WORD FILTER EXAMPLE:
 | Steps  | You Type  |
@@ -428,10 +454,16 @@ You can remove or configure anything you please.
   
   
 ### Build the `.giveme` command in your server.
+```
+.auto &.giveme {params}=
+{role:
+	{params}
+}{req:Owner}
+You've assumed the role **{params}**
+```
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &.giveme {params}={role:{params}}{req:Owner}You've assumed the role **{params}**`  |
-| Use Command  | `.giveme Role Name` the **{req}** key is requiring the user to have the role `Owner` to use!  |
+| Use Command  | `.giveme Role Name` |
   
   
 ### Build the `.boobs` and `.ass` commands
