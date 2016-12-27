@@ -20,7 +20,28 @@
   
   
 # Auto Response System **101**
-Ok first let's look at the trigger section.  
+  
+First i'd like to introduce **A.R.S Etiquette**.
+  
+**Not Proper:**
+```
+.auto &.give {params}={role:{params}}
+```
+  
+**Proper:**
+```
+.auto &.give {params}=
+{role:
+   {params}
+}
+```
+The reason we've added Ettiquette to A.R.S is to help people understand easily.  
+When rules get super long and you've got it all crammed into a single line  
+It can look daunting, and even steer people away from using our system.  
+So, Practice proper A.R.S Ettiquette and you will notice a big difference!
+  
+  
+Ok now let's look at the trigger section.  
 You want to set this to whatever word/sentence you want Echo to respond to.  
   
   
@@ -67,26 +88,64 @@ the purpose is to keep you updated on what your greet\bye or prefix is.
   
 in your server type this exactly:  
 ```php
-.auto .server=
-SERVER INFO
-.......
-prefix: {pref}
-greet: {greet}
-bye: {bye}
-roles: {allroles}
-channels: {channels}
-.......
+.auto &.server={embed:
+    {title:Information for {guild|name}}
+    {type:rich}
+    {author|name:{owner|name}}
+    {author|icon:{owner|avatar}}
+    {author|url:{owner|avatar}}
+    {color:
+        {randlist:
+             #ff0000,#00ff00,#ffffff,#4286f4,
+             #f45642,#262525,#e2d626,#87e226,
+             #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {thumb|url:{guild|icon}}
+    {desc:
+───────────────────────
+× ID:                     {guild|id}
+× Region:             {guild|region}
+× OwnerID:        {owner|id}
+× Discord Icon:  [Click to view Guild Icon]({guild|icon})
+× Members:       {membercount}
+× Channels:        {channelcount}
+× Roles:               {rolecount}
+───────────────────────
+    }
+    {footer|icon:https://xtclabs.net/img/favicon-new.png}
+    {footer|text: Echo 2.0 A.R.S}
+}
 ```
-Now when you type **.server** Echo will display your prefix, greet and bye message also the curent channel.  
+Now when you type **.server** Echo will display the server information.  
+You can set it up to list all the channels, the server prefix. all that stuff!
   
   
 ### WHOAMI COMMAND
 ```php
-.auto &whoami=
-you: {/user}
-commander: {ismaster}
-channel: {chan}
-roles: {listroles}
+.auto .whoami=
+{embed:
+    {title:User Information for {guild|name}}
+    {type:rich}
+    {author|icon:{usericon}}
+    {author|name:{/user}}
+    {color:
+        {randlist:
+             #ff0000,#00ff00,#ffffff,#4286f4,
+             #f45642,#262525,#e2d626,#87e226,
+             #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {thumb|url:{guild|icon}}
+    {desc:
+Bot Master: *{ismaster}*
+Discord Icon: [Click here for Icon]({usericon})
+Discord ID: *{rawid}*
+Roles: *{listroles}*
+    }
+    {footer|icon:https://xtclabs.net/img/favicon-new.png}
+    {footer|text: Echo 2.0 A.R.S}
+}
 ```
 pretty neat huh? :)  
   
@@ -126,6 +185,68 @@ pretty neat huh? :)
 | Use Command  | `.joke`  |
   
   
+Alright that was fun, Now let's make a Sexy Meme & Jokes Command.
+```
+.auto .joke=
+{embed:
+    {title:Random Fucking Jokes}
+    {url:https://api.xtclabs.net}
+    {type:rich}
+    {desc:
+        {joke}
+    }
+    {color:
+       {randlist:
+          #4286f4,#ff0000,
+          #00ff00,##e8f442,
+          #f49e42,#000000
+       }
+    }
+    {footer|text:
+        Requested: {/user}
+    }{footer|icon:
+    {usericon}
+    }
+}
+```
+
+And now the Memes:
+```
+.auto .meme=
+{embed:
+    {title:
+        {randlist:
+            Here Bitch!,Nom Nom Nom,
+            Oh Look at you!,Noob Alert,
+            Wank-o-Meter,Take a cold Shower!
+            Douche Alert,The King is here!
+        }
+    }
+    {url:https://api.xtclabs.net}
+    {type:rich}
+    {color:
+        {randlist2:
+            #ff0000,#00ff00,#ffffff,#4286f4,
+            #f45642,#262525,#e2d626,#87e226,
+            #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {image|url:
+        {meme}
+    }
+    {image|width:250}
+    {image|height:250}
+    {footer|text:Requested: {/user}}
+    {footer|icon:
+        {usericon}
+    }
+}
+```
+As you can see i've added my personal jokes and memes command.  
+These rules have extra features, like random colors and random titles!  
+You can remove or configure anything you please.  
+
+
 ### Build the `.cats` command in your server.
 | Steps  | You Type  |
 | :--:  | :--:  |
