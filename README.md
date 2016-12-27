@@ -73,7 +73,6 @@ Here's tons of examples:
   You can view the list of A.R.S Keys at [Echo's Website!](https://echo.xtclabs.net)  
   
   
-Will update constantly!
   
 ### USING THE {PARAMS} KEY
 | Steps  | You Type  |
