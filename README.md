@@ -18,8 +18,172 @@
 *On Dec. 27th 2016*  
 ### Index
 
+> Did you know!
+You can have Echo link a trigger for Events.
+  
+Let's take a look at the keys:
+```
+{Event:Join}         // When someone joins the server.
+{Event:Leave}         // When someone leaves the server.
+{Event:MemberUpdate}    // When a member is updated.
+{Event:RoleCreate}    // When a role is created.
+{Event:RoleDelete}    // When a role is deleted.
+{Event:ChannelCreate}    // When a channel is created.
+{Event:ChannelDelete}    // When a channel is deleted.
+{Event:ChannelUpdate}    // When a channel is updated.
+{Event:RoleUpdate}    // When a role is updated.
+{Event:GuildUpdate}    // When the guild is updated.
+```
+  
+Now let's learn how to use these Event Keys to do something cool!  
+The example below links an A.R.S to the event: **Join**  
+This means when someone joins the server Echo will do something!
+  
+**STEP #1:**
+```
+.auto jnevnt=
+   {protect}
+   {Event:Join}
+   {ars:
+      mchk101
+   }
+```
+Alright so what we are doing is protecting the key.
+This means no one can call it or trigger it via typing.
+Than we want to link to the **Join Event**
+And last we want to link to another trigger. Read below!
+  
+Now we need to make another trigger. This time we encrypt it!  
+  
+**STEP #2:**
+```
+.auto64 mchk101=
+   {protect}
+   {sleep:15m}
+   {role:
+      Member
+   }{pm}
+   Hey user! I see you have been here for 15 minutes!
+   I've added you to the role Member!
+```
+Alright that's it! Now let me explain what we are doing.
+We're protecting the a.r.s rule so no one can call it **IMPORTANT**
+We're making echo sleep for 15 minutes, if they user is still in your server  
+Echo will give them the role **Member** and PM them alerting them.  
+**auto64** is used to encrypt your response. To stray from peeking eyes.  
+The owner can also **.inspect** the trigger to make changes etc..
   
   
+# Are you A Developer?
+### Echo can send your guild object, channels, roles & members to any site!
+That's right, you can have a full fledged members list on your page.  
+Along with roles, channels. You could basically create your own manager.  
+And keep it 100% updated using Echos A.R.S System and the **{Events}** Keys.  
+  
+**Example Below:**  
+  
+Alright what we're going to do is have echo update the members to any site.  
+For this example we will use **localhost**
+**First Step:** You will want to make a **.php** file.  
+In the file you want to make the file that catches the objects and than stores it.  
+For this example we are simply saving the files to a .json in a directory.  
+  
+**PHP File**: Name it *collection.php*  
+```php
+<?php
+$json = file_get_contents('php://input');
+$srv = json_decode($json);
+
+if(isset($_GET['gid'])) {
+	if(! file_exists("Test/".$_GET['gid'])) {
+		mkDir('Test/'.$_GET['gid'], 0777);
+	}
+}
+if($_GET['id'] == "guild") {
+	$myfile = fopen('Test/'.$_GET['gid'].'/guild.json', "w") or die("Unable to open file!");
+	fwrite($myfile, json_encode($srv, JSON_PRETTY_PRINT));
+	fclose($myfile);
+	// echo "Guild object has been saved to your PC.";
+}
+if($_GET['id'] == "channels") {
+	$myfile = fopen('Test/'.$_GET['gid'].'/channels.json', "w") or die("Unable to open file!");
+	fwrite($myfile, json_encode($srv, JSON_PRETTY_PRINT));
+	fclose($myfile);
+	// echo "Channel object has been saved to your PC.";
+}
+if($_GET['id'] == "members") {
+	$myfile = fopen('Test/'.$_GET['gid'].'/members.json', "w") or die("Unable to open file!");
+	fwrite($myfile, json_encode($srv, JSON_PRETTY_PRINT));
+	fclose($myfile);
+	// echo "Members object has been updated to your PC.";
+}
+if($_GET['id'] == "roles") {
+	$myfile = fopen('Test/'.$_GET['gid'].'/roles.json', "w") or die("Unable to open file!");
+	fwrite($myfile, json_encode($srv, JSON_PRETTY_PRINT));
+	fclose($myfile);
+	// echo "Members object has been saved to your PC.";
+}
+?>
+```
+Alright now that you have your **Landing Page** Created let's move to Echo.  
+**A.R.S Step #1:** Setting the main command up.  
+```
+.auto pform=
+   {protect}
+   {json|members:
+      http://localhost/collection.php?id=members&gid={guild|id}
+   }
+```
+** Notice: ** Echo will respond with any errors  
+He will also respond if you have it setup in the .php file to echo a repsonse.  
+If you don't echo a response, Echo will not post anything.  
+**A.R.S Step #2:** Linking the A.R.S To Events  
+*Member Join Event*
+```
+.auto jnevnt=
+   {protect}
+   {Event:Join}
+   {ars:
+      pform
+   }
+```
+*Member Leave Event*
+```
+.auto lvevnt=
+   {protect}
+   {Event:Leave}
+   {ars:
+      pform
+   }
+```
+*Member Update Event*
+```
+.auto updevnt=
+   {protect}
+   {Event:MemberUpdate}
+   {ars:
+      pform
+   }
+```
+**Alright that's it**!  
+Now when someone Joins, Updates or Leaves your server  
+Echo will send the updated Members list to your page.  
+You can do this with roles, channels. Or just send the  
+Entire Guild object through, which has channels, roles, members inside.  
+  
+** List of All the JSON Form Post Rules:**  
+```
+{json|guild:http://link.to/yourpage.php?id=guild&gid={guild|id}}  
+// Sends a json object of your entire guild.  
+// This includes roles, members & channels.  
+{json|members:http://link.to/yourpage.php?id=members&gid={guild|id}}  
+// Sends a json object of just your members.  
+{json|channels:http://link.to/yourpage.php?id=channels&gid={guild|id}}  
+// Sends a json object of just your channels.  
+{json|roles:http://link.to/yourpage.php?id=roles&gid={guild|id}}  
+// Sends a json object of just your roles.  
+```
+
 # Auto Response System **101**
   
 First i'd like to introduce **A.R.S Etiquette**.
