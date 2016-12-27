@@ -83,8 +83,7 @@ Here's tons of examples:
   
   
 ### SERVER INFO COMMAND
-Alright let's make a **"Server Info"** command  
-the purpose is to keep you updated on what your greet\bye or prefix is.  
+Alright let's make a **"Server Info"** command    
   
 in your server type this exactly:  
 ```php
