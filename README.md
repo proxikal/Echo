@@ -11,14 +11,15 @@
 [https://webm.xtclabs.net](https://webm.xtclabs.net)  
    
    
-   
-   
    
 ## This page is being converted to the new Echo Documentation
 *On Dec. 27th 2016*  
-### Index
+  
+### We have added so many keys, please give us some time to document them.  
+And remember you can view a list of command, keys at [Echo Official Website](https://echo.xtclabs.net/)  
+  
 
-> Did you know!
+# Did you know!
 You can have Echo link a trigger for Events.
   
 Let's take a look at the keys:
@@ -134,7 +135,7 @@ Alright now that you have your **Landing Page** Created let's move to Echo.
       http://localhost/collection.php?id=members&gid={guild|id}
    }
 ```
-** Notice: ** Echo will respond with any errors  
+**Notice:** Echo will respond with any errors  
 He will also respond if you have it setup in the .php file to echo a repsonse.  
 If you don't echo a response, Echo will not post anything.  
 **A.R.S Step #2:** Linking the A.R.S To Events  
@@ -166,12 +167,14 @@ If you don't echo a response, Echo will not post anything.
    }
 ```
 **Alright that's it**!  
+You don't have to do ANYTHING! Echo will detect the Event keys  
+And act accordingly. You can only have **One of Each Event**  
 Now when someone Joins, Updates or Leaves your server  
 Echo will send the updated Members list to your page.  
 You can do this with roles, channels. Or just send the  
 Entire Guild object through, which has channels, roles, members inside.  
   
-** List of All the JSON Form Post Rules:**  
+**List of All the JSON Form Post Rules:**  
 ```
 {json|guild:http://link.to/yourpage.php?id=guild&gid={guild|id}}  
 // Sends a json object of your entire guild.  
