@@ -19,19 +19,25 @@
 
   
   
-# Auto Response System Keys
-> <b>You no longer need to initiate by typing</b> `.auto`  
-you can just start adding keys!  
-  
+# Auto Response System **101**
 Ok first let's look at the trigger section.  
 You want to set this to whatever word/sentence you want Echo to respond to.  
   
   
-<b>NEW: You can use the {params} key in the trigger to catch their text!</b> 
-`.auto &.giveme {params}={role:{params}}{req:Owner}You've assumed the role {params}`
+<b>You can use the {params} key in the trigger to catch their text!</b> 
+```
+.auto &.giveme {params}=
+{role:
+   {params}
+}{req:Owner}
+{notreq:
+   {/user} You're not the owner
+}
+You've assumed the role {params}
+```
   
 The example above `requires` you to have the role `Owner` and will give you  
-whatever role you type (*As long as the role exists*) for example: `giveme Staff`  
+whatever role you type (*As long as the role exists*) for example: `.giveme Staff`  
   
   
 If you want to use regex you add the <b>&</b> key before the word Example Below:  
@@ -42,40 +48,8 @@ Add a space after the word. this will assure it only triggers on the word! Examp
   
 Ok, now let's look at the <b>Response</b> section and all the keys you can use!  
 <b>Keys</b> are surrounded by obraces. `{key}` Echo will replace these keys with data!  
-Here's a list:  
-  
-  
-| Command  | Usage  | Information  |
-| :--: | :--: | :--: |
-| {pm}  | {pm}  | Echo will private message the response.  |
-| {user}  | {user}  | Echo will mention the user.  |
-| {/user}  | {/user}  | Echo will say the user's name  |
-| {del}  | {del}  | Echo will delete the user's message.  |
-| {kick}  | {kick}  | Echo will kick Non-Commanders  |
-| {ban}  | {ban}  | Echo will ban Non-Commanders  |
-| {role}  | {role:Role Name}  | Gives a user a specific role.  |
-| {alert}  | {alert:YOURID}  | Alerts you if someone triggers reponse<Br>You can also do multiple alerts<Br>{alert:YourID,AnotherID}  |
-| {exc}  | {exc:Role Name}  | Excludes a role from your trigger.!<br>You can exclude multiple roles!<br>{exc:Role name,Role Name}  |
-| {chan}  | {chan}  | Returns the current channel.  |
-| {pref}  | {pref}  | Displays echo's current prefix.  |
-| {greet}  | {greet}  | Displays echo's current greeting.  |
-| {bye}  | {bye}  | Displays echo's current bye message.  |
-| {ismaster}  | {ismaster}  | Displays if the user is master or not `True` or `False`  |
-| {listroles}  | {listroles}  | Displays all the users roles.  |
-| {allroles}  | {allroles}  | Displays all roles in server.  |
-| {joined}  | {joined}  | Shows the date and time a user has joined.  |
-| {channels}  | {channels}  | Shows all channels in the server.  |
-| {meme}  | {meme}  | Shows random memes.  |
-| {joke}  | {joke}  | Shows random jokes.  |
-| {params}  | {params}  | if you have this key in your trigger and response<br>you can catch their text!<br>`.auto &.announce {params}=**ANNOUNCEMENT:**{params}`  |
-| {req}  | {req:Role Name}  | Requires a user to have a role. you can also require multiple roles like `{exc}`  |
-| {ass}  | {ass}  | Shows random ass.  |
-| {boobs}  | {boobs}  | Shows random boobs.  |
-| {warn}  | {warn:5}  | Adds a warning point to a user.<Br>be default `.setpunish` is set to `kick`  |
-| {msg}  | {msg:Text Here}  | The warning message before he kicks\bans. Only works if`{warn}` key is found.  |
-| {getid}  | {getid}  | Grabs the users id.
-| {redirect}  | {redirect:CHANNELID}  | Redirects users text to a specific channel.  |
-  
+Here's tons of examples:  
+  You can view the list of A.R.S Keys at [Echo's Website!](https://echo.xtclabs.net)  
   
   
 Will update constantly!
