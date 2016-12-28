@@ -115,8 +115,8 @@ in your server type this exactly:
     {footer|text: Echo 2.0 A.R.S}
 }
 ```
-Now when you type **.server** Echo will display the server information.  
-You can set it up to list all the channels, the server prefix. all that stuff!
+Now when you type `.server` Echo will display the server information.  
+You can set it up to list all the channels, roles & the server prefix. all that stuff!
   
   
 ### WHOAMI COMMAND
@@ -145,7 +145,46 @@ Roles: *{listroles}*
     {footer|text: Echo 2.0 A.R.S}
 }
 ```
-pretty neat huh? :)  
+now just type `.whoami`
+  
+### Embeds with Multiple Fields!
+```
+.auto .echo=
+{embed:
+    {type:rich}
+        {color:
+            {randlist:
+                #4286f4,#ff0000,#00ff00,
+                ##e8f442,#f49e42,#000000
+            }
+        }
+    {image|url:https://xtclabs.net/img/EchoIcon.jpg}
+    {image|width:250}
+    {image|height:250}
+    {field[0]|name:Echo}
+    {field[0]|value:[Echo Official Website](https://echo.xtclabs.net "The Official website for Echo 2.0")}
+    {field[0]|inline:true}
+    {field[1]|name:Echo Help}
+    {field[1]|value:[Echo Documentation](https://github.com/proxikal/Echo "Learn how to use Echo A.R.S Through some Examples.")}
+    {field[1]|inline:true}
+    {field[2]|name:AutoGo}
+    {field[2]|value:[AutoGo Website!](https://autogo.xtclabs.net "AutoGo! A bot like Echo 1.x You run yourself!")}
+    {field[2]|inline:true}
+    {field[3]|name:Web Manager}
+    {field[3]|value:[Discord Server Manager](https://webm.xtclabs.net "Manage Your discord server and Echo from the world wide web!")}
+    {field[3]|inline:true}
+    {field[4]|name:PHP Webhooks}
+    {field[4]|value:[Github Page!](https://github.com/proxikal/discordphp-webhook "Use discord webhooks with ease using DiscordPHP-Webhooks")}
+    {field[4]|inline:true}
+    {field[5]|name:xTech Labs API}
+    {field[5]|value:[View Website](https://api.xtclabs.net/ "xTech Labs offers free API endpoints like memes, jokes etc..")}
+    {field[5]|inline:true}
+    {footer|text:Requested by: {/user}.}
+    {footer|icon:{usericon}}
+}
+```
+now just type `.echo` 
+You are allowed 10 fields. `field[0]` through `field[9]`  
   
 ### Using IF Statements with Echo.
 The IF statements are very basic at the moment.  
