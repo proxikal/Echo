@@ -17,7 +17,57 @@
 ### We have added so many keys, please give us some time to document them.  
 And remember you can view a list of command, keys at [Echo Official Website](https://echo.xtclabs.net/)  
   
+  
+# Echo + Virus Total!
+> Protect your members!  
+  
+Do you want a safe place to post links? Not have to worry about malicious activity?  
+xTech Labs Introduces `Echo + Virus Total` Initiative.  
+We're on a mission, To keep your Discord Information where it belongs. With you and ONLY you!  
 
+### Step 1: Links!
+What Echo can do is delete every `unknown` link and than use Virus Total to scan.  
+If the link comes back safe, Echo will repost the URL and the original Author.  
+Echo in return adds the `safe url` to his cache system.  
+However if your link is a short url, it will remain in his cache for 1 week.  
+And than the link will be considered `unknown` once again.  
+Ok let me show you how to make this system.  
+
+**Method #1**:
+```
+.auto &{all}=
+{checkurl:
+	{/user} Please wait while we inspect your link..
+}{whitelist:
+	https://yoursite.com,
+	https://site2.com
+}
+```
+What we're telling Echo to do here is: Check `Every` message for a link.  
+If a link is found and unknown, or not on the Whitelist Echo will check it using Virus Total!  
+If everything is good with the link he will post back like:  
+```
+Echo: User Posted: [Link]
+```
+**Method #2**:
+```
+.auto &http://=
+{checkurl:
+	{/user} Please wait while we inspect your link..
+}{whitelist:
+	https://yoursite.com,
+	https://site2.com
+}
+```
+What we're telling echo to do here is: Check every message that has an `http://` in the Content.  
+Instead of every single message sent. `This is the best choice` because it doesn't slow Echo down  
+In your server. Since the A.R.S Limit is Server Based. It could be slowing other more vital commands down  
+That users are trying to request in your other channels.  
+  
+### Step 2: Attachments!
+**Soon!** The system is about 98% Complete but I am tired.  
+Will be completed on Dec 29th, 2016 Around `12pm` Eastern Time.  
+  
 # Did you know?
 You can have Echo link a trigger for Events! For example, if someone joins  
 or leaves, updates. Channel updates. All of it!
