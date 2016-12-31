@@ -32,26 +32,9 @@ Echo in return adds the `safe url` to his cache system.
 However if your link is a short url, it will remain in his cache for 1 week.  
 And than the link will be considered `unknown` once again.  
 Ok let me show you how to make this system.  
-
-**Method #1**:
+ 
 ```
-.auto &{all}=
-{checkurl:
-	{/user} Please wait while we inspect your link..
-}{whitelist:
-	https://yoursite.com,
-	https://site2.com
-}
-```
-What we're telling Echo to do here is: Check `Every` message for a link.  
-If a link is found and unknown, or not on the Whitelist Echo will check it using Virus Total!  
-If everything is good with the link he will post back like:  
-```
-Echo: User Posted: [Link]
-```
-**Method #2**:
-```
-.auto &http://=
+.auto &http://={init}
 {checkurl:
 	{/user} Please wait while we inspect your link..
 }{whitelist:
@@ -60,14 +43,9 @@ Echo: User Posted: [Link]
 }
 ```
 What we're telling echo to do here is: Check every message that has an `http://` in the Content.  
-Instead of every single message sent. `This is the best choice` because it doesn't slow Echo down  
-In your server. Since the A.R.S Limit is Server Based. It could be slowing other more vital commands down  
-That users are trying to request in your other channels.  
+And than scan the URL using Virus Total!  
   
-### Step 2: Attachments!
-**Soon!** The system is about 98% Complete but I am tired.  
-Will be completed on Dec 29th, 2016 Around `12pm` Eastern Time.  
-  
+   
 # Did you know?
 You can have Echo link a trigger for Events! For example, if someone joins  
 or leaves, updates. Channel updates. All of it!
@@ -95,7 +73,7 @@ And than load, save at any time.
   
 <b>You can use the {params} key in the trigger to catch their text!</b> 
 ```
-.auto &.giveme {params}=
+.auto &.giveme {params}={init}
 {role:
    {params}
 }{req:Owner}
@@ -110,10 +88,10 @@ whatever role you type (*As long as the role exists*) for example: `.giveme Staf
   
   
 If you want to use regex you add the <b>&</b> key before the word Example Below:  
-`.auto &word=The Response here!`  
+`.auto &word={init}The Response here!`  
 Want to add a work like `ass` to the word filter? but don't want to catch `mass`?  
 Add a space after the word. this will assure it only triggers on the word! Example Below:  
-`.auto &ass =The Response here!`  
+`.auto &ass ={init}The Response here!`  
   
 Ok, now let's look at the <b>Response</b> section and all the keys you can use!  
 <b>Keys</b> are surrounded by obraces. `{key}` Echo will replace these keys with data!  
@@ -127,7 +105,7 @@ You can view the [Public A.R.S Library](https://webm.xtclabs.net} Click Tools->A
 ### USING THE {PARAMS} KEY
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | .auto &.sayhi {params}=Your Message: {params}  |
+| Make Command  | .auto &.sayhi {params}={init}Your Message: {params}  |
 | Use Command:  | `.sayhi hey guys!`  |
   
   
@@ -136,7 +114,8 @@ Alright let's make a **"Server Info"** command
   
 in your server type this exactly:  
 ```php
-.auto .server={embed:
+.auto .server={init}
+{embed:
     {title:Information for {guild|name}}
     {type:rich}
     {author|name:{owner|name}}
@@ -171,7 +150,7 @@ You can set it up to list all the channels, roles & the server prefix. all that 
   
 ### WHOAMI COMMAND
 ```php
-.auto .whoami=
+.auto .whoami={init}
 {embed:
     {title:User Information for {guild|name}}
     {type:rich}
@@ -199,7 +178,7 @@ now just type `.whoami`
   
 ### Embeds with Multiple Fields!
 ```
-.auto .echo=
+.auto .echo={init}
 {embed:
     {type:rich}
         {color:
@@ -242,7 +221,7 @@ However there are plans to make it more dynamic.
 Below we are going to use an if sstatement to block  
 a command from the **#general** Channel.
 ```
-.auto .boobs=
+.auto .boobs={init}
 {if:
 	channel!=general
 }{boobs}
@@ -254,7 +233,7 @@ Except for #general channel.
 Alright now let's do the same but for a user.  
 Let's make it so No One BUT **Proxy** Can use a command.
 ```
-.auto .boobs=
+.auto .boobs={init}
 {if:
 	user==Proxy
 }{boobs}
@@ -265,21 +244,21 @@ However, Make sure to keep checking back as this will change.
 ### WORD FILTER EXAMPLE:
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &fuck={del}{pm}{kick}You've been kicked for swearing.`  |
+| Make Command  | `.auto &fuck={init}{del}{pm}{kick}You've been kicked for swearing.`  |
 | If Typed  | The message gets deleted and echo will send a pm of the above message.  |
   
   
 ### GET ALERTS ON TRIGGERS
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &<@YOURIDHERE>={alert:YOURIDHERE}I have alerted Proxy!`  |
+| Make Command  | `.auto &<@YOURIDHERE>={init}{alert:YOURIDHERE}I have alerted Proxy!`  |
 | If Typed  | Echo will private message you and let the user know.<br>You can get your id with `.getid @User`  |
   
   
 ### CUSTOM `.getid` COMMAND:
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &.grabid {params}={rawid}The user's ID: {params}`  |
+| Make Command  | `.auto &.grabid {params}={init}{rawid}The user's ID: {params}`  |
 | Use Command  | `.grabdid @User`  |
   
   
@@ -288,19 +267,19 @@ However, Make sure to keep checking back as this will change.
 ### Build the `.meme` or `.jokes` command
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto .meme={meme}`  |
+| Make Command  | `.auto .meme={init}{meme}`  |
 | Use Command  | `.meme`  |
   
   
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `auto .joke={joke}`  |
+| Make Command  | `auto .joke={init}{joke}`  |
 | Use Command  | `.joke`  |
   
   
 Alright that was fun, Now let's make a Sexy Meme & Jokes Command.
 ```
-.auto .joke=
+.auto .joke={init}
 {embed:
     {title:Random Fucking Jokes}
     {url:https://api.xtclabs.net}
@@ -325,7 +304,7 @@ Alright that was fun, Now let's make a Sexy Meme & Jokes Command.
 
 And now the Memes:
 ```
-.auto .meme=
+.auto .meme={init}
 {embed:
     {title:
         {randlist:
@@ -363,20 +342,20 @@ You can remove or configure anything you please.
 ### Build the `.cats` command in your server.
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto .cats={cats}`  |
+| Make Command  | `.auto .cats={init}{cats}`  |
 | Use Command  | `.cats`  |
   
   
 ### Build the `.giphy` command in your server.
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &.giphy {params}={giphy}`<br>**(Does not require `{params}` key)**  |
+| Make Command  | `.auto &.giphy {params}={init}{giphy}`<br>**(Does not require `{params}` key)**  |
 | Use Command  | `.giphy keyword here`  |
   
   
 ### Build the `.giveme` command in your server.
 ```
-.auto &.giveme {params}=
+.auto &.giveme {params}={init}
 {role:
 	{params}
 }{req:Owner}
@@ -390,20 +369,20 @@ You've assumed the role **{params}**
 ### Build the `.boobs` and `.ass` commands
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto .ass={ass}`  |
+| Make Command  | `.auto .ass={init}{ass}`  |
 | Use Command  | `.ass`  |
   
   
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto .boobs={boobs}`  |
+| Make Command  | `.auto .boobs={init}{boobs}`  |
 | Use Command  | `.boobs`  |
   
   
 ### MAKE AN ANNOUNCE COMMAND:
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &.announce {params}={redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  |
+| Make Command  | `.auto &.announce {params}={init}{redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  |
 | Use Command  | `.announce What's up!`  |
   
   
