@@ -136,6 +136,18 @@ You can view the [Public A.R.S Library](https://webm.xtclabs.net} Click Tools->A
 | Use Command:  | `.sayhi hey guys!`  |
   
   
+### PREVENT MULTI-LINE MESSAGES WITH REGEX!
+```
+.auto &{:}(\n)={init}
+{if:channel==echo-test}
+{del}Whoa {/user}.. Not in here
+```
+First you need to replace `echo-test` with whatever channel you want to prevent multi-line chat.  
+Basically what this does is. If Echo senses any multi-line (where they hit shift+enter)  
+He will remove their message and display a message letting them know.  
+**Notice** This doesn't remove long messages in a single line. Only if they hit (shift+enter)  
+  
+  
 ### SERVER INFO COMMAND
 Alright let's make a **"Server Info"** command    
   
