@@ -17,6 +17,33 @@
 ### We have added so many keys, please give us some time to document them.  
 And remember you can view a list of command, keys at [Echo Official Website](https://echo.xtclabs.net/)  
   
+
+# Echo + Pure Regex!
+Alright everyone! Something that was widely requested in Echo **1.x** Is here!  
+Echo can parse and (for now) lightly manipulate content based off pure Regex!  
+  
+First we need to introduce you to a new identifier in the trigger.  
+`{:}` identifier is used to let echo know your trigger will be **Pure Regex**  
+However, you still need to add the `&` trigger before hand. Let's check out the example below:  
+```php
+.auto &{:}(a{3})={init}
+Hey {/user} you said aaa
+```
+Notice how we keep the Identifier `&` before the `{:}` this is important.  
+  
+This time we are going to detect some special characters and than have echo replace them.  
+```
+.auto &{:}[^][.,_'0-9a-zA-Z -]={init}
+{%replace|with:TEST}
+```
+For now the manipulation is basic. But this will change as the system grows!  
+But what we're doing is having Echo detect all the special characters  
+like `~!@#$%^&*()+` however he ignores a few as well. `_[],.space`  
+And than he will post a message replacing each char with `TEST`  
+  
+If you're newer to regex there are a few websites that can push you along.  
+[Regex101.com](https://regex101.com/)  
+  
   
 # Echo + Virus Total!
 > Protect your members!  
