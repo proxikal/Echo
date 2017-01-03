@@ -9,7 +9,7 @@
 
 ### Discord Server Manager Website:
 [https://webm.xtclabs.net](https://webm.xtclabs.net)  
-   
+
 ### Echo for Beginners:
 [https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)  
    
@@ -112,6 +112,10 @@ use | Admin
 }
 ```
   
+### Single lined if statement
+```php
+.auto .test3={init}use | Admin{if(hasrole):You have the role!} (else) {You don't have the role!}
+```
   
 # Echo + Virus Total!
 > Protect your members!  
