@@ -10,6 +10,9 @@
 ### Discord Server Manager Website:
 [https://webm.xtclabs.net](https://webm.xtclabs.net)  
    
+### Echo for Beginners:
+[https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)  
+   
    
 ## This page is being converted to the new Echo Documentation
 *On Dec. 27th 2016*  
@@ -43,6 +46,71 @@ And than he will post a message replacing each char with `TEST`
   
 If you're newer to regex there are a few websites that can push you along.  
 [Regex101.com](https://regex101.com/)  
+  
+  
+# Introducing the new If Statments!
+Echo now has the power to use (somewhat) comples if statements!  
+Before we start I want to make sure you understand `use |`  
+**use |** is a way to define what your if statement is looking for.  
+Here's a little example. we're going to use my `Discord ID`
+
+```php
+use | 146046383726657536
+```
+Now you can also define multiple users,roles,channels.  
+However **you can't mix defines**. meaning you can't have this  
+```php
+use | USERID | CHANNELID | Role Name
+```
+The above example will not work, when you're using an if statement  
+You're defining the statement itself with `(isuser)` or `(ischannel)`, `(hasrole)`  
+So you need to define the proper IDS with the Statement.  
+
+**HasRole** When you're defining a role don't worry, you don't need the id.  
+Instead it's the **Case Sensitive** name. Example below:
+```php
+use | Admin
+```
+And you can check as many roles as you need example below:
+```php
+use | Admin | Owner | Developers
+```
+So if **Bob** Has `Admin` and **Tom** Does __not__, However **Tom** Has `Developers` role.
+Echo will respond with the response. If **Bob** and **Tom** Has neither, echo will not respond.  
+
+### If Statement - Restrict command to User(s)
+```php
+.auto .test2={init}
+use | 146046383726657536
+{if(isuser):
+    {/user} can use this command!
+} (else) {
+    {/user} doesn't have access to this command.
+}
+```
+Make sure to __Read above__ to learn how to define multiple users.  
+  
+### If Statement - Restrict command to Channel(s)
+```php
+.auto .test={init}
+use | 265348251266449409
+{if(ischannel):
+    This command will work!
+} (else) {
+    {/user} this command is restricted from this channel.
+}
+```
+  
+### If Statement - Restrict command to Role(s)
+```php
+.auto .test3={init}
+use | Admin
+{if(hasrole):
+    {/user} has the role Admin
+} (else) {
+    {/user} doesn't have the role Admin
+}
+```
   
   
 # Echo + Virus Total!
