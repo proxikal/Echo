@@ -353,10 +353,9 @@ use | YOUR-CHANNEL-ID
 }
 ```
   
-## Echo's A.R.S Is not a good way to filter out words. There is a Rate Limiter  
-Governing the A.R.S, So when someone spams `fuck` echo takes time to catch up.  
-So Only use the below example if you really need to.  
-Otherwise just use Echo's `WordFilter` command  
+## Echo's A.R.S Is not a good way to filter out words.
+There is a Rate Limiter Governing the A.R.S, So when someone spams `fuck` echo takes time to catch up.  
+So Only use the below example if you really need to. Otherwise just use Echo's `WordFilter` command  
 ### WORD FILTER EXAMPLE:
 | Steps  | You Type  |
 | :--:  | :--:  |
@@ -397,7 +396,7 @@ Alright that was fun, Now let's make a Sexy Meme & Jokes Command.
 ```
 .auto .joke={init}
 {embed:
-    {title:Random Fucking Jokes}
+    {title:Random Jokes}
     {url:https://api.xtclabs.net}
     {type:rich}
     {desc:
@@ -422,14 +421,7 @@ And now the Memes:
 ```
 .auto .meme={init}
 {embed:
-    {title:
-        {randlist:
-            Here Bitch!,Nom Nom Nom,
-            Oh Look at you!,Noob Alert,
-            Wank-o-Meter,Take a cold Shower!
-            Douche Alert,The King is here!
-        }
-    }
+    {title:Random Memes!}
     {url:https://api.xtclabs.net}
     {type:rich}
     {color:
