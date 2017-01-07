@@ -32,6 +32,8 @@ And remember you can view a list of command, keys at [Echo Official Website](htt
 | [Using If Statements](https://github.com/proxikal/Echo/wiki/If-Statements)  | Learn how to use If Statements with Echo.  |
 | [Echo + Virus Total](https://github.com/proxikal/Echo/wiki/Echo-plus-VT)  | Learn how Echo can protect your Members.  |
    
+You can grab a channels id by typing `.channelid` in the channel.  
+Or enabling `Developer Mode` in your Discord **User Settings Panel**  
   
 # Auto Response System **101**
 > Here are some examples to help you along.
@@ -77,10 +79,14 @@ You can view the [Public A.R.S Library](https://webm.xtclabs.net} Click Tools->A
 ### PREVENT MULTI-LINE MESSAGES WITH REGEX!
 ```php
 .auto &{:}(\n)={init}
-{if:channel==echo-test}
-{del}Whoa {/user}.. Not in here
+use | YOUR-CHANNEL-ID
+{if(ischannel):
+    {del}Whoa {/user}.. Not in here
+} (else) {
+    {stop}
+}
 ```
-First you need to replace `echo-test` with whatever channel you want to prevent multi-line chat.  
+First you need to replace `YOUR-CHANNEL-ID` with whatever channel you want to prevent multi-line chat.  
 Basically what this does is. If Echo senses any multi-line (where they hit shift+enter)  
 He will remove their message and display a message letting them know.  
 **Notice** This doesn't remove long messages in a single line. Only if they hit (shift+enter)  
@@ -323,8 +329,10 @@ You can remove or configure anything you please.
 ### Build the `.giphy` command in your server.
 | Steps  | You Type  |
 | :--:  | :--:  |
-| Make Command  | `.auto &.giphy {params}={init}{giphy}`<br>**(Does not require `{params}` key)**  |
+| Make Command  | `.auto &.giphy {params}={init}{giphy}`  |
 | Use Command  | `.giphy keyword here`  |
+**({giphy} Does not require `{params}` key in the response like most keys.)**  
+Just make sure you've placed the `{params}` key in the trigger as shown above!  
   
   
 ### Build the `.giveme` command in your server.
@@ -337,6 +345,7 @@ You've assumed the role **{params}**
 ```
 **Important**: Make sure you add a `req` or `exc` key when dealing with the above.  
 You `DO NOT` want everyone to have have access to this command.  
+  
 | Steps  | You Type  |
 | :--:  | :--:  |
 | Use Command  | `.giveme Role Name` |
@@ -360,6 +369,4 @@ You `DO NOT` want everyone to have have access to this command.
 | :--:  | :--:  |
 | Make Command  | `.auto &.announce {params}={init}{redirect:CHANNELID}**ANNOUNCEMENT:** *{params}*`  |
 | Use Command  | `.announce What's up!`  |
-  
-  
-You can grab a channels id by typing `.channelid` in the channel.  
+   
