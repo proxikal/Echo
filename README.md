@@ -132,7 +132,7 @@ However if your link is a short url, it will remain in his cache for 1 week.
 And than the link will be considered `unknown` once again.  
 Ok let me show you how to make this system.  
  
-```
+```php
 .auto &http://={init}
 {checkurl:
 	{/user} Please wait while we inspect your link..
@@ -171,7 +171,7 @@ And than load, save at any time.
   
   
 <b>You can use the {params} key in the trigger to catch their text!</b> 
-```
+```php
 .auto &.giveme {params}={init}
 {role:
    {params}
@@ -209,7 +209,7 @@ You can view the [Public A.R.S Library](https://webm.xtclabs.net} Click Tools->A
   
   
 ### PREVENT MULTI-LINE MESSAGES WITH REGEX!
-```
+```php
 .auto &{:}(\n)={init}
 {if:channel==echo-test}
 {del}Whoa {/user}.. Not in here
@@ -288,7 +288,7 @@ Roles: *{listroles}*
 now just type `.whoami`
   
 ### Embeds with Multiple Fields!
-```
+```php
 .auto .echo={init}
 {embed:
     {type:rich}
@@ -326,32 +326,37 @@ now just type `.whoami`
 now just type `.echo` 
 You are allowed 10 fields. `field[0]` through `field[9]`  
   
-### Using IF Statements with Echo.
-The IF statements are very basic at the moment.  
-However there are plans to make it more dynamic.  
-Below we are going to use an if sstatement to block  
-a command from the **#general** Channel.
-```
+### Restricting Boobs & Ass command to channel(s)
+```php
 .auto .boobs={init}
-{if:
-	channel!=general
-}{boobs}
+use | YOUR-CHANNEL-ID
+{if(ischannel):
+    {boobs}
+} (else) {
+    {stop}
+}
 ```
 Basically what we're doing above is..  
 People will be able to use **.boobs** in any channel.  
-Except for #general channel.  
+you choose. You need to replace `YOUR-CHANNEL-ID` with the channel  
+you want to allow the boobs command in. You can also add multiple channels.  
+`use | CHANNELID | CHANNELID`  
   
-Alright now let's do the same but for a user.  
-Let's make it so No One BUT **Proxy** Can use a command.
+Alright now let's do the same but for `{ass}` key! 
+```php
+.auto .ass={init}
+use | YOUR-CHANNEL-ID
+{if(ischannel):
+    {ass}
+} (else) {
+    {stop}
+}
 ```
-.auto .boobs={init}
-{if:
-	user==Proxy
-}{boobs}
-```
-Alright! Now you understand the If statements.  
-However, Make sure to keep checking back as this will change.  
   
+## Echo's A.R.S Is not a good way to filter out words. There is a Rate Limiter  
+Governing the A.R.S, So when someone spams `fuck` echo takes time to catch up.  
+So Only use the below example if you really need to.  
+Otherwise just use Echo's `WordFilter` command  
 ### WORD FILTER EXAMPLE:
 | Steps  | You Type  |
 | :--:  | :--:  |
@@ -472,6 +477,8 @@ You can remove or configure anything you please.
 }{req:Owner}
 You've assumed the role **{params}**
 ```
+**Important**: Make sure you add a `req` or `exc` key when dealing with the above.  
+You `DO NOT` want everyone to have have access to this command.  
 | Steps  | You Type  |
 | :--:  | :--:  |
 | Use Command  | `.giveme Role Name` |
