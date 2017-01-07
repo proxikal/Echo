@@ -21,154 +21,20 @@
 And remember you can view a list of command, keys at [Echo Official Website](https://echo.xtclabs.net/)  
   
 
-# Echo + Pure Regex!
-Alright everyone! Something that was widely requested in Echo **1.x** Is here!  
-Echo can parse and (for now) lightly manipulate content based off pure Regex!  
-  
-First we need to introduce you to a new identifier in the trigger.  
-`{:}` identifier is used to let echo know your trigger will be **Pure Regex**  
-However, you still need to add the `&` trigger before hand. Let's check out the example below:  
-```php
-.auto &{:}(a{3})={init}
-Hey {/user} you said aaa
-```
-Notice how we keep the Identifier `&` before the `{:}` this is important.  
-  
-This time we are going to detect some special characters and than have echo replace them.  
-```
-.auto &{:}[^][.,_'0-9a-zA-Z -]={init}
-{%replace|with:TEST}
-```
-For now the manipulation is basic. But this will change as the system grows!  
-But what we're doing is having Echo detect all the special characters  
-like `~!@#$%^&*()+` however he ignores a few as well. `_[],.space`  
-And than he will post a message replacing each char with `TEST`  
-  
-If you're newer to regex there are a few websites that can push you along.  
-[Regex101.com](https://regex101.com/)  
-  
-  
-# Introducing the new If Statments!
-Echo now has the power to use (somewhat) comples if statements!  
-Before we start I want to make sure you understand `use |`  
-**use |** is a way to define what your if statement is looking for.  
-Here's a little example. we're going to use my `Discord ID`
-
-```php
-use | 146046383726657536
-```
-Now you can also define multiple users,roles,channels.  
-However **you can't mix defines**. meaning you can't have this  
-```php
-use | USERID | CHANNELID | Role Name
-```
-The above example will not work, when you're using an if statement  
-You're defining the statement itself with `(isuser)` or `(ischannel)`, `(hasrole)`  
-So you need to define the proper IDS with the Statement.  
-
-**HasRole** When you're defining a role don't worry, you don't need the id.  
-Instead it's the **Case Sensitive** name. Example below:
-```php
-use | Admin
-```
-And you can check as many roles as you need example below:
-```php
-use | Admin | Owner | Developers
-```
-So if **Bob** Has `Admin` and **Tom** Does __not__, However **Tom** Has `Developers` role.
-Echo will respond with the response. If **Bob** and **Tom** Has neither, echo will not respond.  
-
-### If Statement - Restrict command to User(s)
-```php
-.auto .test2={init}
-use | 146046383726657536
-{if(isuser):
-    {/user} can use this command!
-} (else) {
-    {/user} doesn't have access to this command.
-}
-```
-Make sure to __Read above__ to learn how to define multiple users.  
-  
-### If Statement - Restrict command to Channel(s)
-```php
-.auto .test={init}
-use | 265348251266449409
-{if(ischannel):
-    This command will work!
-} (else) {
-    {/user} this command is restricted from this channel.
-}
-```
-  
-### If Statement - Restrict command to Role(s)
-```php
-.auto .test3={init}
-use | Admin
-{if(hasrole):
-    {/user} has the role Admin
-} (else) {
-    {/user} doesn't have the role Admin
-}
-```
-  
-### Single lined if statement
-```php
-.auto .test3={init}use | Admin{if(hasrole):You have the role!} (else) {You don't have the role!}
-```
-  
-# Echo + Virus Total!
-> Protect your members!  
-  
-Do you want a safe place to post links? Not have to worry about malicious activity?  
-xTech Labs Introduces `Echo + Virus Total` Initiative.  
-We're on a mission, To keep your Discord Information where it belongs. With you and ONLY you!  
-
-### Step 1: Links!
-What Echo can do is delete every `unknown` link and than use Virus Total to scan.  
-If the link comes back safe, Echo will repost the URL and the original Author.  
-Echo in return adds the `safe url` to his cache system.  
-However if your link is a short url, it will remain in his cache for 1 week.  
-And than the link will be considered `unknown` once again.  
-Ok let me show you how to make this system.  
- 
-```php
-.auto &http://={init}
-{checkurl:
-	{/user} Please wait while we inspect your link..
-}{whitelist:
-	https://yoursite.com,
-	https://site2.com
-}
-```
-What we're telling echo to do here is: Check every message that has an `http://` in the Content.  
-And than scan the URL using Virus Total!  
-  
+# Table of Contents
+| Link  | Information  |
+| :--:  | :--:  |
+| [A.R.S Etiquette](https://github.com/proxikal/Echo/wiki/A.R.S-Etiquette)  | Learn how to properly format your A.R.S!  |
+| [Discord Events](https://github.com/proxikal/Echo/wiki/A.R.S-Events)  | Learn how to link Echo to your Discord Events!  |
+| [A.R.S Profiles](https://github.com/proxikal/Echo/wiki/A.R.S-Profiles)  | Learn how to have multiple A.R.S DB's  |
+| [Echo 4 Devs](https://github.com/proxikal/Echo/wiki/Echo-for-Devs)  | Learn how to send your guild info to your websites!  |
+| [Regex Triggers](https://github.com/proxikal/Echo/wiki/Regex-Triggers)  | Learn how to use Pure Regex with Echo!  |
+| [Using If Statements](https://github.com/proxikal/Echo/wiki/If-Statements)  | Learn how to use If Statements with Echo.  |
+| [Echo + Virus Total](https://github.com/proxikal/Echo/wiki/Echo-plus-VT)  | Learn how Echo can protect your Members.  |
    
-# Did you know?
-You can have Echo link a trigger for Events! For example, if someone joins  
-or leaves, updates. Channel updates. All of it!
-  
-[View Echo A.R.S Events](https://github.com/proxikal/Echo/wiki/A.R.S-Events)  
-
-# Are you A Developer?
-### Echo can send your guild object, channels, roles & members to any site!
-That's right, you can have a full fledged members list on your page.  
-Along with roles, channels. You could basically create your own manager.  
-And keep it 100% updated using Echos A.R.S System and the **{Events}** Keys.  
-  
-[View Echo for Devs](https://github.com/proxikal/Echo/wiki/Echo-for-Devs)  
-
-# Multiple A.R.S Profiles & .grabars!
-We've made it so you can store multiple A.R.S Profiles  
-And than load, save at any time.  
-  
-[View Echo A.R.S Profiles](https://github.com/proxikal/Echo/wiki/A.R.S-Profiles)  
   
 # Auto Response System **101**
-  
-[View Echo A.R.S Etiquette](https://github.com/proxikal/Echo/wiki/A.R.S-Etiquette)  
-  
+> Here are some examples to help you along.
   
 <b>You can use the {params} key in the trigger to catch their text!</b> 
 ```php
