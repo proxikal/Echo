@@ -1,4 +1,4 @@
-.auto .server={init}
+.server={init}
 {embed:
     {title:Information for {guild|name}}
     {type:rich}
@@ -28,7 +28,7 @@
     {footer|text: Echo 2.0 A.R.S}
 }
 [#CONTINUE#]
-.auto .whoami={init}
+.whoami={init}
 {embed:
     {title:User Information for {guild|name}}
     {type:rich}
