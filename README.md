@@ -1,21 +1,12 @@
-### xTech Labs Website
-[https://xtclabs.net](https://xtclabs.net)  
-
-### Echo Official Website:
-[https://echo.xtclabs.net](https://echo.xtclabs.net)  
-
-### AutoGo Official Website:
-[https://autogo.xtclabs.net](https://autogo.xtclabs.net)  
-
-### Discord Server Manager Website:
-[https://webm.xtclabs.net](https://webm.xtclabs.net)  
-
-### Echo for Beginners:
-[https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)  
-   
-   
-## This page is being converted to the new Echo Documentation
-*On Dec. 27th 2016*  
+# Table of References
+| Link  | Information  |
+| :--:  | :--:  |
+| [xTech Labs Website](https://xtclabs.net)  | xTech Labs Official Website  |
+| [Echo 2.0 Website Website](https://echo.xtclabs.net)  | Echo 2.0 Official Website  |
+| [AutoGo Website](https://autogo.xtclabs.net)  | AutoGo Official Website  |
+| [Discord Server Manager](https://webm.xtclabs.net)   | Closed Beta (Will be back soon!)  |
+| [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
+  
   
 ### We have added so many keys, please give us some time to document them.  
 And remember you can view a list of command, keys at [Echo Official Website](https://echo.xtclabs.net/)  
@@ -31,6 +22,7 @@ And remember you can view a list of command, keys at [Echo Official Website](htt
 | [Regex Triggers](https://github.com/proxikal/Echo/wiki/Regex-Triggers)  | Learn how to use Pure Regex with Echo!  |
 | [Using If Statements](https://github.com/proxikal/Echo/wiki/If-Statements)  | Learn how to use If Statements with Echo.  |
 | [Echo + Virus Total](https://github.com/proxikal/Echo/wiki/Echo-plus-VT)  | Learn how Echo can protect your Members.  |
+| [A.R.S Profile locking](https://github.com/proxikal/Echo/wiki/Channel-Profiles)  | Learn how to lock A.R.S Profiles to channels.  |
    
 You can grab a channels id by typing `.channelid` in the channel.  
 Or enabling `Developer Mode` in your Discord **User Settings Panel**  
