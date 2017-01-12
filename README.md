@@ -8,10 +8,21 @@
 | [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
   
   
-### We have added so many keys, please give us some time to document them.  
-And remember you can view a list of command, keys at [Echo Official Website](https://echo.xtclabs.net/)  
+# Support Staff Openings.
+> You need to have knowledge in the A.R.S and his Commands.  
+The commands aren't as big of an issue as the A.R.S 
   
-
+### Professional, Knowledgeable & Good Attitude!
+> Good manners! And the ability to join servers to help with any special case.  
+PM: Your pm needs to be open for anyone to ask for help, we have a support channel.  
+But if they message you in your PM, Don't ask them to re-type in support.  
+  
+### Independence!
+> Study! Because the A.R.S Is big! And it's only going to get bigger.  
+We need you to be able to fix problems yourself. (Minor bugging of Management is fine)  
+Don't message our moderators to help someone else. (They are only there to kick, ban & keep the peace)  
+  
+  
 # Table of Contents
 | Link  | Information  |
 | :--:  | :--:  |
