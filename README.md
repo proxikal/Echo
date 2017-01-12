@@ -26,7 +26,7 @@ Is all of this too much? Just want the commands you see below with ease?
 We have a few files with some preset commands! All you have to do is..  
 Step 1: Download one of the snippet files you want in [Easy Scripts Folder](https://github.com/proxikal/Echo/tree/master/EasyScripts)  
 Step 2: Drag the file(s) you want into a channel Echo has permissions to read messages in.  
-If all went well, you will see the new commands listed under the file your uploaded.  
+If all went well, you will see the new commands listed under the file you uploaded.  
 And available for you to use!  
   
 # Table of Contents
