@@ -22,6 +22,7 @@ But if they message you in your PM, Don't ask them to re-type in support.
 We need you to be able to fix problems yourself. (Minor bugging of Management is fine)  
 Don't message our moderators to help someone else. (They are only there to kick, ban & keep the peace)  
   
+# Easy Mode!
 Is all of this too much? Just want the commands you see below with ease?  
 We have a few files with some preset commands! All you have to do is..  
 Step 1: Download one of the snippet files you want in [Easy Scripts Folder](https://github.com/proxikal/Echo/tree/master/EasyScripts)  
