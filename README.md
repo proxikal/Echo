@@ -6,6 +6,7 @@
 | [AutoGo Website](https://autogo.xtclabs.net)  | AutoGo Official Website  |
 | [Discord Server Manager](https://webm.xtclabs.net)   | Manage Echo & Your Server Online!  |
 | [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
+| [Echo R.P.G Game](https://discord.gg/dHzx2aa)  | An R.P.G Text based game coded with Echo!  |  
   
   
 # Support Staff Openings.
@@ -42,6 +43,7 @@ And available for you to use!
 | [Echo + Virus Total](https://github.com/proxikal/Echo/wiki/Echo-plus-VT)  | Learn how Echo can protect your Members.  |
 | [A.R.S Profile locking](https://github.com/proxikal/Echo/wiki/Channel-Profiles)  | Learn how to lock A.R.S Profiles to channels.  |
 | [A.R.S Functions](https://github.com/proxikal/EchoRepository)  | Learn how to simplify your A.R.S With Functions!  |
+| [A.R.S Error Reporting](https://github.com/proxikal/Echo/wiki/A.R.S-Error-Reporting)  | Learn how to reveal A.R.S Errors  |  
   
 You can grab a channels id by typing `.channelid` in the channel.  
 Or enabling `Developer Mode` in your Discord **User Settings Panel**  
