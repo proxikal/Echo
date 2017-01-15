@@ -142,8 +142,8 @@ in your server type this exactly:
 }
 ```
 Now when you type `.server` Echo will display the server information.  
-You can set it up to list all the channels, roles & the server prefix. all that stuff!
-  
+You can set it up to list all the channels, roles & the server prefix. all that stuff!  
+![Server Example](https://github.com/proxikal/Echo/blob/master/server-example.png)
   
 ### WHOAMI COMMAND
 ```php
