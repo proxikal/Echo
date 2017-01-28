@@ -104,10 +104,37 @@ First you need to replace `YOUR-CHANNEL-ID` with whatever channel you want to pr
 Basically what this does is. If Echo senses any multi-line (where they hit shift+enter)  
 He will remove their message and display a message letting them know.  
 **Notice** This doesn't remove long messages in a single line. Only if they hit (shift+enter)  
-  
+
+### EMBEDS
+You can also make the A.R.S. print out an entire embed.
+An example of an embed containing all its options:
+```php
+{embed:
+	{title:}
+	//Insert the title here
+	{type:rich}
+	//This is always rich as discord does not have any other types
+	{author|name:}
+	//Insert the author name (={user}) here
+	{author|icon:}
+	//This can be used to display a little picture next to the author name
+	{author|url:}
+	{color:}
+	//Insert a colour here (HEX-colors only)
+	{thumb|url:}
+	//Inserts a small picture in the top right of the embed, can be replaced with {usericon} or related
+	{desc:}
+	//Your entire description goes here, again {user}, {/user} and related can be used
+	{footer|icon:}
+	//An icon url goes here ({usericon} or related can also be used) This icon will be displayed at the bottom of the embed
+	{footer|text:}
+	//Text that should go alongside the {footer|icon:} goes here
+}
+```
   
 ### SERVER INFO COMMAND
-Alright let's make a **"Server Info"** command    
+Alright let's make a **"Server Info"** command!
+We will be using an embed in this example.
   
 in your server type this exactly:  
 ```php
