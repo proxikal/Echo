@@ -69,10 +69,7 @@ whatever role you type (*As long as the role exists*) for example: `.giveme Staf
   
   
 If you want to use regex you add the <b>&</b> key before the word Example Below:  
-`.auto &word={init}The Response here!`  
-Want to add a work like `ass` to the word filter? but don't want to catch `mass`?  
-Add a space after the word. this will assure it only triggers on the word! Example Below:  
-`.auto &ass ={init}The Response here!`  
+`.auto &word={init}The Response here!`    
   
 Ok, now let's look at the <b>Response</b> section and all the keys you can use!  
 <b>Keys</b> are surrounded by obraces. `{key}` Echo will replace these keys with data!  
