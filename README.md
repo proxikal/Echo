@@ -271,34 +271,60 @@ this will change to allow for multiple randlists, here is an example
 ```
 Now when you type `.gift` you will get random responses.  
 the more responses, the better!  
- 
-### Restricting Boobs & Ass command to channel(s)
+## IF STATEMENTS
+If statements are used to determine wether or not a requirement is met and they are a very powerful tool for all coders, Echo has an IF statement system as well! There are multiple types, lets sum them up shall we?
+### General use
+An if statement must contain three things, an "if-parameter", an "if-success-case" and an "if-fail-case". The if-parameter defines what will be checked, this depends on what type of if statement is being used. the if-success-case is basically a simple output that will be executed when the if statement succeeds, if it fails, the if-fail-case will be executed instead. You can use the {stop} key to make it do nothing.
+An example:
 ```php
-.auto .boobs={init}
-use | YOUR-CHANNEL-ID
-{if(ischannel):
-    {boobs}
+.auto .test={init}
+use | IF-PARAMETER-HERE
+{if(IF-TYPE-HERE):
+    Success!
 } (else) {
-    {stop}
+    Fail!
 }
 ```
-Basically what we're doing above is..  
-People will be able to use **.boobs** in any channel.  
-you choose. You need to replace `YOUR-CHANNEL-ID` with the channel  
-you want to allow the boobs command in. You can also add multiple channels.  
-`use | CHANNELID | CHANNELID`  
+NOTE: If you want to use multiple if-parameters you must divide all parameters with ` | `
+Example: use | param1 | param2 | param3
   
-Alright now let's do the same but for `{ass}` key! 
+### If type: Channel
+When using this type of if statement, the success case will be executed only when the statement is executed from one of the set channel ID's (You can obtain the channel id by typing: `.channelid` ). The type is named `ischannel`
+An example:
 ```php
-.auto .ass={init}
-use | YOUR-CHANNEL-ID
+.auto .test={init}
+use | YOUR-CHANNEL-ID-HERE | OPTIONAL-EXTRA-CHANNEL-ID-HERE
 {if(ischannel):
-    {ass}
+    The command was executed in one of the set channels
 } (else) {
-    {stop}
+    The command was not executed in one of the set channels
 }
 ```
-  
+### If type: User
+To use this you need to set one or multiple user ID's (obtained via right-clicking the user, then selecting "Copy ID"), the success case is executed when the user is one of the set users, otherwise the fail case is executed. Its name: `isuser`
+An example:
+```php
+.auto .test={init}
+use | USER-ID-HERE | OPTIONAL-EXTRA-USER-ID-HERE
+{if(isuser):
+    You are one of the set users
+} (else) {
+    You are not one of the set users
+}
+```
+### If type: Role
+The success case is executed if the user has one of the roles that match the set roles, to set roles you must use role names. This is casesensitive. The name: `hasrole`
+An example:
+```php
+.auto .test={init}
+use | ROLE-NAME-HERE | OPTIONAL-EXTRA-ROLE-NAME-HERE
+{if(hasrole):
+    You have one of the set roles!
+} (else) {
+    You don't have one of the set roles!
+}
+```
+
 ## Echo's A.R.S Is not a good way to filter out words.
 There is a Rate Limiter Governing the A.R.S, So when someone spams `fuck` echo takes time to catch up.  
 So Only use the below example if you really need to. Otherwise just use Echo's `WordFilter` command  
