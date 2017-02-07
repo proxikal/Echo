@@ -270,7 +270,8 @@ this will change to allow for multiple randlists, here is an example
 }
 ```
 Now when you type `.gift` you will get random responses.  
-the more responses, the better!  
+the more responses, the better!
+
 ## IF STATEMENTS
 If statements are used to determine wether or not a requirement is met and they are a very powerful tool for all coders, Echo has an IF statement system as well! There are multiple types, lets sum them up shall we?
 ### General use
