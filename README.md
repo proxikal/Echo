@@ -325,6 +325,8 @@ use | ROLE-NAME-HERE | OPTIONAL-EXTRA-ROLE-NAME-HERE
     You don't have one of the set roles!
 }
 ```
+## Note:
+There are a few more if types, you can find those [here](https://github.com/proxikal/Echo/wiki/If-Statements)
 
 ## Echo's A.R.S Is not a good way to filter out words.
 There is a Rate Limiter Governing the A.R.S, So when someone spams `fuck` echo takes time to catch up.  
