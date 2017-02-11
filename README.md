@@ -3,7 +3,7 @@
 | :--:  | :--:  |
 | [xTech Labs Website](https://xtclabs.net)  | xTech Labs Official Website  |
 | [Echo 2.0 Website](https://echo.xtclabs.net)  | Echo 2.0 Official Website  |
-| [Echo Reddit](https://www.reddit.com/r/EchoDiscord/) |
+| [Echo Reddit](https://www.reddit.com/r/EchoDiscord/) | Official Echo Subreddit! |
 | [AutoGo Website](https://autogo.xtclabs.net)  | AutoGo Official Website  |
 | [Discord Server Manager](https://webm.xtclabs.net)   | Manage Echo & Your Server Online!  |
 | [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
