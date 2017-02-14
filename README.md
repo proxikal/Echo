@@ -8,7 +8,8 @@
 | [Discord Server Manager](https://webm.xtclabs.net)   | Manage Echo & Your Server Online!  |
 | [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
 | [Echo R.P.G Game](https://discord.gg/dHzx2aa)  | An R.P.G Text based game coded with Echo!  |  
-| [A.R.S Builder](https://builder.xtclabs.net/)  | Currently in Beta by: JurrijnP  |  
+| [A.R.S Builder](https://builder.xtclabs.net/)  | Currently in Beta by: JurrijnP  |
+| [Project Frostbyte](https://github.com/proxikal/Frostbyte) | Open Source Lightweight version of Echo anyone can contribute!  |  
   
 # Easy Mode!
 Is all of this too much? Just want the commands you see below with ease?  
