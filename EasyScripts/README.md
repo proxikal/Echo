@@ -30,3 +30,4 @@ or a message stating a single command was installed.
 | .boobs | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/boobs.snippet.ars) | random boobs pictures |
 | .cute | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/cute.snippet.ars) | random cute pictures |
 | .cars | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/cars.snippet.ars) | random car pictures |
+| All [Safe] | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/combined.safe.snippet.ars) | All safe commands |
