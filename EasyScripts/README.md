@@ -13,7 +13,7 @@ If the commands aren't working there is a great chance he has no permissions.
 In a channel where Echo can read messages drag the file you saved to your channel  
 Once the file uploads to Discord Echo will install the command(s).  
 If everything worked right he will list the commands that were installed.  
-of a message stating a single command was installed.  
+or a message stating a single command was installed.  
   
 ### Table of Scripts
 | Command | Download | Short Desc |  
