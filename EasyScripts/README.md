@@ -18,7 +18,7 @@ or a message stating a single command was installed.
 ### Table of Scripts
 | Command | Download | Short Desc |  
 | :--: | :--: | :--: |  
-| .server | [Click Here](https://https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.server.snippet.ars) | An embed server info command |
+| .server | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.server.snippet.ars) | An embed server info command |
 | .joke | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.jokes.snippet.ars) | an embed jokes command |
 | .meme | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.meme.snippet.ars) | an embed meme command |
 | .whoami | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.whoami.snippet.ars) | an embed whoami command |
