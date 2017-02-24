@@ -22,5 +22,10 @@ If everything worked right, he will list the commands that were installed.
 | .meme | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.meme.snippet.ars) | an embed meme command |
 | .whoami | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.whoami.snippet.ars) | an embed whoami command |
 | .sky | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/sky.snippet.ars) | random sky pictures |
-| .space | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/space.snippet.ars) | random space pictures |  
-  
+| .space | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/space.snippet.ars) | random space pictures |
+| .cats | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/cats.snippet.ars) | random cat pictures |
+| .dbz | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/dbz.snippet.ars) | random dbz pictures |
+| .ass | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/ass.snippet.ars) | random ass pictures |
+| .boobs | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/boobs.snippet.ars) | random boobs pictures |
+| .cute | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/cute.snippet.ars) | random cute pictures |
+| .cars | [Click Here](https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/cars.snippet.ars) | random car pictures |
