@@ -12,7 +12,8 @@ If the commands aren't working there is a great chance he has no permissions.
 > Find the command you want in the table below, right click "Save link as"  
 In a channel where Echo can read messages drag the file you saved to your channel  
 Once the file uploads to Discord Echo will install the command(s).  
-If everything worked right, he will list the commands that were installed.  
+If everything worked right he will list the commands that were installed.  
+of a message stating a single command was installed.  
   
 ### Table of Scripts
 | Command | Download | Short Desc |  
