@@ -32,7 +32,8 @@ And available for you to use!
 | [A.R.S Profile locking](https://github.com/proxikal/Echo/wiki/Channel-Profiles)  | Learn how to lock A.R.S Profiles to channels.  |
 | [A.R.S Error Reporting](https://github.com/proxikal/Echo/wiki/A.R.S-Error-Reporting)  | Learn how to reveal A.R.S Errors  |
 | [A.R.S Functions](https://github.com/proxikal/EchoRepository)  | Learn how to simplify your A.R.S With Functions!  |
-| [Dynamic Statements](https://github.com/proxikal/Echo/wiki/Dynamic-Statements) | More simple and dynamic statements! |   
+| [Dynamic Statements](https://github.com/proxikal/Echo/wiki/Dynamic-Statements) | More simple and dynamic statements! |
+| [Global Variables](https://github.com/proxikal/Echo/wiki/Global-Variables) | Learn how to make your A.R.S more Simple with Variables! |
   
 You can grab a channels id by typing `.channelid` in the channel.  
 Or enabling `Developer Mode` in your Discord **User Settings Panel**  
