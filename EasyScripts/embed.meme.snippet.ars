@@ -1,0 +1,20 @@
+.meme={init}
+{embed:
+    {title:Random Memes by Echo}
+    {type:rich}
+    {author|icon:{usericon}}
+    {author|name:{/user}}
+    {color:
+        {randlist:
+             #ff0000,#00ff00,#ffffff,#4286f4,
+             #f45642,#262525,#e2d626,#87e226,
+             #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {thumb|url:{guild|icon}}
+    {image|url:{meme}}
+    {image|width:nil}
+    {image|height}
+    {footer|icon:https://xtclabs.net/img/favicon-new.png}
+    {footer|text: Requested by {/user}}
+}
