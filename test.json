@@ -1,0 +1,12 @@
+{
+  "string": "Simple string",
+  "slice": [
+    "Test1",
+    "Test2",
+    "Test3"
+  ],
+  "map": {
+    "beta": "Testing stuff out",
+    "alpha": "More testing!"
+  }
+}
