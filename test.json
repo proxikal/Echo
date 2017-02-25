@@ -7,6 +7,10 @@
   ],
   "map": {
     "beta": "Testing stuff out",
-    "alpha": "More testing!"
+    "alpha": "More testing!",
+    "another": {
+      "scrooge": "About a main tale of two swords!",
+      "ankle": "The brave were away!"
+    }
   }
 }
