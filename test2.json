@@ -1,0 +1,11 @@
+{
+    "name" : {
+        "first" : "John", 
+        "last" : "Doe" 
+    },
+    "Information" : {
+        "gender" : "MALE", 
+        "verified" : false,
+        "userImage" : "Ioud2285="
+    },
+}
