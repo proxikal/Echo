@@ -30,7 +30,7 @@ function GetPermByName(name) {
 			return 4096;
 		case "embed links":
 			return 16384;
-		case "read message histoy":
+		case "read message history":
 			return 65536;
 		case "use external emojis":
 			return 262144;
