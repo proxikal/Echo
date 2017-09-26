@@ -63,7 +63,7 @@ function GetPermByName(name) {
 }
 
 function RoleHasPermission(role, perm) {
-	bit := GetPermByName(perm);
+	var bit = GetPermByName(perm);
     for(i = 0; i < ServerRoles.length; i++) {
     	var ctx = ServerRoles[i];
     	if(ctx.Name == role) {
