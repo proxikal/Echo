@@ -25,7 +25,7 @@ function GithubBasics() {
   	};
   
   	// Parse JSON
-  	this.prs(Input) {
+  	this.prs = function(Input) {
     		return JSON.parse(Input)
   	};
 
