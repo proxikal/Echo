@@ -1,11 +1,11 @@
 function GithubBasics() {
-  // Add to an array.
+	// Add to an array.
 	this.addTo = function(array, item) {
 		array.push(item);
 		return array;
 	};
   
-  // Remove from array.
+  	// Remove from array.
 	this.removeFrom = function(array, item) {
 		var trashIndex;
 		for(i = 0; i < array.length; i++) {
@@ -19,13 +19,13 @@ function GithubBasics() {
 		}
 	};
   
-  // Stringify json
-  this.str(Input) {
-    return JSON.stringify(Input)
-  };
+  	// Stringify json
+	this.str(Input) {
+    		return JSON.stringify(Input)
+  	};
   
-  // Parse JSON
-  this.prs(Input) {
-    return JSON.parse(Input)
-  };
+  	// Parse JSON
+  	this.prs(Input) {
+    		return JSON.parse(Input)
+  	};
 }
