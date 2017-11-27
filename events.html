@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Events System</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="assets/plugins/prism/prism.css"> -->
+    <link rel="stylesheet" href="assets/css/prism-light.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-red">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">A.R.S</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Events System</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_lifesaver"></span> Events System</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Mar 09th, 2017</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="dashboards" class="doc-section">
+                                <h2 class="section-title">Introductions</h2>
+                                <div class="section-block">
+                                    <p>Use A.R.S To manipulate Echos actions when Events are triggered. This could range from when someone joins the server or a channel being created. Learn how to secure and use these formulas to better your community!<br>
+                                    <br>Event keys do have purpose inside Discord Howver they are mainly aimed towards the {json|} keys and web devs.</p>
+                                    <br>
+                                    <h3>Sending Server info to your Website</h3>
+                                    Echo can update your website with information about your server!<br>
+                                    All it takes is to understand the information Echo is sending and how to collect it.<br>
+                                    You can learn more at <a href="#">Echo 4 Devs</a>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                            <section id="app-security" class="doc-section">
+                                <h2 class="section-title">Security Checks</h2>
+                                <div id="dkl" class="section-block">
+                                It's important to protect any A.R.S Rule that involves an Event key.<br>
+                                <h3>Why protect?</h3>
+                                Without protection people could run a key manually which is bad for this case.<br>
+                                <pre><code class="language-css">{protect}</code></pre>
+                                This key is your best friend when it comes to securing your event rules!<br>
+                                Make sure to add it to the beginning of any rule that's linked to an event!<br>
+                                Ok now let's move on..
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="app-linking" class="doc-section">
+                                <h2 class="section-title">Linking or Not?</h2>
+                                <div id="ckl" class="section-block">
+                                When using the Event keys you will ask yourself, Should I link to another A.R.S Rule?<br>
+                                Well now you know how to protect both rules, so why not? What's the difference?<br>
+                                <h3>Running Direct</h3>
+                                This way is the most efficient way and will take the least time to execute.<Br>
+                                <pre><code class="language-css">.auto jnevnt={init}
+{protect}
+{Event:Join}Welcome to {guild|name} {/user}!
+</code></pre>
+<br>
+<h3>Linking to another rule</h3>
+This method will take a little longer however it allows for more complex systems.<br>
+<h5>Step 1</h5>
+<pre><code class="language-css">.auto jnevnt={init}
+{protect}
+{Event:Join}{ars:jnevnt2}
+</code></pre>
+<h5>Step 2</h5>
+<pre><code class="language-css">.auto jnevnt2={init}
+{protect}
+/* Some more code to run with the Event. */
+Welcome to {guild|name} {/user}!
+</code></pre>
+                                </div>
+                            </section><!--//doc-section-->
+
+
+                            <section id="member-join" class="doc-section">
+                                <h2 class="section-title">Member Joins Server</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto jnevnt={init}
+{protect}
+{Event:Join}Welcome to {guild|name} {/user}!
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="member-leave" class="doc-section">
+                                <h2 class="section-title">Member Leaves Server</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto lvevnt={init}
+{protect}
+{Event:Leave}{redirect:CHANNELID}{/user} has left the building.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="member-update" class="doc-section">
+                                <h2 class="section-title">Member Update</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto mupdb={init}
+{protect}
+{Event:MemberUpdate}{redirect:CHANNELID}
+{/user} has changed something!
+```
+Nick: {usernick}
+Username: {/user}
+Roles
+----
+{listroles}
+```
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="role-create" class="doc-section">
+                                <h2 class="section-title">Role Create</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        When a role is created Discord only offers a few options. and the role name will always be <b>new role</b>.
+                                        <pre><code class="language-cplx">.auto rcrdb={init}
+{protect}
+{Event:RoleCreate}{redirect:CHANNELID}
+A role has been created.
+/* you can use {rolename} but read above */
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="role-delete" class="doc-section">
+                                <h2 class="section-title">Role Delete</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        Discord only offers the Role ID When being deleted inside of Discord. So there are limitations if you're not using the json keys.
+                                        <pre><code class="language-cplx">.auto rdldb={init}
+{protect}
+{Event:RoleDelete}{redirect:CHANNELID}
+A role has been deleted.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="role-update" class="doc-section">
+                                <h2 class="section-title">Role Update</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto rlupdb={init}
+{protect}
+{Event:RoleUpdate}{redirect:CHANNELID}
+A role has been updated.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="channel-create" class="doc-section">
+                                <h2 class="section-title">Channel Create</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto chcrt={init}
+{protect}
+{Event:ChannelCreate}{redirect:CHANNELID}
+A channel has been created.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="channel-delete" class="doc-section">
+                                <h2 class="section-title">Channel Delete</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto chdl={init}
+{protect}
+{Event:ChannelDelete}{redirect:CHANNELID}
+A channel has been deleted.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="channel-update" class="doc-section">
+                                <h2 class="section-title">Channel Update</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto chupd={init}
+{protect}
+{Event:ChannelUpdate}{redirect:CHANNELID}
+A channel has been updated.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="server-update" class="doc-section">
+                                <h2 class="section-title">Server Update</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto servupd={init}
+{protect}
+{Event:GuildUpdate}{redirect:CHANNELID}
+The server has been updated.
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu hidden-xs" data-spy="affix">
+                                <li><a class="scrollto" href="#dashboards">Introduction</a></li>
+                                <li>
+                                    <a class="scrollto" href="#app-system">The System</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#app-security">Security Checks</a></li>
+                                        <li><a class="scrollto" href="#app-linking">Linking or Not?</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#app-events">Events</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#member-join">Member Join Server</a></li>
+                                        <li><a class="scrollto" href="#member-leave">Member Leave Server</a></li>
+                                        <li><a class="scrollto" href="#member-update">Member Update</a></li>
+                                        <li><a class="scrollto" href="#role-create">Role Create</a></li>
+                                        <li><a class="scrollto" href="#role-delete">Role Delete</a></li>
+                                        <li><a class="scrollto" href="#role-update">Role Update</a></li>
+                                        <li><a class="scrollto" href="#channel-create">Channel Create</a></li>
+                                        <li><a class="scrollto" href="#channel-delete">Channel Delete</a></li>
+                                        <li><a class="scrollto" href="#channel-update">Channel Update</a></li>
+                                        <li><a class="scrollto" href="#server-update">Server Update</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+    
+        
+    </div><!--//page-wrapper-->
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Layout Designed by <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a></small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>                                                                 
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+      <!-- Start of StatCounter Code for Default Guide -->
+      <script type="text/javascript">
+      var sc_project=11147929; 
+      var sc_invisible=1; 
+      var sc_security="2cb37e82"; 
+      var scJsHost = (("https:" == document.location.protocol) ?
+      "https://secure." : "http://www.");
+      document.write("<sc"+"ript type='text/javascript' src='" +
+      scJsHost+
+      "statcounter.com/counter/counter.js'></"+"script>");
+      </script>
+      <noscript><div class="statcounter"><a title="free web stats"
+      href="https://statcounter.com/free-web-stats/"
+      target="_blank"><img class="statcounter"
+      src="//c.statcounter.com/11147929/0/2cb37e82/1/" alt="free
+      web stats"></a></div></noscript>
+      <!-- End of StatCounter Code for Default Guide -->
+</body>
+</html> 

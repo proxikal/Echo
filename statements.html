@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Statements</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="assets/plugins/prism/prism.css"> -->
+    <link rel="stylesheet" href="assets/css/prism-light.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-pink">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">A.R.S</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Statements</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_genius"></span> Statements</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Mar 09th, 2017</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="dashboards" class="doc-section">
+                                <h2 class="section-title">Introductions</h2>
+                                <div class="section-block">
+                                    <p>Statements were originally created shortly after the A.R.S to allow for more function. Over the time the simple statements have evolved into Complex or Dynamic Statements. All of which can be learned on this page.</p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                            <section id="app-components" class="doc-section">
+                                <h2 class="section-title">Dynamic Statements</h2>
+                                <div id="dkl" class="section-block">
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Role Detection</h3>
+                                        <div class="answer">Check if a user has a role.<br>
+                                        <pre><code class="language-dss">.auto .isRole={init}
+Role.Role Name1?:{/user} You have the role Role Name1
+Role.Role Name2?:{/user} You have the role Role Name2
+Response.nil?:You don't have either Role 1 or Role 2
+</code></pre>
+<i>You Type:</i> .isRole</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - User Detection</h3>
+                                        <div class="answer">React different based on the user.<br>
+                                        <pre><code class="language-dss">.auto .isUser={init}
+User.UserDiscordIDHere?:{/user} You are the user x1
+User.UserDiscordIDHere?:{/user} You are the user x2
+User.UserDiscordIDHere?:{/user} You are the user x3
+Response.nil?:You are not allowed to use this command.
+</code></pre>
+<i>You Type:</i> .isUser</div>
+
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Channel Detection</h3>
+                                        <div class="answer">Check for a specific channel<br>
+                                        <pre><code class="language-dss">.auto .isChannel={init}
+Channel.general?:{/user} This is a reaction for Channel X1
+Channel.nsfw?:{/user} This is a reaction for Channel X2
+Channel.channel-name?:{/user} This is a reaction for Channel X3
+Response.nil?:{stop} /* Does nothing if the command is not form X1,X2,X3 */
+</code></pre>
+<i>You Type:</i> .isChannel</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Detection</h3>
+                                        <div class="answer">Check for specific text in params.<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+Params.Hello?:Hello, {/user}!
+Params.Gross?:{/user} I'm not gross!! :(
+Response.nil?:I couldn't understand what you said!
+</code></pre>
+<i>You Type:</i> .test Hello<br>
+<i>You Type:</i> .test Gross</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Regex Detection</h3>
+                                        <div class="answer">Check for specific regex expression from params.<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+ParamRegex.(a{3,6})?:You said a 3 - 6 times
+ParamRegex.(b{3,6})?:You said b 3 - 6 times
+Response.nil?:I coudldn't understand the input.
+</code></pre>
+<i>You Type:</i> .test aaa<br>
+<i>You Type:</i> .test bbb</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Content Detection</h3>
+                                        <div class="answer">Check for specific text in Content.<br>
+                                        <pre><code class="language-dss">.auto &.test={init}
+{clean}
+Content.Hello?:You said Hello!
+ContentContains.cat?:You said cat!
+Response.nil?:Nothing came of this...
+</code></pre>
+<i>You Type:</i> .test Hello<br>
+<i>You Type:</i> .test Testing cat!</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Content Regex Detection</h3>
+                                        <div class="answer">Check for regex expression in Content.<br>
+                                        <pre><code class="language-dss">.auto &.test={init}
+{clean}
+ContentRegex.(a{3,6})?:You said a 3 - 6 times
+ContentRegex.(b{3,6})?:You said b 3 - 6 times
+Response.nil?:I couldn't understand the input.
+</code></pre>
+<i>You Type:</i> .test aaa<br>
+<i>You Type:</i> .test bbb</div>
+                                    </div><!--//section-block-->
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Nickname Detection</h3>
+                                        <div class="answer">Check for specific text in nickname.<br>
+                                        <pre><code class="language-dss">.auto &.test={init}
+Nickname.Monster Cat?:Your nickname is Monster Cat!
+Nickname.Bob?:Your nickname is Bob!
+NicknameContains.Hex?:Your nickname contains the word Hex!
+Response.nil?:{stop} /* Do nothing if above is not found */
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Day Detection</h3>
+                                        <div class="answer">Check for specific day.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+Day.Friday?:Hey it's Fridat!
+Day.Saturday?:Partaaay time!!
+Response.nil?:This command is sleeping.
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Hour Detection</h3>
+                                        <div class="answer">Check for specific hour.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+Hour.5?:It's 5am!
+Hour.17?:It's 5pm!
+Response.nil?:This command is sleeping.
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Minute Detection</h3>
+                                        <div class="answer">Check for specific Minute.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+Minute.15?:It's 15 past x!
+Minute.10?:It's 10 past x!
+Response.nil?:This command is sleeping.
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Timezeone Manipulation</h3>
+                                        <div class="answer">Set the Timezone for all time based A.R.S and D.S.S Keys. <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_new">View Timezones</a><br>
+                                        <pre><code class="language-dss">.auto .stamp={init}
+Timezone.America/New_York?
+Time.Now > Hour.13?:It's past 1pm in new york!
+</code></pre>
+<i>You Type:</i> .stamp</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Time Statements</h3>
+                                        <div class="answer">React based off different times.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+Time.Now > Hour.3?:It's past 3am!
+Time.Now >= Hour.15?:It's past 3pm!
+Time.Now <= Hour.12?:It's before or equal to noon!
+Time.Now < Hour.12?:It's before noon!
+Time.Now == Hour.13?:It's 1pm!
+Response.nil?:Command is sleeping.
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Counting Statements</h3>
+                                        <div class="answer">React based off x ? x.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+Count.X >= Y?:X is higher than or equal to Y!
+Count.X == Y?:X is equal to Y!
+Count.X > Y?:X is higher than Y!
+Count.X < Y?:X is lower than Y!
+Count.X <= Y?:X is lower than or equal to Y!
+Response.nil?:Command is sleeping.
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Global Var Statements</h3>
+                                        <div class="answer">Check to see if a Global Variable Exists or not.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+Globals.VarName?:Global Variable {.VarName} Exists!
+Response.nil?:The Global Variable `VarName` does not exist.
+</code></pre>
+<i>You Type:</i> .test</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Replace</h3>
+                                        <div class="answer">Replace text in Params.<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+Replace.Hello?:Goodbye!
+You said `{params}`
+/* Type .test Hello */
+</code></pre>
+<i>You Type:</i> .test Hello</div>
+                                    </div><!--//section-block-->
+
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="comp-statements" class="doc-section">
+                                <h2 class="section-title">Complex Statements</h2>
+                                <div id="ckl" class="section-block">
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Channel(s) Detection</h3>
+                                        <div class="answer">Check for a Channel or Channels by the Discord ID or Name.<br>
+                                        <pre><code class="language-cplx">.auto .isChannel={init}
+use | general | nsfw
+{if(ischannel):
+    {/user} Found the right channel.
+}
+</code></pre>
+<h4>Another Way</h4>
+                                        <pre><code class="language-cplx">.auto .isChannel={init}
+use | DiscordID | DiscordID
+{if(ischannel):
+    {/user} Found the right channel.
+} (else) {
+    {/user} Posted in the wrong channel.
+}
+</code></pre>
+<i>You Type:</i> .isChannel
+</div>
+                                    </div><!--//section-block-->
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - User(s) Detection</h3>
+                                        <div class="answer">Check for a User or Users by Their Discord ID.<br>
+                                        <pre><code class="language-cplx">.auto .isUser={init}
+use | 146046383726657536
+{if(isuser):
+    {/user} can use this command!
+}
+</code></pre>
+<h4>Another Way</h4>
+                                        <pre><code class="language-cplx">.auto .isUser={init}
+use | 146046383726657536 | 2156553266565364564
+{if(isuser):
+    {/user} can use this command!
+} (else) {
+    {/user} doesn't have access to this command.
+}
+</code></pre>
+<i>You Type:</i> .isUser
+</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Role(s) Detection</h3>
+                                        <div class="answer">Check user for a Role or Roles.<br>
+                                        <pre><code class="language-cplx">.auto .hasRole={init}
+use | Admin
+{if(hasrole):
+    {/user} has the role Admin
+}
+</code></pre>
+<h4>Another Way</h4>
+                                        <pre><code class="language-cplx">.auto .hasRole={init}
+use | Admin | Team Instinct | Valor
+{if(hasrole):
+    {/user} has the role Admin
+} (else) {
+    {/user} doesn't have the role Admin
+}
+</code></pre>
+<i>You Type:</i> .hasRole
+</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Username Detection</h3>
+                                        <div class="answer">Check if a username contains word(s)<br>
+                                        <pre><code class="language-cplx">.auto .checkUser={init}
+use | noob | hex | fudge
+{if(user|contains):
+    {/user} contains the words in their username!
+}
+</code></pre>
+<h4>Another Way</h4>
+                                        <pre><code class="language-cplx">.auto .checkUser={init}
+use | noob | hex | fudge
+{if(user|contains):
+    {/user} contains the words in their username!
+} (else) {
+    {stop}
+}
+</code></pre>
+<i>You Type:</i> .checkUser
+</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Nickname Detection</h3>
+                                        <div class="answer">Check if a nickname contains word(s)<br>
+                                        <pre><code class="language-cplx">.auto .checkNick={init}
+use | noob | hex | fudge
+{if(nick|contains):
+    {/user} contains the words in their nickname!
+}
+</code></pre>
+<h4>Another Way</h4>
+                                        <pre><code class="language-cplx">.auto .checkNick={init}
+use | noob | hex | fudge
+{if(nick|contains):
+    {/user} contains the words in their nickname!
+} (else) {
+    {stop}
+}
+</code></pre>
+<i>You Type:</i> .checkNick
+</div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section><!--//doc-section-->
+
+
+                            <section id="simp-statements" class="doc-section">
+                                <h2 class="section-title">Basic Statements</h2>
+                                <p>Simple statements work with two different conditions <code>==</code> or <code>!=</code></p>
+                                <div id="skl" class="section-block">
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - User Detection</h3>
+                                        <div class="answer">Check for user.<br>
+                                        <pre><code class="language-cplx">.auto .checkUser={init}
+{if:user == Proxy}
+{/user} is Proxy!
+</code></pre>
+<i>You Type:</i> .checkUser</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Channel Detection</h3>
+                                        <div class="answer">Check for Channel.<br>
+                                        <pre><code class="language-cplx">.auto .checkChannel={init}
+{if:channel == general}
+{/user} this is #general channel.
+</code></pre>
+<i>You Type:</i> .checkChannel</div>
+                                    </div><!--//section-block-->
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Detection</h3>
+                                        <div class="answer">Check Params.<br>
+                                        <pre><code class="language-cplx">.auto &.check {params}={init}
+{if:params == hello}
+{/user} you said hello! /* type .check Hello */
+</code></pre>
+<i>You Type:</i> .check hello</div>
+                                    </div><!--//section-block-->
+
+
+                                </div>
+                            </section>
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu hidden-xs" data-spy="affix">
+                                <li><a class="scrollto" href="#dashboards">Introduction</a></li>
+                                <li>
+                                    <a class="scrollto" href="#app-components">Statements List</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#app-components">Dynamic Statements</a></li>
+                                        <li><a class="scrollto" href="#comp-statements">Complex Statements</a></li>
+                                        <li><a class="scrollto" href="#simp-statements">Basic Statement</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+    
+        
+    </div><!--//page-wrapper-->
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Layout Designed by <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a></small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>                                                                 
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+      <!-- Start of StatCounter Code for Default Guide -->
+      <script type="text/javascript">
+      var sc_project=11147929; 
+      var sc_invisible=1; 
+      var sc_security="2cb37e82"; 
+      var scJsHost = (("https:" == document.location.protocol) ?
+      "https://secure." : "http://www.");
+      document.write("<sc"+"ript type='text/javascript' src='" +
+      scJsHost+
+      "statcounter.com/counter/counter.js'></"+"script>");
+      </script>
+      <noscript><div class="statcounter"><a title="free web stats"
+      href="https://statcounter.com/free-web-stats/"
+      target="_blank"><img class="statcounter"
+      src="//c.statcounter.com/11147929/0/2cb37e82/1/" alt="free
+      web stats"></a></div></noscript>
+      <!-- End of StatCounter Code for Default Guide -->
+</body>
+</html> 
