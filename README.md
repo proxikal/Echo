@@ -1,15 +1,11 @@
 # Table of References
 | Link  | Information  |
 | :--:  | :--:  |
-| [xTech Labs Website](https://xtclabs.net)  | xTech Labs Official Website  |
-| [Echo 2.0 Website](https://echo.xtclabs.net)  | Echo 2.0 Official Website  |
-| [Echo Reddit](https://www.reddit.com/r/EchoDiscord/) | Official Echo Subreddit! |
-| [AutoGo Website](https://autogo.xtclabs.net)  | AutoGo Official Website  |
-| [Discord Server Manager](https://webm.xtclabs.net)   | Manage Echo & Your Server Online!  |
+| [Echo Commands](https://proxikal.github.io/Echo/Commands)  | Echo Commands Page  |
+| [Echo ARS](https://proxikal.github.io/Echo/) | Echo ARS Page |
 | [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
 | [Echo R.P.G Game](https://discord.gg/dHzx2aa)  | An R.P.G Text based game coded with Echo!  |  
-| [A.R.S Builder](https://builder.xtclabs.net/)  | Currently in Beta by: JurrijnP  |
-| [Project Frostbyte](https://github.com/proxikal/Frostbyte) | Open Source Lightweight version of Echo anyone can contribute!  |  
+| [A.R.S Builder](https://google.com)  | Coming back soon!  | 
   
 # Easy Mode!
 Is all of this too much? Just want the commands you see below with ease?  
@@ -28,7 +24,6 @@ And available for you to use!
 | [Echo 4 Devs](https://github.com/proxikal/Echo/wiki/Echo-for-Devs)  | Learn how to send your guild info to your websites!  |
 | [Regex Triggers](https://github.com/proxikal/Echo/wiki/Regex-Triggers)  | Learn how to use Pure Regex with Echo!  |
 | [Using If Statements](https://github.com/proxikal/Echo/wiki/If-Statements)  | Learn how to use If Statements with Echo.  |
-| [Echo + Virus Total](https://github.com/proxikal/Echo/wiki/Echo-plus-VT)  | Learn how Echo can protect your Members.  |
 | [A.R.S Profile locking](https://github.com/proxikal/Echo/wiki/Channel-Profiles)  | Learn how to lock A.R.S Profiles to channels.  |
 | [A.R.S Error Reporting](https://github.com/proxikal/Echo/wiki/A.R.S-Error-Reporting)  | Learn how to reveal A.R.S Errors  |
 | [A.R.S Functions](https://github.com/proxikal/EchoRepository)  | Learn how to simplify your A.R.S With Functions!  |
@@ -201,23 +196,14 @@ now just type `.whoami`
     {image|width:250}
     {image|height:250}
     {field[0]|name:Echo}
-    {field[0]|value:[Echo Official Website](https://echo.xtclabs.net "The Official website for Echo 2.0")}
+    {field[0]|value:[Echo Official Website](https://proxikal.github.io/Echo/Commands "The Official website for Echo 2.0")}
     {field[0]|inline:true}
     {field[1]|name:Echo Help}
     {field[1]|value:[Echo Documentation](https://github.com/proxikal/Echo "Learn how to use Echo A.R.S Through some Examples.")}
     {field[1]|inline:true}
-    {field[2]|name:AutoGo}
-    {field[2]|value:[AutoGo Website!](https://autogo.xtclabs.net "AutoGo! A bot like Echo 1.x You run yourself!")}
+    {field[2]|name:PHP Webhooks}
+    {field[2]|value:[Github Page!](https://github.com/proxikal/discordphp-webhook "Use discord webhooks with ease using DiscordPHP-Webhooks")}
     {field[2]|inline:true}
-    {field[3]|name:Web Manager}
-    {field[3]|value:[Discord Server Manager](https://webm.xtclabs.net "Manage Your discord server and Echo from the world wide web!")}
-    {field[3]|inline:true}
-    {field[4]|name:PHP Webhooks}
-    {field[4]|value:[Github Page!](https://github.com/proxikal/discordphp-webhook "Use discord webhooks with ease using DiscordPHP-Webhooks")}
-    {field[4]|inline:true}
-    {field[5]|name:xTech Labs API}
-    {field[5]|value:[View Website](https://api.xtclabs.net/ "xTech Labs offers free API endpoints like memes, jokes etc..")}
-    {field[5]|inline:true}
     {footer|text:Requested by: {/user}.}
     {footer|icon:{usericon}}
 }
@@ -344,79 +330,8 @@ So Only use the below example if you really need to. Otherwise just use Echo's `
 **{rawid}** is required along with **{params}** to display another users ID.  
   
 ### Build the `.meme` or `.jokes` command
-| Steps  | You Type  |
-| :--:  | :--:  |
-| Make Command  | `.auto .meme={init}{meme}`  |
-| Use Command  | `.meme`  |
-  
-  
-| Steps  | You Type  |
-| :--:  | :--:  |
-| Make Command  | `auto .joke={init}{joke}`  |
-| Use Command  | `.joke`  |
-  
-  
-Alright that was fun, Now let's make a Sexy Meme & Jokes Command.
-```
-.auto .joke={init}
-{embed:
-    {title:Random Jokes}
-    {url:https://api.xtclabs.net}
-    {type:rich}
-    {desc:
-        {joke}
-    }
-    {color:
-       {randlist:
-          #4286f4,#ff0000,
-          #00ff00,##e8f442,
-          #f49e42,#000000
-       }
-    }
-    {footer|text:
-        Requested: {/user}
-    }{footer|icon:
-    {usericon}
-    }
-}
-```
-
-And now the Memes:
-```
-.auto .meme={init}
-{embed:
-    {title:Random Memes!}
-    {url:https://api.xtclabs.net}
-    {type:rich}
-    {color:
-        {randlist2:
-            #ff0000,#00ff00,#ffffff,#4286f4,
-            #f45642,#262525,#e2d626,#87e226,
-            #26e2c0,#2633e2,#8126e2
-        }
-    }
-    {image|url:
-        {meme}
-    }
-    {image|width:250}
-    {image|height:250}
-    {footer|text:Requested: {/user}}
-    {footer|icon:
-        {usericon}
-    }
-}
-```
-As you can see i've added my personal jokes and memes command.  
-These rules have extra features, like random colors and random titles!  
-You can remove or configure anything you please.  
-
-
-### Build the `.cats` command in your server.
-| Steps  | You Type  |
-| :--:  | :--:  |
-| Make Command  | `.auto .cats={init}{cats}`  |
-| Use Command  | `.cats`  |
-  
+> These commands were taken offline when our xtclabs.net site went down  
+We will be working on a new version of both keys eventuall.
   
 ### Build the `.giphy` command in your server.
 | Steps  | You Type  |
