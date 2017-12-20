@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Intralink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="custom.min.css">
+  </head>
+  <body>
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <a href="../" class="navbar-brand">The Intralink</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!--
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../help/">Public Addresses</a>
+            </li>
+          </ul>
+        -->
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://proxikal.github.io/Echo" target="_blank">ARS Docs</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="bs-component">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Intralink</a></li>
+            <li class="breadcrumb-item active">Home</li>
+          </ol>
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-bottom: 2rem;">
+        <div class="col-lg-12">
+          <div class="bs-component">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#info">Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#commands">Internal Commands</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#public">Public Addresses</a>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade show active" id="info">
+              <div class="card border-info mb-3" style="max-width: 500rem;">
+                <div class="card-header">The Basics <small class="text-muted">Beginners guide</small></div>
+                <div class="card-body">
+                  <h5 class="card-title">Quick Information</h5>
+                  <p class="card-text">
+                    <small class="text-muted">
+                    The Intralink is our idea to bring people together, Even if they don't share a server.
+                    In it's most basic sense it's like the internet. A user can register up to <u><font color="#ccc">10 addresses</font></u> at a time.
+                    Afterwards, they have the ability to customize the address with any ARS they want. Mini games ect.
+                    Now, The neat thing about the Intralink is no matter where they are visiting from DM or Channel
+                    The data will be shared between everyone. Which makes the possibility for multiplayer games and more!
+                    </small>
+                  </p>
+                  <h5>Visiting Addresses via DM</h5>
+                  <p class="card-text">
+                    <small class="text-muted">
+                      First step: <u>Open up an DM Channel with Echo</u> And than type <font color="#ccc">ars://Intralink</font><br>
+                      Now, usually in the topic they will give you a command to type in order to see their list. You can also type the command <font color="#ccc">:readinfo</font> to view their topic and description. For the official Intralink address the command is <font color="#ccc">?help</font>
+                    </small>
+                  </p>
+                  <h5>Visiting Addresses in Servers</h5>
+                  <p class="card-text">
+                    <small class="text-muted">
+                      If you're familiar with locking profiles to a channel, This is almost the same thing. However, Instead of a profile you're locking down an ars:// address. example <font color="#ccc">.lockprofile ars://Intralink</font>
+                    </small>
+                  </p>
+                  <h5>Private Addresses And Passwords</h5>
+                  <p class="card-text">
+                    <small class="text-muted">
+                      If you're trying to get into your address via DM. And you know the pass type <font color="#ccc">ars://YourAddress:</font><font color="#4286f4">YourPassword</font><br>
+                      If you're trying with a server you'd type: .lockprofile <font color="#ccc">ars://YourAddress:</font><font color="#4286f4">YourPassword</font><br>
+                      If you want to set a password, Visit the address you wish to lock a password to. Afterwards simply type <font color="#ccc">:setpass NewPasswordHere</font> You can always clear your password which will make your server public again by typing <font color="#ccc">:clearpass</font>
+                    </small>
+                  </p>
+                  <h5>List and Cancel Addresses</h5>
+                  <p class="card-text">
+                    <small class="text-muted">
+                      To cancel an address simply type <font color="#ccc">:cancel &gt;address></font> Once you cancel an address you will need to remove any channels linked to the address!<br>
+                      To list your current addresses type <font color="#ccc">:list</font>
+                    </small>
+                  </p>
+                </div>
+              </div>
+
+              </div>
+              <div class="tab-pane fade" id="commands">
+
+                <div class="card border-success mb-3" style="max-width: 500rem;">
+                  <div class="card-header">Commands List</div>
+                  <div class="card-body text-success">
+
+                    <table class="table table-hover">
+                      <thead>
+                        <tr style="border-top: 0px;">
+                          <th scope="col" style="border-top: 0px;">Commands</th>
+                          <th scope="col" style="border-top: 0px;">Description</th>
+                          <th scope="col" style="border-top: 0px;">Permissions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">:readinfo</th>
+                          <td>View some information and the description of the current address.</td>
+                          <td>Anyone</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">:list</th>
+                          <td>View your registered addresses</td>
+                          <td>Anyone</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">:register &lt;address> </th>
+                          <td>Registers an address under your account and is made public.</td>
+                          <td>Anyone</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">:cancel &lt;address> </th>
+                          <td>Cancels an address from your account and the public.</td>
+                          <td>Anyone</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">:setpass &lt;password></th>
+                          <td>Sets the address to private and sets the password.</td>
+                          <td>Owner</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">:clearpass</th>
+                          <td>Clears any password and sets address to public.</td>
+                          <td>Owner</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:topic &lt;text></th>
+                          <td>Sets the address topic that people see when they join.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:desc &lt;text></th>
+                          <td>Sets the address description that's available in :readinfo</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:create -db &lt;dbname></th>
+                          <td>Creates a new database for the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:view -db &lt;dbname></th>
+                          <td>Views the database contents for the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:delete -db &lt;dbname></th>
+                          <td>Deletes the database for the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:viewdbs</th>
+                          <td>Views the available databases in the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:grabdb &lt;dbname></th>
+                          <td>Echo will upload the database for download.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:auto trigger={init}response</th>
+                          <td>Create an ARS Rule for the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:viewauto</th>
+                          <td>Views the ARS file for the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:inspect &lt;trigger></th>
+                          <td>Views the specific ARS Rule.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:delauto &lt;trigger&gt;</th>
+                          <td>Deletes a rule fron the ARS file for the address</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:stafflist</th>
+                          <td>Views the staff list on the address.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:staff -a &lt;user></th>
+                          <td>adds a user to the staff ID or mention.</td>
+                          <td>Staff</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">:staff -d &lt;user></th>
+                          <td>removes a user from the staff ID or mention.</td>
+                          <td>Staff</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="public">
+                <!-- Start -->
+                <div class="card border-warning mb-3" style="max-width: 500rem;">
+                  <div class="card-header">Public Servers</div>
+                  <div class="card-body text-warning">
+                     <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">ars://Intralink</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">By: Management</h6>
+                        <p class="card-text"><font color="#ccc"><b>Description:</b></font> The Official Intralink address. Shows a list of available commands and more!</p><!--
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a> -->
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">ars://Games</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">By: Management & Friends</h6>
+                        <p class="card-text"><font color="#ccc"><b>Description:</b></font> Play Mini-Games created by staff and friends. (Still under Construction)</p><!--
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
