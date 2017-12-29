@@ -332,3 +332,7 @@ function GetHuntStatRewards() {
     };
     return ref;
 }
+function GetDragon(user) {
+    var usr = JSON.parse(DragonWars[user]);
+    return usr.Dragon;
+}
