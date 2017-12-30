@@ -1,3 +1,50 @@
+function HunterFormulaBonus(theHunt) {
+	var fireDragons = 0,
+		waterDragons = 0,
+		grassDragons = 0,
+		rockDragons = 0,
+		steelDragons = 0,
+		lightDragons = 0,
+		darkDragons = 0;
+
+	for(var i = 0; i < theHunt.Users.length; i++) {
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Fire") { fireDragons++; }
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Water") { waterDragons++; }
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Grass") { grassDragons++; }
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Rock") { rockDragons++; }
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Steel") { steelDragons++; }
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Light") { lightDragons++; }
+		if(GetDragon(theHunt.Users[i]).Stats.Type == "Dark") { darkDragons++; }
+	}
+	var owner = GetDragon(theHunt.Owner);
+	if(owner.Stats.Type == "Fire") { fireDragons++; }
+	if(owner.Stats.Type == "Water") { waterDragons++; }
+	if(owner.Stats.Type == "Grass") { grassDragons++; }
+	if(owner.Stats.Type == "Rock") { rockDragons++; }
+	if(owner.Stats.Type == "Steel") { steelDragons++; }
+	if(owner.Stats.Type == "Light") { lightDragons++; }
+	if(owner.Stats.Type == "Dark") { darkDragons++; }
+	
+	// Formula Section
+	// -------
+	// Fire = Attack, Speed
+	// Grass = Defense, Health
+	// Water = Speed, Attack
+	// Steel = Speed, Defense
+	// Light = Health, Speed
+	// Dark = Attack, Health
+	// Rock = Health, Defense
+
+	var ref = {Attack: 0, Defense: 0, Health: 0, Speed: 0};
+	for(var i = 0; i < fireDragons.length; i++) { ref.Attack += Math.floor(Math.random() * 3) + 1; ref.Speed += Math.floor(Math.random() * 3) + 1; }
+	for(var i = 0; i < grassDragons.length; i++) { ref.Defense += Math.floor(Math.random() * 3) + 1; ref.Health += Math.floor(Math.random() * 3) + 1; }
+	for(var i = 0; i < waterDragons.length; i++) { ref.Attack += Math.floor(Math.random() * 3) + 1; ref.Speed += Math.floor(Math.random() * 3) + 1; }
+	for(var i = 0; i < steelDragons.length; i++) { ref.Defense += Math.floor(Math.random() * 3) + 1; ref.Speed += Math.floor(Math.random() * 3) + 1; }
+	for(var i = 0; i < lightDragons.length; i++) { ref.Health += Math.floor(Math.random() * 3) + 1; ref.Speed += Math.floor(Math.random() * 3) + 1; }
+	for(var i = 0; i < darkDragons.length; i++) { ref.Attack += Math.floor(Math.random() * 3) + 1; ref.Health += Math.floor(Math.random() * 3) + 1; }
+	for(var i = 0; i < rockDragons.length; i++) { ref.Health += Math.floor(Math.random() * 3) + 1; ref.Defense += Math.floor(Math.random() * 3) + 1; }
+	return ref;
+}
 function Pagination(page, totalPages, perPage, obj) {
     if(page < 1) { page = 1; }
     var rObj = {
