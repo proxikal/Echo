@@ -19,7 +19,7 @@ function Pagination(page, totalPages, perPage, obj) {
 }
     
 function IsAddressStaff(user) {
-    var addr = Address("dragonwars");
+    var addr = Address();
     for(i = 0; i < addr.Staff.length; i++) {
         if(addr.Staff[i] == user) {
             return true;
