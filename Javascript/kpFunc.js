@@ -215,7 +215,7 @@ function RegisterUser(user, company) {
 		newUser.StockPrice = 0;
 		newUser.Backpack = [];
 		newUser.MaxBackpackSize = 25;
-		newUser.Dealer = [];
+		newUser.Dealer = GetDrugs();
 		newUser.Gang = [];
 		newUser.LastGangID = 0;
 		newUser.AwayTeam = [];
