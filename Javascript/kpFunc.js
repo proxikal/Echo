@@ -425,10 +425,29 @@ function ViewDrugs(user) {
 	if(Kingpin[user]) {
 		var data = "```md\n";
 		var obj = JSON.parse(Kingpin[user]);
+		if(Now() >= obj.Cooldowns.DealerRefresh) {
+			var chk = RefreshDealer(user);
+			if(chk.Code == 501) {
+				data = chk.Msg;
+				return data;
+			}
+		}
 		for(var i = 0; i < obj.Dealer.length; i++) {
 			data += "# " + obj.Dealer[i].Name + "(" + obj.Dealer[i].Amount + ")\n- < $" + commafy(obj.Dealer[i].Price) + " >\n";
 		}
 		return data + "```";
+	}
+}
+function ViewBackpack(user) {
+	if(Kingpin[user]) {
+		var data = "```md\n";
+		var obj = JSON.parse(Kingpin[user]);
+		var totalPages = Math.ceil(obj.Backpack.length / 10);
+		var pgn = Pagination(page, totalPages, 10, obj.Backpack.length);
+		for(var i = pgn.Start; i < pgn.End; i++) {
+			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].Price) + " >\n";
+		}
+		return data + "\n--------------------\n"+pgn.Info+"```";
 	}
 }
 function TravelToCity(user, city) {
