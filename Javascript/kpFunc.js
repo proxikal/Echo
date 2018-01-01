@@ -501,18 +501,18 @@ function BuyDrugs(user, drug, amount) {
 }
 function GetDrugs() {
 	var drugs = [];
-	var weed = {};
-	var speed = {};
-	var shrooms = {};
-	var peyote = {};
-	var crack = {};
-	var opium = {};
-	var smack = {};
-	var ecstasy = {};
-	var heroin = {};
-	var hashish = {};
-	var cocaine = {};
-	var acid = {};
+	var weed = {Name: "Weed"};
+	var speed = {Name: "Speed"};
+	var shrooms = {Name: "Shrooms"};
+	var peyote = {Name: "Peyote"};
+	var crack = {Name: "Crack"};
+	var opium = {Name: "Opium"};
+	var smack = {Name: "Smack"};
+	var ecstasy = {Name: "Ecstasy"};
+	var heroin = {Name: "Heroin"};
+	var hashish = {Name: "Hashish"};
+	var cocaine = {Name: "Cocaine"};
+	var acid = {Name: "Acid"};
 
 	if(Math.random() < 0.02) {
 		// Show the exceptional prices of the drugs.
