@@ -2,6 +2,21 @@ var returnData = {
 	Code: 0,
 	Msg: ""
 };
+function commafy(inVal){
+	var returnNum;
+	if(inVal != null) {
+	   	var dat = inVal.toString();
+	   	var arrTheNumber = dat.split("").reverse();
+	   	var newNum = Array();
+	   	for(var i=0; i<arrTheNumber.length; i++){
+	        newNum[newNum.length] = ((i%3===2) && (i<arrTheNumber.length-1)) ? "," + arrTheNumber[i]: arrTheNumber[i];
+	   	}
+	   	returnNum = newNum.reverse().join("");
+	} else {
+		returnNum = inVal;
+	}
+   return returnNum;
+}
 function Random(min,max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -411,7 +426,7 @@ function ViewDrugs(user) {
 		var data = "```md\n";
 		var obj = JSON.parse(Kingpin[user]);
 		for(var i = 0; i < obj.Dealer.length; i++) {
-			data += obj.Dealer[i].Name + "(" + obj.Dealer[i].Amount + ")\n- < $" + obj.Dealer[i].Price + " >\n";
+			data += "# " + obj.Dealer[i].Name + "(" + obj.Dealer[i].Amount + ")\n- < $" + commafy(obj.Dealer[i].Price) + " >\n";
 		}
 		return data + "```";
 	}
