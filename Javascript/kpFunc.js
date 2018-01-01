@@ -2,7 +2,10 @@ var returnData = {
 	Code: 0,
 	Msg: ""
 };
-
+function Random(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 function Now() {
 	return Math.floor(Date.now() / 1000);
 }
