@@ -473,7 +473,7 @@ function ViewBackpack(user, page) {
 		if(p > totalPages) {
 			p = totalPages;
 		}
-		var data = "```md\nBackpack Size: <" + GetBackpackSize(RawUserID) + "/" + obj.MaxBackpackSize + ">\nTotal Pages: <"+totalPages+">\n-\n";
+		var data = "```md\nBackpack Size: <" + GetBackpackSize(user) + "/" + obj.MaxBackpackSize + ">\nTotal Pages: <"+totalPages+">\n-\n";
 		var pgn = Pagination(p, totalPages, perPage, obj.Backpack);
 		for(var i = pgn.Start; i < pgn.End; i++) {
 			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].PurchasedAt) + " >\n";
@@ -512,7 +512,7 @@ function BuyDrugs(user, drug, amount) {
 		}
 		if(exists == true) { // Drug exists in the dealer
 			var price = obj.Dealer[d].Price * amount; // compute price * amount.
-			if(obj.MaxBackpackSize > obj.Backpack.length + amount) { // Make sure they have the required space.
+			if(obj.MaxBackpackSize > GetBackpackSize(user) + amount) { // Make sure they have the required space.
 				if(obj.Dealer[d].Amount >= amount) { // The dealer has the amount needed.
 					if(obj.Cash >= price) { // They have the cash required.
 						if(DrugExistsInPack(user, drug) == false) {
