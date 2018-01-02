@@ -493,7 +493,7 @@ function BuyDrugs(user, drug, amount) {
 							obj.Backpack.push(drug);
 						} else {
 							var id = GetDrugID("pack", user, drug);
-							if(obj.Backpack[id].Name == drug) { // make sure the array kept it's order.
+							if(obj.Backpack[id].Name.toLowerCase() == drug.toLowerCase()) { // make sure the array kept it's order.
 								obj.Backpack[id].amount += amount;
 								obj.Backpack[id].PurchasedAt = price;
 							}
@@ -524,7 +524,7 @@ function BuyDrugs(user, drug, amount) {
 		}
 		if(exists == false) {
 			returnData.Code = 204;
-			returnData.Msg = "The drug doesn't exist in this current dealer";
+			returnData.Msg = "The drug `"+drug+"` with amount **("+amount+")** doesn't exist in this current dealer";
 			return returnData;
 		}
 	} else {
