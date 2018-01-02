@@ -412,11 +412,7 @@ function ListProperties(page) {
 		data += props[i].Name + "\n- < AHS (" + props[i].Attack + "/" + props[i].Health + "/" + props[i].Speed + ") >\n";
 	}
 	data += "\n--------------------\n"+pgn.Info+"```";
-	if(data != "```md\n```") {
-		return data + "```";
-	} else {
-		return "No results found";
-	}
+	return data;
 }
 function BuyProperty(user, prop) {
 
