@@ -432,8 +432,9 @@ function ViewDrugs(user) {
 				return data;
 			}
 		}
-		for(var i = 0; i < obj.Dealer.length; i++) {
-			data += "# " + obj.Dealer[i].Name + "(" + obj.Dealer[i].Amount + ")\n- < $" + commafy(obj.Dealer[i].Price) + " >\n";
+		var nobj = JSON.parse(Kingpin[user]);
+		for(var i = 0; i < nobj.Dealer.length; i++) {
+			data += "# " + nobj.Dealer[i].Name + "(" + nobj.Dealer[i].Amount + ")\n- < $" + commafy(nobj.Dealer[i].Price) + " >\n";
 		}
 		return data + "```";
 	}
