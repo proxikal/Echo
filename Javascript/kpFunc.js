@@ -50,6 +50,7 @@ function GetBackpackSize(user) {
 		for(var i = 0; i < obj.Backpack.length; i++) {
 			size += obj.Backpack[i].Amount;
 		}
+		return size;
 	}
 }
 function CalculateAwayTeam(user) {
