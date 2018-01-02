@@ -443,6 +443,8 @@ function ViewDrugs(user) {
 			} else {
 				footer = "\nLast Market Refresh: **" + seconds + " second(s) ago**";
 			}
+		} else {
+			footer = "\nLast Market Refresh: **Just now**";
 		}
 		var nobj = JSON.parse(Kingpin[user]);
 		for(var i = 0; i < nobj.Dealer.length; i++) {
