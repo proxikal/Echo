@@ -43,6 +43,15 @@ function Pagination(page, totalPages, perPage, obj) {
     rObj.Info = start + " to " + end + " items out of (" + obj.length + ")";
     return rObj;
 }
+function GetBackpackSize(user) {
+	if(Kingpin[user]) {
+		var obj = JSON.parse(Kingpin[user]);
+		var size = 0;
+		for(var i = 0; i < obj.Backpack.length; i++) {
+			size += obj.Backpack[i].Amount;
+		}
+	}
+}
 function CalculateAwayTeam(user) {
 	if(Kingpin[user]) {
 		var obj = JSON.parse(Kingpin[user]);
@@ -463,7 +472,7 @@ function ViewBackpack(user, page) {
 		if(p > totalPages) {
 			p = totalPages;
 		}
-		var data = "```md\nBackpack Size: <"+obj.Backpack.length + "/" + obj.MaxBackpackSize + ">\nTotal Pages: <"+totalPages+">\n-\n";
+		var data = "```md\nBackpack Size: <" + GetBackpackSize(RawUserID) + "/" + obj.MaxBackpackSize + ">\nTotal Pages: <"+totalPages+">\n-\n";
 		var pgn = Pagination(p, totalPages, perPage, obj.Backpack);
 		for(var i = pgn.Start; i < pgn.End; i++) {
 			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].PurchasedAt) + " >\n";
