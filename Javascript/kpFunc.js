@@ -444,11 +444,11 @@ function ViewBackpack(user, page) {
 		var obj = JSON.parse(Kingpin[user]);
 		var p = parseInt(page);
 		var perPage = 10;
-		if(obj.Backpack.length < perPage) {
-			perPage = obj.Backpack.length;
-		}
 		var totalPages = Math.ceil(obj.Backpack.length / perPage);
-		var pgn = Pagination(p, totalPages, perPage, obj.Backpack.length);
+		if(p > totalPages) {
+			p = totalPages;
+		}
+		var pgn = Pagination(p, totalPages, perPage, obj.Backpack);
 		for(var i = pgn.Start; i < pgn.End; i++) {
 			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].PurchasedAt) + " >\n";
 		}
