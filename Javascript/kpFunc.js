@@ -481,7 +481,7 @@ function BuyDrugs(user, drug, amount) {
 		}
 		if(exists == true) { // Drug exists in the dealer
 			var price = obj.Dealer[d].Price * amount; // compute price * amount.
-			if(obj.MaxBackpackSize <= obj.Backpack.length + amount) { // Make sure they have the required space.
+			if(obj.MaxBackpackSize > obj.Backpack.length + amount) { // Make sure they have the required space.
 				if(obj.Dealer[d].Amount >= amount) { // The dealer has the amount needed.
 					if(obj.Cash >= price) { // They have the cash required.
 						if(DrugExistsInPack(user, drug) == false) {
