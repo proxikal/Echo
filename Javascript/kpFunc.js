@@ -316,7 +316,7 @@ function SellDrugs(user, drug, amount) {
 		var bID = GetDrugID("pack", user, drug);
 		if(bID == null) { // The drug exists inside of the users backpack.
 			var dID = GetDrugID("dealer", user, drug);
-			if(dID.Code != 101) {
+			if(dID == null) {
 				// The drug exists in the dealers pack.
 				// So manipulate current data.
 				if(amount == obj.Backpack[bID].Amount) {
