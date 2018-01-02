@@ -260,7 +260,7 @@ function DrugExistsInPack(user, drug) {
 	if(Kingpin[user]) {
 		var obj = JSON.parse(Kingpin[user]);
 		for(var b = 0; b < obj.Backpack.length; b++) {
-			if(obj.Backpack[b].Name == drug) {
+			if(obj.Backpack[b].Name.toLowerCase() == drug.toLowerCase()) {
 				return true;
 			}
 		}
@@ -271,7 +271,7 @@ function DrugExistsInDealer(user, drug) {
 	if(Kingpin[user]) {
 		var obj = JSON.parse(Kingpin[user]);
 		for(var b = 0; b < obj.Dealer.length; b++) {
-			if(obj.Dealer[b].Name == drug) {
+			if(obj.Dealer[b].Name.toLowerCase() == drug.toLowerCase()) {
 				return true;
 			}
 		}
@@ -283,14 +283,14 @@ function GetDrugID(target, user, drug) {
 		var obj = JSON.parse(Kingpin[user]);
 		if(target == "pack") {
 			for(var b = 0; b < obj.Backpack.length; b++) {
-				if(obj.Backpack[b].Name == drug) {
+				if(obj.Backpack[b].Name.toLowerCase() == drug.toLowerCase()) {
 					return b;
 				}
 			}
 		}
 		if(target == "dealer") {
 			for(var d = 0; d < obj.Dealer.length; d++) {
-				if(obj.Dealer[d].Name == drug) {
+				if(obj.Dealer[d].Name.toLowerCase() == drug.toLowerCase()) {
 					return d;
 				}
 			}
@@ -438,7 +438,7 @@ function ViewDrugs(user) {
 		return data + "```";
 	}
 }
-function ViewBackpack(user) {
+function ViewBackpack(user, page) {
 	if(Kingpin[user]) {
 		var data = "```md\n";
 		var obj = JSON.parse(Kingpin[user]);
