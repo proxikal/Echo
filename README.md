@@ -3,6 +3,7 @@
 | :--:  | :--:  |
 | [Echo Commands](https://proxikal.github.io/Echo/Commands)  | Echo Commands Page  |
 | [Echo ARS](https://proxikal.github.io/Echo/) | Echo ARS Page |
+| [Echo Intralink](https://proxikal.github.io/Echo/Intralink) | Echo Intralink Page |
 | [Echo Youtube Channel](https://www.youtube.com/channel/UC6C6Iq78tZ4Ud8wP4Hqnubw)   | Youtube Help Videos  |  
 | [Echo R.P.G Game](https://discord.gg/dHzx2aa)  | An R.P.G Text based game coded with Echo!  |  
 | [A.R.S Builder](https://google.com)  | Coming back soon!  | 
@@ -14,6 +15,18 @@ Step 1: Download one of the snippet files you want in [Easy Scripts Folder](http
 Step 2: Drag the file(s) you want into a channel Echo has permissions to read messages in.  
 If all went well, you will see the new commands listed under the file you uploaded.  
 And available for you to use!  
+  
+# ARS Intralink Is Here!!
+The Intralink takes the ARS to a whole new level.  
+Here's a short description (But visit the site in our **Table of References** above)  
+**The Intralink is a way to share an ARS file on any server or in Echo's DM with a unique Address**  
+Almost like the internet. Except with the Intralink addresses look like `ars://Intralink`  
+A few live links (`ars://Servers`, `ars://DragonWars`, `ars://economy`).  
+**Connect to an Address Via Echo DM:** *Just DM the address to echo (You will see a topic when it works)*  
+**Connect an Address to a channel in your server**: *Type: .lockprofile ars://AddressHere you will see a topic when it works*  
+**Connect to a password protected address** *Type: ars://AddressHere:PasswordHere*  
+You can register up to **10 Addresses** at a time and you can password protect them.  
+Want more information? And all the commands? [Echo Intralink](https://proxikal.github.io/Echo/Intralink)  
   
 # Table of Contents
 | Link  | Information  |
