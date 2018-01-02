@@ -314,9 +314,9 @@ function SellDrugs(user, drug, amount) {
 	if(Kingpin[user]) {
 		var obj = JSON.parse(Kingpin[user]);
 		var bID = GetDrugID("pack", user, drug);
-		if(bID == null) { // The drug exists inside of the users backpack.
+		if(bID.Code == null) { // The drug exists inside of the users backpack.
 			var dID = GetDrugID("dealer", user, drug);
-			if(dID == null) {
+			if(dID.Code == null) {
 				// The drug exists in the dealers pack.
 				// So manipulate current data.
 				if(amount == obj.Backpack[bID].Amount) {
