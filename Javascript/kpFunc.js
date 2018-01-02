@@ -517,7 +517,7 @@ function BuyDrugs(user, drug, amount) {
 					if(obj.Cash >= price) { // They have the cash required.
 						if(DrugExistsInPack(user, drug) == false) {
 							var drug = {
-								Name: drug,
+								Name: obj.Dealer[d].Name,
 								Amount: amount,
 								PurchasedAt: obj.Dealer[d].Price
 							};
