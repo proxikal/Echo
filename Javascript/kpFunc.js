@@ -441,7 +441,6 @@ function ViewDrugs(user) {
 }
 function ViewBackpack(user, page) {
 	if(Kingpin[user]) {
-		var data = "```md\n";
 		var obj = JSON.parse(Kingpin[user]);
 		var p = parseInt(page);
 		var perPage = 10;
@@ -449,6 +448,7 @@ function ViewBackpack(user, page) {
 		if(p > totalPages) {
 			p = totalPages;
 		}
+		var data = "```md\nBackpack Size: <"+obj.Backpack.length + "/" + obj.MaxBackpackSize + ">\nTotal Pages: <"+totalPages+">\n";
 		var pgn = Pagination(p, totalPages, perPage, obj.Backpack);
 		for(var i = pgn.Start; i < pgn.End; i++) {
 			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].PurchasedAt) + " >\n";
