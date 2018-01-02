@@ -442,10 +442,11 @@ function ViewBackpack(user, page) {
 	if(Kingpin[user]) {
 		var data = "```md\n";
 		var obj = JSON.parse(Kingpin[user]);
+		var p = parseInt(page);
 		var totalPages = Math.ceil(obj.Backpack.length / 10);
-		var pgn = Pagination(page, totalPages, 10, obj.Backpack.length);
+		var pgn = Pagination(p, totalPages, 10, obj.Backpack.length);
 		for(var i = pgn.Start; i < pgn.End; i++) {
-			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].Price) + " >\n";
+			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].PurchasedAt) + " >\n";
 		}
 		return data + "\n--------------------\n"+pgn.Info+"```";
 	}
@@ -488,14 +489,14 @@ function BuyDrugs(user, drug, amount) {
 							var drug = {
 								Name: drug,
 								Amount: amount,
-								PurchasedAt: price
+								PurchasedAt: obj.Dealer[d].Price
 							};
 							obj.Backpack.push(drug);
 						} else {
 							var id = GetDrugID("pack", user, drug);
 							if(obj.Backpack[id].Name.toLowerCase() == drug.toLowerCase()) { // make sure the array kept it's order.
 								obj.Backpack[id].amount += amount;
-								obj.Backpack[id].PurchasedAt = price;
+								obj.Backpack[id].PurchasedAt = obj.Dealer[d].Price;
 							}
 						}
 						if(obj.Dealer[d].Amount == amount) { // They purchased all of the drugs.
