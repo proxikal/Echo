@@ -439,12 +439,12 @@ function ViewDrugs(user) {
 		if(timeLeft > 0) {
 			if(seconds >= 60) {
 				minutes = Math.floor(seconds / 60);
-				footer = "\nLast Market Refresh: **" + minutes + " minute(s) ago**";
+				footer = "\nLast Market Refresh: " + minutes + " minute(s) ago";
 			} else {
-				footer = "\nLast Market Refresh: **" + seconds + " second(s) ago**";
+				footer = "\nLast Market Refresh: " + seconds + " second(s) ago";
 			}
 		} else {
-			footer = "\nLast Market Refresh: **Just now**";
+			footer = "\nLast Market Refresh: Just now";
 		}
 		var nobj = JSON.parse(Kingpin[user]);
 		for(var i = 0; i < nobj.Dealer.length; i++) {
