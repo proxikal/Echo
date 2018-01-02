@@ -432,11 +432,23 @@ function ViewDrugs(user) {
 				return data;
 			}
 		}
+		var timeLeft = obj.Cooldowns.DealerRefresh - Now();
+		var seconds = timeLeft;
+		var minutes = 0;
+		var footer = "";
+		if(timeLeft > 0) {
+			if(seconds >= 60) {
+				minutes = Math.floor(seconds / 60);
+				footer = "\nLast Market Refresh: **" + minutes + " minute(s) ago**";
+			} else {
+				footer = "\nLast Market Refresh: **" + seconds + " second(s) ago**";
+			}
+		}
 		var nobj = JSON.parse(Kingpin[user]);
 		for(var i = 0; i < nobj.Dealer.length; i++) {
 			data += "# " + nobj.Dealer[i].Name + "(" + nobj.Dealer[i].Amount + ")\n- < $" + commafy(nobj.Dealer[i].Price) + " >\n";
 		}
-		return data + "```";
+		return data + footer + "```";
 	}
 }
 function ViewBackpack(user, page) {
