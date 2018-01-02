@@ -439,12 +439,12 @@ function ViewDrugs(user) {
 		if(timeLeft > 0) {
 			if(seconds >= 60) {
 				minutes = Math.floor(seconds / 60);
-				header = "Last Market Refresh: " + minutes + " minute(s) ago";
+				header = "Next Market Refresh: " + minutes + " minute(s)";
 			} else {
-				header = "Last Market Refresh: " + seconds + " second(s) ago";
+				header = "Next Market Refresh: " + seconds + " second(s)";
 			}
 		} else {
-			header = "Last Market Refresh: Just now";
+			header = "Next Market Refresh: Just now";
 		}
 		data += header + "\n----------------------\n"
 		var nobj = JSON.parse(Kingpin[user]);
