@@ -380,7 +380,7 @@ function PropertyMarket(page) {
 	var pgn = Pagination(page, totalPages, 10, properties);
 
 	var data = "```md\n";
-	for(var i = pgn.Start; i < pgn.Stop; i++) {
+	for(var i = pgn.Start; i < pgn.End; i++) {
 		data += "# " + properties[i].Name + "\n-\n";
 	}
 	data += "\n--------------------\n"+pgn.Info+"```";
@@ -398,7 +398,7 @@ function ListProperties(page) {
 
 	var pgn = Pagination(page, totalPages, 10, props);
 	var data = "```md\n";
-	for(var i = pgn.Start; i < pgn.Stop; i++) {
+	for(var i = pgn.Start; i < pgn.End; i++) {
 		data += props[i].Name + "\n- < AHS (" + props[i].Attack + "/" + props[i].Health + "/" + props[i].Speed + ") >\n";
 	}
 	data += "\n--------------------\n"+pgn.Info+"```";
@@ -445,7 +445,7 @@ function ViewBackpack(user, page) {
 		var p = parseInt(page);
 		var totalPages = Math.ceil(obj.Backpack.length / 10);
 		var pgn = Pagination(p, totalPages, 10, obj.Backpack.length);
-		for(var i = pgn.Start; i < pgn.Stop; i++) {
+		for(var i = pgn.Start; i < pgn.End; i++) {
 			data += "# " + obj.Backpack[i].Name + "(" + obj.Backpack[i].Amount + ")\n- < $" + commafy(obj.Backpack[i].PurchasedAt) + " >\n";
 		}
 		return data + "\n--------------------\n"+pgn.Info+"```";
