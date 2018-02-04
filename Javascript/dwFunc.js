@@ -260,7 +260,7 @@ function UsersStartHunt(hunt, obj, stamp) {
         if(usr.Timers == null) { usr.Timers = new Array(); }
         usr.Timers.push(hunt);
         usr.Hunting = true;
-        DragonWars[obj.Users[i] + "-hunting"] = seconds + "s";
+        dwTimers[obj.Users[i] + "-hunting"] = seconds + "s";
         DragonWars[obj.Users[i]] = JSON.stringify(usr);
     }
 }
