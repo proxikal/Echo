@@ -398,8 +398,7 @@ function GetDragon(user) {
     var usr = JSON.parse(DragonWars[user]);
     return usr.Dragon;
 }
-function CalculateTierBoost(user) {
-	var obj = JSON.parse(DragonWars[user]);
+function CalculateTierBoost(obj) {
 	var boost = { Attack: 0, Defense: 0, Health: 0, Speed: 0 };
 	if(obj.Tier != null) {
 		boost.Attack = obj.Tier.Boost.Attack;
