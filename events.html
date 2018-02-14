@@ -261,6 +261,21 @@ The server has been updated.
                                     </div><!--//section-block-->
                                 </div>
                             </section>
+
+                            <section id="voice-update" class="doc-section">
+                                <h2 class="section-title">Voice Update</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        <pre><code class="language-cplx">.auto vjUpdate={init}
+{protect}
+{Event:VoiceUpdate}{redirect:CHANNELID}
+String.{data|channel} == ?:{/user} has left voice.
+Response.nil?:{/user} has joined <#{data|channel}>
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                     <div class="doc-sidebar">
@@ -287,6 +302,7 @@ The server has been updated.
                                         <li><a class="scrollto" href="#channel-delete">Channel Delete</a></li>
                                         <li><a class="scrollto" href="#channel-update">Channel Update</a></li>
                                         <li><a class="scrollto" href="#server-update">Server Update</a></li>
+                                        <li><a class="scrollto" href="#voice-update">Voice Update</a></li>
                                     </ul><!--//nav-->
                                 </li>
                             </ul><!--//doc-menu-->
