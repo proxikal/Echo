@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ARS Docs</title>
+      <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+      <meta name="description" content="ARS Documentation">
+      <meta name="author" content="NoOne">
+      <meta name="copyright" content="dct">
+      <meta name="date" content="2-18-2018">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+      <link rel="stylesheet" type="text/css" href="css/responsive.css">
+      <style>code { background-color: #2B2F3E!important; color: #C5D4D7!important;width:75%!important;border: 1px solid #000!important; }</style>
+   </head>
+   <body id="ars-docs">
+      <div id="page">
+         <header class="header" id="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-2 col-sm-3">
+                     <div class="mm-toggle-wrap">
+                        <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">Menu</span></div>
+                     </div>
+                     <h1>
+                        <a class="header__block header__brand" href="index.html"><img src="images/logo-new.png" alt="API Logo">
+                        </a>
+                     </h1>
+                  </div>
+                  <div class="col-lg-10 col-sm-9 hidden-xs">
+                     <div class="header__nav">
+                        <div class="header__nav--right">
+                           <ul class="dx-nav-0 dx-nav-0-tools">
+                              <li class="dx-nav-0-item ">
+                                 <a class="dx-nav-0-link" href="https://discordapp.com/oauth2/authorize?permissions=0&scope=bot&client_id=249891250117804032">Invite Echo</a>
+                              </li>
+                              <li class="dx-nav-0-item ">
+                                 <a class="dx-nav-0-link" href="http://proxikal.github.io/Echo/Commands/">Preset Commands</a>
+                              </li>
+                           </ul>
+                           <div class="dx-auth-block">
+                              <div class="dx-auth-logged-out">
+                                 <a class="dx-auth-login dx-btn dx-btn-primary" data-js="auth-btn" href="https://discord.gg/9PRs6xH" data-dxa="login,nav-click,nav-login">Join Server</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <section>
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-3">
+                     <div id="documenter_sidebar">
+                        <ol id="documenter_nav">
+                           <li><a class="current" href="#d1"><i class="fa fa-file-text-o"></i> Introduction</a></li>
+                           <li><a href="#d2"><i class="fa fa-cog"></i> The Basics </a> </li>
+                           <li><a href="#d3"><i class="fa fa-anchor"></i> Params Key </a></li>
+                           <li><a href="#d4"><i class="fa fa-key"></i> Command Security </a></li>
+                           <li><a href="#d5"><i class="fa fa-at"></i> Interact with Mentions </a></li>
+                           <li><a href="#d6"><i class="fa fa-bed"></i> The Power of Sleep </a></li>
+                           <li><a href="#d7"><i class="fa fa-link"></i> ARS Linking 101 </a></li>
+                           <li><a href="#d8"><i class="fa fa-code"></i> Statements 101 </a></li>
+                           <li><a href="#d9"><i class="fa fa-database"></i> Custom DBs 101 </a></li>
+                           <li><a href="#d10"><i class="fa fa-superscript"></i> Regex 101 </a></li>
+                        </ol>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-9 col-sm-9">
+                     <div class="header-section-wrapper">
+                        <div class="header-section header-section-example">
+                           <div id="language">
+                              <ul class="language-toggle">
+                                 <li>
+                                    <input type="radio" class="language-toggle-source">
+                                    <label class="language-toggle-button">Home</label>
+                                 </li>
+                                 <li>
+                                    <input type="radio" class="language-toggle-source">
+                                    <label class="language-toggle-button">-></label>
+                                 </li>
+                                <li>
+                                    <input type="radio" class="language-toggle-source" checked="checked">
+                                    <label class="language-toggle-button">Bible</label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="documenter_content" class="method-area-wrapper">
+                        <div id="d1" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>Introductions</h3>
+                                    <p>
+                                       Auto Response System was created to grant users the ability to have Echo perform complex tasks. Almost like a Bot Bootstrap system for Discord. The idea came from my original bot Paradox which was released early 2016 when everyone wanted "Custom Commands". The Auto Response System is very unique and allows for people to make things we weren't even aware were possible. This is where A.R.S Masters are born.
+                                    </p>
+                                    <p> <img src="https://github.com/proxikal/Echo/blob/master/server-example.png?raw=true" alt="place holder"></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div id="d2" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>The Basics</h3>
+                                    <p>
+                                       There are two parts to the ARS System. The <b>Trigger</b> and the <b>Response</b><br>
+                                       For most cases the trigger will be the word you want echo to react to when people say it.<br>
+                                       The response will be what Echo sends back to the user. This is where majority of ARS Keys are used.
+                                    </p>
+                                    <h3>Triggers</h3>
+                                    <i>There are a few different variations of triggers to allow for maximum manipulate.</i>
+
+<h4>Basic Trigger</h4>
+<pre><code>.auto hello={init}
+Hello {/user} How are you today?
+</code></pre>
+Now when someone types <b>Hello</b> <i>(Not case sensitive)</i><br>
+Echo will respond with Hello (Their name) How are you today?<br>
+<u>Important:</u> This trigger will only work if their message is ONLY hello or Hello.<br>
+Anything else and echo will ignore the message.
+<br>
+<h4>Find\Catching Trigger</h4>
+<pre><code>.auto &hello={init}
+Hello {/user} How are you today?
+</code></pre>
+Now if someone types <b>Hello guys how are you?</b><br>
+Echo will find the Hello inside of the message and react with the response!<br>
+Pretty neat huh? But there is more of course..
+<br>
+<h4>Regex Triggers</h4>
+<pre><code>.auto &{:}(\n)={init}
+{del}Whoa, keep your messages to a single line please!
+</code></pre>
+<b>Info:</b> What's happening here is we're using Regex to find anyone who hits<br>
+<b>shift+enter</b> to make a new line in. If this has happened<br>
+Echo will delete their message and tell the user to keep their message simple.
+<br>
+<h4>Formula Trigger</h4>
+<pre><code>.auto (hey|how|you)={init}
+I'm doing just fine {/user}, thank you for asking!
+</code></pre>
+<b>Info:</b> What's happening here is. If the user types<br>
+<b>Hey How</b> and <b>You</b> in the same message, Echo will respond with the desired response.<br>
+If they only typed out Hey and You, echo will ignore the message<br>
+until all three conditions (words) have been found in their message.
+<br>
+<h4>Trigger Elements</h4>
+<pre><code>.auto &lt;&lt;HasPrefix?:Hello&gt;&gt;={init}
+Hello to you too {/user}
+</code></pre>
+<b>Info:</b> Basically this trigger will check all messages<br>
+and see if it starts with Hello. If so then echo will respond!
+<br>
+We're only showing you one of the trigger elements available<br>
+to view more check out the docs index page and click <b>Trigger Elements</b><br>
+<br>
+<br>
+Triggers are fun once you learn how to handle and manipulate them.<br>
+And with Regex you could really take things to the next level!
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                        <div id="d3" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>Params Key</h3>
+                                    <p>
+                                       One of the neat things you can do is catch peoples text inside of a command.<br>
+                                       And than you can handle that data inside of Echo's response to the user.<br>
+                                       We make this possible by using the only ARS Key available inside of triggers.
+                                    </p>
+<pre><code>.auto &.say {params}={init}
+Hey You said {params} and let's do fun things with it below!
+</code></pre>
+<br>
+<pre><code>.auto &.say {params}={init}
+Normal Text: `{params}`
+Backwards: `{params:flip}`
+No Text: `{striptext:{params}}`
+No Numbers: `{stripint:{params}}`
+</code></pre>
+
+<b>Want to split your Params? Let's do it!!</b>
+<pre><code>.auto &.say {params}={init}
+{split: }
+You said `{/p0}` And also `{/p1}`
+</code></pre>
+You type <b>.say Hello World</b>
+<i>This will split your text into two by the delimiter which in this case is a space.</i>
+<br>
+<b>When using Params inside of your trigger, the trigger must always start with a <u>&</u></b><br>
+However, you don't type the & when calling the command.
+<br><br>
+<h3>Params and Mentions</h3>
+Echo will remove mentions from your params, the reason for this may not be clear for you yet.<br>
+But when you start dealing with custom role commands, or even games & Moderation commands it's needed.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div id="d4" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>Command Security</h3>
+                                    <p>
+                                       So from what you've learned so far, you're probably telling yourself<br>
+                                       Hey, i could make a custom role command? Yes! You can. However..<br>
+                                       Let's make sure by doing so. You don't allow your members to take your server over.
+                                    </p>
+<h3>Bad Idea</h3>
+<pre><code>.auto &.role {params}={init}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>Why is this bad?</b>: The command above is not restricted<br>
+Which means any member could give themselves any role in your server.<br>
+<b><u>Not Good at All!</u></b>
+<br>
+Later down the road you will learn about statements which will help you out here<br>
+But we're in the basic tutorial of all this, So let me introduce you to the basic ways.<br>
+Now say you and your admins all have a role named <b>Admin</b>. Let's make the above<br>
+only work for people who have that admin role. <i>Phew...</i><br>
+<pre><code>.auto &.role {params}={init}
+{req:Admin}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>Yay!</b> now the command is secured to only your Admins.<br>
+You could also secure it to multiple roles. <b>{req:Admins,Management,Owner}</b><br>
+And there you go. A secure command so only your staff can call this command.<br>
+<br>
+Now i bet you're wondering.. <b>Can i type: .role @User Role Name</b> using the above command?<br>
+The answer is YES! You really can. But before you dabble in this area.. let's move to th next part<br>
+<b>Interact with Mentions</b> which is just below. :)
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div id="d5" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>Interact with Mentions</h3>
+                                    <p>
+                                       <i>AHHHHH</i> this part always makes me giddy :)<br>
+                                       The cool thing is how echo handles a mention inside of a command<br>
+                                       And what happens in the background, unless you restrict it yourself.
+                                    </p>
+<h4>Custom role command</h4>
+<i>We'll start back with this command below to give yourself a role.</i><br>
+What is neat here is, it can also be used to give a mentioned user a role.<br>
+
+<pre><code>.auto &.role {params}={init}
+{req:Admin}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>You Type:</b> <i>.role @User Role Name</i><br>
+Echo will immediately see the mention, remove it from the params (Yay!)<br>
+But that's not all. You will notice all of the keys have directed to the mentioned user<br>
+No longer says the users name who typed the command, instead it's all directed towards the mentioned.<br>
+This is also true for most of Echos keys, {kick}, {ban}, {user}, {rawid} all of the user based keys<br>
+This allows people to create custom commands, check other users info stats..etc so many possibilities!<br>
+<b>I don't want mentions to be possible</b>:<br>
+Not a problem at all, let's look at this nifty little key:
+<pre><code>.auto &.role {params}={init}
+{req:Admin}
+{-mentions}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>No more Mentions!</b> now if this command has a mention inside, Echo will ignore it completely.<br>
+He will still remove the mention from the params key, however. All of the keys are directed to the person<br>
+who triggered the rule. Not the mentioned user.. <b>This is great to know for filtering words</b><br>
+You <u>DO NOT</u> want to do something like this:
+<pre><code>.auto &fuck={init}
+{kick}{/user} was kicked for swearing..
+</code></pre>
+<b>Why is this bad?</b> because if they say Fuck and mention someone...uh oh..<br>
+Echo will now kick the mentioned user..not the person saying <b>fuck</b>.<br>
+So we do this:
+<pre><code>.auto &fuck={init}
+{-mentions}
+{kick}{/user} was kicked for swearing..
+</code></pre>
+Boom! Alright, now the user who just swore (regardless of mentions or not) will be kicked.<br>
+And the poor user who was just mentioned will not be harmed. Which is good..
+<br>
+This system also helps with games, moderation commands and much more.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div id="d6" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>The Power of Sleep</h3>
+                                    <p>
+                                       Want echo to pause before doing something? Boom!
+                                    </p>
+<pre><code>.auto .test={init}
+{sleep:15s} Hey you had to wait 15 seconds before seeing this!
+</code></pre>
+<br>
+Sleeping can be a great thing for many different reasons.<br>
+But you must understand that with sleeping, comes great responsibility...<i>*Hehe*</i> <br>
+There are what we call <b>Sweet spots</b> an ideal amount of time to sleep.<br>
+The reason for this is, Echo sometimes undergoes maintenance or updates.<br>
+If you have a command mid-sleep and Echo goes down for th above, no more command.<br>
+Echo will hault your command completely, and when he comes back. It won't start up again.<br>
+Now this is a small chance, but we managed to collect some data to find that <b>1 Hour</b><br>
+Should be the max amount of wait time <b>{sleep:1h}</b> for the best possible results.<br>
+<br>
+Now, you can do some magic with a little thing we call <b>ARS Linking</b> and the sleep!<br>
+Read down below for more info!!
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                        <div id="d7" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>ARS Linking 101</h3>
+                                    <p>
+                                       The Daisy Chain of the Future.
+                                    </p>
+ARS Linking is a lot of fun, and it allows you to do many more things with Echo.<br>
+The first thing you should know is, everyone is limited to <b>10</b> links in a rule.<br>
+And you cannot link a rule multiple times, or Echo will hault the entire rule.
+<pre><code>.auto .test={init}
+Alright, Here we go!
+{ars:rule2}
+</code></pre>
+Now in the linked rule, we will add <b>{arslock}</b> this will prevent people running it manually.<br>
+<i>Now let's build the rule2 we're calling for inside of the {ars} key.</i>
+<pre><code>.auto rule2={init}
+{arslock} /* Deny manual runs. */
+{sleep:15s}
+And there it went!!!
+</code></pre>
+<br>
+Now this system can be awesome for a few reasons, let's show you below:<br>
+Let's mute someone, and then have echo unmute them in 30 minutes.<br>
+<b>This requires you to have the role <u>Muted</u></b>
+<pre><code>.auto &.mute={init}
+{role:Muted}{/user} has been muted.
+{ars:unMute}
+</code></pre>
+<i>You type: .mute @User</i>
+<pre><code>.auto unMute={init}
+{arslock}
+{sleep:30m}
+{take:Muted}Alright {/user} you can now talk.
+</code></pre>
+Awesome! Now let's explain a little bit of what's happening above.<br>
+You typed out <b>.mute @MentionSomeoneHere</b> and Echo immediately mutes them<br>
+Now, he will wait 30 minutes and then unmute the user, letting them know he's unmuted.<br>
+One thing you should know is all responses will be sent back to the channel you've initiated the command.<br>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                        <div id="d8" class="method">
+                           <div class="method-area">
+                              <div class="method-copy">
+                                 <div class="method-copy-padding">
+                                    <h3>Statements 101</h3>
+                                    <p>
+                                       Statements will help you with many different possibilities<br>
+                                       They allow you to tell Echo to stop, or go. Based on a condition.<br>
+                                       Let's look at some examples below!
+                                    </p>
+We will start you off with the newest of the statements.<br>
+We call them Conditionals.
+<pre><code>.auto &.say {params}={init}
+:break unless params=Hello!
+Hey, you said `Hello` :)
+</code></pre>
+Now with the conditionals you can also have else conditions.
+<pre><code>.auto &.say {params}={init}
+:break unless params=Hello! >> Sorry, you need to type .say Hello
+Hey, you said `Hello` :)
+</code></pre>
+Pretty neat, so if you type <b>.say Goodbye</b> you will get the else response<br>
+<b>Sorry, you need to type .say Hello</b><br>
+<br>
+Seems pretty simple right? Let's look at the <b>Basic Statements</b><br>
+These were the first of the Statements.
+<pre><code>.auto &.say {params}={init}
+{if:params == Hello}
+Hey, you said `Hello` :)
+</code></pre>
+Alright, now let's take a look at <b>Dynamic Statements</b><br>
+Which also give you the ability to have Else conditions :)
+<pre><code>.auto &.say {params}={init}
+Params.Hello?:Hey, you said `Hello` :)
+Response.nil?:Sorry, you need to type .say Hello
+</code></pre>
+Awesome! Now let's take a look at <b>Complex Statements</b><br>
+Which also give you the ability for else conditions.
+<pre><code>.auto .test={init}
+use | general | noob-channel
+{if(ischannel):
+   Hey, you typed this command in #general or #nooob-channel
+} (else) {
+   {stop} /* tell echo to do nothing */
+}
+</code></pre>
+Now let's explain a little bit about above.<br>
+We're checking if the command was typed out in two channels<br>
+If not then we're telling echo to just stop.<br>
+This can also be done without using the else condition all together.
+<pre><code>.auto .test={init}
+use | general | noob-channel
+{if(ischannel):
+   Hey, you typed this command in #general or #nooob-channel
+}
+</code></pre>
+
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <div id="mobile-menu">
+         <div class="mobile-menu-inner">
+            <ul>
+               <li>
+                  <a href="#d1">Page links</a>
+                  <ul>
+                     <li><a class="current" href="#d1"><i class="fa fa-file-text-o"></i> Introduction</a></li>
+                     <li><a href="#d2"><i class="fa fa-cog"></i> The Basics </a> </li>
+                     <li><a href="#d3"><i class="fa fa-anchor"></i> Params Key </a></li>
+                     <li><a href="#d4"><i class="fa fa-key"></i> Command Security </a></li>
+                     <li><a href="#d5"><i class="fa fa-at"></i> Interact with Mentions </a></li>
+                     <li><a href="#d6"><i class="fa fa-bed"></i> The Power of Sleep </a></li>
+                     <li><a href="#d7"><i class="fa fa-link"></i> ARS Linking 101 </a></li>
+                     <li><a href="#d8"><i class="fa fa-code"></i> Statements 101 </a></li>
+                     <li><a href="#d9"><i class="fa fa-database"></i> Custom DBs 101 </a></li>
+                     <li><a href="#d10"><i class="fa fa-superscript"></i> Regex 101 </a></li>
+                  </ul>
+               </li>
+            </ul>
+            <div class="top-links">
+               <ul class="links">
+                  <li><a title="Invite Bot" href="https://discordapp.com/oauth2/authorize?permissions=0&scope=bot&client_id=249891250117804032">Invite Echo</a></li>
+                  <li><a title="Commands" href="http://proxikal.github.io/Echo/Commands">Preset Commands</a></li>
+                  <li><a title="Server" href="https://discord.gg/9PRs6xH">Join Server</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <script src="js/prism.js"></script>
+      <script src="js/jquery.1.6.4.js"></script>
+      <script src="js/jquery.easing.js"></script>
+      <script>document.createElement('section');
+         var duration = 500, easing = 'swing';
+      </script>
+      <script src="js/slides.min.jquery.js"></script>
+      <script src="js/common.js"></script>
+      <script src="js/jquery.mobile-menu.min.js"></script>
+   </body>
+</html>
