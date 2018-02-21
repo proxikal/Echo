@@ -284,8 +284,8 @@ Response.nil?:{/user} has joined <#{data|channel}>
                                         <div class="answer">
                                             <i>Variables available in this event:</i>
                                             <b>{data|channel}, {data|emoji}, {data|msgid}, {data|user}</b>
+                                            <i>Note: You cannot use {protect} on this key.</i>
                                         <pre><code class="language-cplx">.auto rctAdd={init}
-{protect}
 {Event:ReactionAdd}
 :break unless message.id=MessageIDHere
 String.{data|emoji} == :smile:?:{/user} has voted for Option A
@@ -303,8 +303,8 @@ Response.nil?:{stop}
                                         <div class="answer">
                                             <i>Variables available in this event:</i>
                                             <b>{data|channel}, {data|emoji}, {data|msgid}, {data|user}</b>
+                                            <i>Note: You cannot use {protect} on this key.</i>
                                         <pre><code class="language-cplx">.auto rctRemove={init}
-{protect}
 {Event:ReactionRemove}
 :break unless message.id=MessageIDHere
 String.{data|emoji} == :smile:?:{/user} has removed their vote for Option A
