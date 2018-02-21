@@ -68,11 +68,13 @@
                                     <a href="https://ars.xtclabs.net/keylist.html" class="btn btn-green" target="_blank"><i class="fa fa-download"></i> A.R.S Key List</a>
                                 </div>
                             </section><!--//doc-section-->
-                            <section id="installation-section" class="doc-section">
-                                <h2 class="section-title">Logic Behind A.R.S</h2>
+                            <section id="d2" class="doc-section">
+                                <h2 class="section-title">The Basics</h2>
                                 <div id="step1"  class="section-block">
                                     <h3 class="block-title">The Trigger</h3>
-                                    <p>The keyword you want Echo to respond to. This can be a variety of things. Pure Regex, a plain trigger the original & key to find the word anywhere in a sentence. Only two keys are allowed in the trigger. The main key is <b>{params}</b> and the other is to define pure regex <b>{:}</b>
+                                    <p>There are two parts to the ARS System. The <b>Trigger</b> and the <b>Response</b><br>
+                                       For most cases the trigger will be the word you want echo to react to when people say it.<br>
+                                       The response will be what Echo sends back to the user. This is where majority of ARS Keys are used.
                                     </p>
                                     <div class="code-block">
                                         <h6>Basic Trigger:</h6>
@@ -91,78 +93,311 @@ Response Here</code></pre></p>
                                         <p><pre><code class="language-css">.auto (word1|word2)={init}
 Response Here</code></pre></p>
                                         <i>The above rule will only work if word1 and word2 is detected</i>
+                                        <h6>Trigger Elements:</h6>
+                                        <p><pre><code class="language-css">.auto &lt;&lt;HasPrefix?:Hello&gt;&gt;={init}
+Hello to you too {/user}</code></pre></p>
+                                        <i><b>Info:</b> Basically this trigger will check all messages<br>
+and see if it starts with Hello. If so then echo will respond!</i>
+
                                     </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="step2"  class="section-block">
-                                    <h3 class="block-title">The Response</h3>
-                                    <p>The response is where all the neat stuff happens. This is where you can do anything, to make Echo truly your own bot. And to help you along, We've added a vast library of keys to help you have more control over what echo is doing for you.
-                                    </p>
-
-                                    <div class="code-block">
-                                        <h6>Give someone a role.</h6>
-                                        <p><pre><code class="language-css">.auto &Instinct={init}
-{role:Instinct}Alright {/user} You have the role Instinct!</code></pre></p>
-                                    </div>
-                                    <p>Now if someone types I love team instinct! Echo will give them the role. (This of course being they don't already have the role). Echo will not respond to people who have the role when using {role} key.
-                                    <br>
-                                    Why use the <b>&</b> in the trigger?:<br>
-                                    This allows echo to find the word Instinct in a message. Without the & in the trigger the user would have to <b>ONLY</b> type the word instinct for echo to respond.
-                                    </p>
-
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
                             
-                            <section id="code-section" class="doc-section">
-                                <h2 class="section-title">Using {params} Key.</h2>
+                            <section id="d3" class="doc-section">
+                                <h2 class="section-title">Params Key</h2>
                                 <div class="section-block">
                                     <p>
                                         Params key is one of the favorites in the system. It's the original key that allows you to catch someones input. Now there happens to be another key called {content} but that's for another time. Let's take a look at how we can use params in it's simplest form.
                                     </p>
                                 </div><!--//section-block-->
                                 <div id="html" class="section-block">
-                                    
-                                    <div class="callout-block callout-success">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Useful Tip:</h4>
-                                            <p><font color="#666">When using {params} key the trigger has to have a <code>&</code> character at the beginning.</font></p>
-                                        </div><!--//content-->
-                                    </div>
+                                    <p>
+                                       One of the neat things you can do is catch peoples text inside of a command.<br>
+                                       And than you can handle that data inside of Echo's response to the user.<br>
+                                       We make this possible by using the only ARS Key available inside of triggers.
+                                    </p>
 
                                     <div class="code-block">
                                         <h6>Basic Example</h6>
-                                        <pre><code class="language-css">.auto &.say {params}={init} 
-{/user} You said `{params}`
+                                        <pre><code class="language-css">.auto &.say {params}={init}
+Hey You said {params} and let's do fun things with it below!
 </code></pre>
 
                                         <h6>Another Example</h6>
-                                        <pre><code class="language-css">.auto &.ascii {params}={init}
-```{ascii:{params}}```
+                                        <pre><code class="language-css">.auto &.say {params}={init}
+Normal Text: `{params}`
+Backwards: `{params:flip}`
+No Text: `{striptext:{params}}`
+No Numbers: `{stripint:{params}}`
 </code></pre>
+<br>
+<h4>Splitting the Params key</h4>
+                                        <pre><code class="language-css">.auto &.say {params}={init}
+{split: }
+You said `{/p0}` And also `{/p1}`
+</code></pre>
+<i>This will split your text into two by the delimiter which in this case is a space.</i>
+<br>
+<b>When using Params inside of your trigger, the trigger must always start with a <u>&</u></b><br>
+However, you don't type the & when calling the command.
+<br><br>
+<h3>Params and Mentions</h3>
+Echo will remove mentions from your params, the reason for this may not be clear for you yet.<br>
+But when you start dealing with custom role commands, or even games & Moderation commands it's needed.
+
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
-                            <section id="callouts-section" class="doc-section">
-                                <h2 class="section-title">The Order</h2>
+                            <section id="d4" class="doc-section">
+                                <h2 class="section-title">Command Security</h2>
                                 <div class="section-block">
-                                    <p>One of the most important aspects to the Auto Response System is the Order in which keys are parsed. Echo will start with most common data keys like {user} {pm} etc.. And than climb to the more complicated keys like {embed} or {getapi}. The reasoning for parse order is to allow usage between multiple keys for many different possibilities (However not always the case). We work hard to make everything compatible However we do run into order issues all the time! And we work hard in fixing the issues to allow for max potential for everyone!
+                                    <p>
+                                       So from what you've learned so far, you're probably telling yourself<br>
+                                       Hey, i could make a custom role command? Yes! You can. However..<br>
+                                       Let's make sure by doing so. You don't allow your members to take your server over.
                                     </p>
+
+                                    <div class="code-block">
+<h3>Bad Idea</h3>
+<pre><code class="language-css">.auto &.role {params}={init}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>Why is this bad?</b>: The command above is not restricted<br>
+Which means any member could give themselves any role in your server.<br>
+<b><u>Not Good at All!</u></b>
+<br>
+Later down the road you will learn about statements which will help you out here<br>
+But we're in the basic tutorial of all this, So let me introduce you to the basic ways.<br>
+Now say you and your admins all have a role named <b>Admin</b>. Let's make the above<br>
+only work for people who have that admin role. <i>Phew...</i><br>
+<pre><code class="language-css">.auto &.role {params}={init}
+{req:Admin}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>Yay!</b> now the command is secured to only your Admins.<br>
+You could also secure it to multiple roles. <b>{req:Admins,Management,Owner}</b><br>
+And there you go. A secure command so only your staff can call this command.<br>
+<br>
+Now i bet you're wondering.. <b>Can i type: .role @User Role Name</b> using the above command?<br>
+The answer is YES! You really can. But before you dabble in this area.. let's move to th next part<br>
+<b>Interact with Mentions</b> which is just below. :)
+                                    </div>
                                 </div>
                             </section><!--//doc-section-->
-                            <section id="tables-section" class="doc-section">
-                                <h2 class="section-title">A.R.S Governor</h2>
+
+
+                            <section id="d5" class="doc-section">
+                                <h2 class="section-title">Interact with Mentions</h2>
                                 <div class="section-block">
-                                    <p>The A.R.S is Governed to make sure abuse is minimal. The system will wait specified to how many rules has been triggered in a certain amount of time. Abusing the system can lead to a global ban from the Auto Response System.</p>
+                                    <p>
+                                      The cool thing is how echo handles a mention inside of a command<br>
+                                       And what happens in the background, unless you restrict it yourself.
+                                    </p>
+
+                                    <div class="code-block">
+<h4>Custom role command</h4>
+<i>We'll start back with this command below to give yourself a role.</i><br>
+What is neat here is, it can also be used to give a mentioned user a role.<br>
+
+<pre><code class="language-css">.auto &.role {params}={init}
+{req:Admin}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>You Type:</b> <i>.role @User Role Name</i><br>
+Echo will immediately see the mention, remove it from the params (Yay!)<br>
+But that's not all. You will notice all of the keys have directed to the mentioned user<br>
+No longer says the users name who typed the command, instead it's all directed towards the mentioned.<br>
+This is also true for most of Echos keys, {kick}, {ban}, {user}, {rawid} all of the user based keys<br>
+This allows people to create custom commands, check other users info stats..etc so many possibilities!<br>
+<b>I don't want mentions to be possible</b>:<br>
+Not a problem at all, let's look at this nifty little key:
+<pre><code class="language-css">.auto &.role {params}={init}
+{req:Admin}
+{-mentions}
+{role:{params}} Alright {/user} you now have the role `{params}`
+</code></pre>
+<b>No more Mentions!</b> now if this command has a mention inside, Echo will ignore it completely.<br>
+He will still remove the mention from the params key, however. All of the keys are directed to the person<br>
+who triggered the rule. Not the mentioned user.. <b>This is great to know for filtering words</b><br>
+You <u>DO NOT</u> want to do something like this:
+<pre><code class="language-css">.auto &fuck={init}
+{kick}{/user} was kicked for swearing..
+</code></pre>
+<b>Why is this bad?</b> because if they say Fuck and mention someone...uh oh..<br>
+Echo will now kick the mentioned user..not the person saying <b>fuck</b>.<br>
+So we do this:
+<pre><code class="language-css">.auto &fuck={init}
+{-mentions}
+{kick}{/user} was kicked for swearing..
+</code></pre>
+Boom! Alright, now the user who just swore (regardless of mentions or not) will be kicked.<br>
+And the poor user who was just mentioned will not be harmed. Which is good..
+<br>
+This system also helps with games, moderation commands and much more.
+                                    </div>
+                                </div><!--//section-block-->
+                                <div c
+                            </section><!--//doc-section-->
+
+
+                            <section id="d6" class="doc-section">
+                                <h2 class="section-title">The Power of Sleep</h2>
+                                <div class="section-block">
+                                    <p>
+                                    Learn how to manipulate when Echo performs a task!
+                                    </p>
+                                <div class="code-block">
+<pre><code class="language-css">.auto .test={init}
+{sleep:15s} Hey you had to wait 15 seconds before seeing this!
+</code></pre>
+<br>
+Sleeping can be a great thing for many different reasons.<br>
+But you must understand that with sleeping, comes great responsibility...<i>*Hehe*</i> <br>
+There are what we call <b>Sweet spots</b> an ideal amount of time to sleep.<br>
+The reason for this is, Echo sometimes undergoes maintenance or updates.<br>
+If you have a command mid-sleep and Echo goes down for th above, no more command.<br>
+Echo will hault your command completely, and when he comes back. It won't start up again.<br>
+Now this is a small chance, but we managed to collect some data to find that <b>1 Hour</b><br>
+Should be the max amount of wait time <b>{sleep:1h}</b> for the best possible results.<br>
+<br>
+Now, you can do some magic with a little thing we call <b>ARS Linking</b> and the sleep!<br>
+Read down below for more info!!
+                                </div>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
+
+
+                            <section id="d7" class="doc-section">
+                                <h2 class="section-title">A.R.S Linking 101</h2>
+                                <div class="section-block">
+                                    <p>
+                                    The power of Linking two or more rules together!
+                                    </p>
+                                    <div class="code-block">
+ARS Linking is a lot of fun, and it allows you to do many more things with Echo.<br>
+The first thing you should know is, everyone is limited to <b>10</b> links in a rule.<br>
+And you cannot link a rule multiple times, or Echo will hault the entire rule.
+<pre><code class="language-css">.auto .test={init}
+Alright, Here we go!
+{ars:rule2}
+</code></pre>
+Now in the linked rule, we will add <b>{arslock}</b> this will prevent people running it manually.<br>
+<i>Now let's build the rule2 we're calling for inside of the {ars} key.</i>
+<pre><code class="language-css">.auto rule2={init}
+{arslock} /* Deny manual runs. */
+{sleep:15s}
+And there it went!!!
+</code></pre>
+<br>
+Now this system can be awesome for a few reasons, let's show you below:<br>
+Let's mute someone, and then have echo unmute them in 30 minutes.<br>
+<b>This requires you to have the role <u>Muted</u></b>
+<pre><code class="language-css">.auto &.mute={init}
+{role:Muted}{/user} has been muted.
+{ars:unMute}
+</code></pre>
+<i>You type: .mute @User</i>
+<pre><code class="language-css">.auto unMute={init}
+{arslock}
+{sleep:30m}
+{take:Muted}Alright {/user} you can now talk.
+</code></pre>
+Awesome! Now let's explain a little bit of what's happening above.<br>
+You typed out <b>.mute @MentionSomeoneHere</b> and Echo immediately mutes them<br>
+Now, he will wait 30 minutes and then unmute the user, letting them know he's unmuted.<br>
+One thing you should know is all responses will be sent back to the channel you've initiated the command.<br>
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+
+                            <section id="d8" class="doc-section">
+                                <h2 class="section-title">A.R.S Statements 101</h2>
+                                <div class="section-block">
+                                    <p>
+                                       Statements will help you with many different possibilities<br>
+                                       They allow you to tell Echo to stop, or go. Based on a condition.<br>
+                                       Let's look at some examples below!
+                                    </p>
+                                
+                                    <div class="code-block">
+We will start you off with the newest of the statements.<br>
+We call them Conditionals.
+<pre><code class="language-css">.auto &.say {params}={init}
+:break unless params=Hello!
+Hey, you said `Hello` :)
+</code></pre>
+Now with the conditionals you can also have else conditions.
+<pre><code class="language-css">.auto &.say {params}={init}
+:break unless params=Hello! >> Sorry, you need to type .say Hello
+Hey, you said `Hello` :)
+</code></pre>
+Pretty neat, so if you type <b>.say Goodbye</b> you will get the else response<br>
+<b>Sorry, you need to type .say Hello</b><br>
+<br>
+Seems pretty simple right? Let's look at the <b>Basic Statements</b><br>
+These were the first of the Statements.
+<pre><code class="language-css">.auto &.say {params}={init}
+{if:params == Hello}
+Hey, you said `Hello` :)
+</code></pre>
+Alright, now let's take a look at <b>Dynamic Statements</b><br>
+Which also give you the ability to have Else conditions :)
+<pre><code class="language-css">.auto &.say {params}={init}
+Params.Hello?:Hey, you said `Hello` :)
+Response.nil?:Sorry, you need to type .say Hello
+</code></pre>
+Awesome! Now let's take a look at <b>Complex Statements</b><br>
+Which also give you the ability for else conditions.
+<pre><code class="language-css">.auto .test={init}
+use | general | noob-channel
+{if(ischannel):
+   Hey, you typed this command in #general or #nooob-channel
+} (else) {
+   {stop} /* tell echo to do nothing */
+}
+</code></pre>
+Now let's explain a little bit about above.<br>
+We're checking if the command was typed out in two channels<br>
+If not then we're telling echo to just stop.<br>
+This can also be done without using the else condition all together.
+<pre><code class="language-css">.auto .test={init}
+use | general | noob-channel
+{if(ischannel):
+   Hey, you typed this command in #general or #nooob-channel
+}
+</code></pre>
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
+
+<!--
+                     <li><a class="current" href="#d1"><i class="fa fa-file-text-o"></i> Introduction</a></li>
+                     <li><a href="#d2"><i class="fa fa-cog"></i> The Basics </a> </li>
+                     <li><a href="#d3"><i class="fa fa-anchor"></i> Params Key </a></li>
+                     <li><a href="#d4"><i class="fa fa-key"></i> Command Security </a></li>
+                     <li><a href="#d5"><i class="fa fa-at"></i> Interact with Mentions </a></li>
+                     <li><a href="#d6"><i class="fa fa-bed"></i> The Power of Sleep </a></li>
+                     <li><a href="#d7"><i class="fa fa-link"></i> ARS Linking 101 </a></li>
+                     <li><a href="#d8"><i class="fa fa-code"></i> Statements 101 </a></li>
+                     <li><a href="#d9"><i class="fa fa-database"></i> Custom DBs 101 </a></li>
+                     <li><a href="#d10"><i class="fa fa-superscript"></i> Regex 101 </a></li>
+-->
                     <div class="doc-sidebar hidden-xs">
                         <nav id="doc-nav">
                             <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
                                 <li><a class="scrollto" href="#download-section">Introduction</a></li>
+                                <li><a class="scrollto" href="#d2">The Basics</a></li>
+                                <li><a class="scrollto" href="#d3">Params Key</a></li>
+                                <li><a class="scrollto" href="#d4">Command Security</a></li>
+                                <li><a class="scrollto" href="#d5">Interact with Mentions</a></li>
+                                <li><a class="scrollto" href="#d6">Power of Sleep</a></li>
+                                <li><a class="scrollto" href="#d7">ARS Linking 101</a></li>
+                                <li><a class="scrollto" href="#d8">Statements 101</a></li>
+
                                 <li>
                                     <a class="scrollto" href="#installation-section">A.R.S Logic</a>
                                     <ul class="nav doc-sub-menu">
@@ -216,4 +451,3 @@ Response Here</code></pre></p>
       <!-- End of StatCounter Code for Default Guide -->
 </body>
 </html> 
-
