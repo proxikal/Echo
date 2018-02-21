@@ -276,6 +276,46 @@ Response.nil?:{/user} has joined <#{data|channel}>
                                     </div><!--//section-block-->
                                 </div>
                             </section>
+
+                            <section id="reaction-add" class="doc-section">
+                                <h2 class="section-title">Reaction Add</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                            <i>Variables available in this event:</i>
+                                            <b>{data|channel}, {data|emoji}, {data|msgid}, {data|user}</b>
+                                        <pre><code class="language-cplx">.auto rctAdd={init}
+{protect}
+{Event:ReactionAdd}
+:break unless message.id=MessageIDHere
+String.{data|emoji} == :smile:?:{/user} has voted for Option A
+String.{data|emoji} == :frown:?:{/user} has voted for Option B
+Response.nil?:{stop}
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+                            <section id="reaction-add" class="doc-section">
+                                <h2 class="section-title">Reaction Remove</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                            <i>Variables available in this event:</i>
+                                            <b>{data|channel}, {data|emoji}, {data|msgid}, {data|user}</b>
+                                        <pre><code class="language-cplx">.auto rctRemove={init}
+{protect}
+{Event:ReactionRemove}
+:break unless message.id=MessageIDHere
+String.{data|emoji} == :smile:?:{/user} has removed their vote for Option A
+String.{data|emoji} == :frown:?:{/user} has removed their vote for Option B
+Response.nil?:{stop}
+</code></pre></div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                     <div class="doc-sidebar">
@@ -303,6 +343,8 @@ Response.nil?:{/user} has joined <#{data|channel}>
                                         <li><a class="scrollto" href="#channel-update">Channel Update</a></li>
                                         <li><a class="scrollto" href="#server-update">Server Update</a></li>
                                         <li><a class="scrollto" href="#voice-update">Voice Update</a></li>
+                                        <li><a class="scrollto" href="#reaction-add">Reaction Add</a></li>
+                                        <li><a class="scrollto" href="#reaction-remove">Reaction Remove</a></li>
                                     </ul><!--//nav-->
                                 </li>
                             </ul><!--//doc-menu-->
