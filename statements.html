@@ -54,7 +54,7 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><span aria-hidden="true" class="icon icon_genius"></span> Statements</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Mar 09th, 2017</div>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Feb 21st, 2018</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
@@ -65,7 +65,168 @@
                                     <p>Statements were originally created shortly after the A.R.S to allow for more function. Over the time the simple statements have evolved into Complex or Dynamic Statements. All of which can be learned on this page.</p>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
-                            
+
+
+                            <section id="app-conditionals" class="doc-section">
+                                <h2 class="section-title">Conditional Statements</h2>
+                                <div id="dkl" class="section-block">
+                                    <b>Conditional statements have the ability for single or multiple line else conditions.<br>
+                                    They also allow for single objects or an array of objects.
+                                    </b>
+
+                                    <h3>Example (Single):</h3>
+<pre><code class="language-dss">.auto .test={init}
+:break unless user.has_role=Admin
+Hey {/user} you have the Admin role!
+</code></pre>
+<h3>Example (Array):</h3>
+<pre><code class="language-dss">.auto .test={init}
+:break unless user.has_role=["Admin", "Management", "Support"]
+Hey {/user} you have one of these roles `Admin, Management or Support`!
+</code></pre>
+<h3>Example (Else Condition):</h3>
+<pre><code class="language-dss">.auto .test={init}
+:break unless user.has_role=Admin >> Sorry {/user} you don't have Admin role.
+Hey {/user} you have the Admin role!
+</code></pre>
+<h3>Example (Multi-line Else Condition):</h3>
+<pre><code class="language-dss">.auto .test={init}
+:break unless user.has_role=Admin >> Sorry {/user} you don't have Admin role.
+But you can always ask our staff member
+if you wish to join our team :) <<
+Hey {/user} you have the Admin role!
+</code></pre>
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Message Detection</h3>
+                                        <div class="answer">Check for message id.<br>
+                                        <pre><code class="language-dss">.auto reactAdd={init}
+{Event:ReactionAdd}
+{protect}
+:break unless message.id=14556855595686999965
+String.{data|emoji} == :smile:?:You just smile at me {/user}!
+Response.nil?:{stop}
+</code></pre>
+<i>Event:</i> this rule will only be triggered on Reaction Add Event</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - User ID Detection</h3>
+                                        <div class="answer">Check for user id<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+:break unless user.id=1456565865654654354
+What is up {/user}!
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - User Role Detection</h3>
+                                        <div class="answer">Check if user has role.<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+:break unless user.has_role=Admin
+Hey {/user}! You have the role `Admin`
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Username Contains</h3>
+                                        <div class="answer">Check for word in username<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+:break unless user.has=Josh
+Hey {/user} you have Josh in your name!
+</code></pre>
+</div>
+                                    </div>
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Username Starts With</h3>
+                                        <div class="answer">Check if username starts with word<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+:break unless user.starts_with=P
+Your name starts with a P `{/user}`
+</code></pre>
+</div>
+                                    </div>
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Username Ends With</h3>
+                                        <div class="answer">Check if username ends with word<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+:break unless user.ends_with=y
+Your name ends with a y `{/user}`
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Channel ID</h3>
+                                        <div class="answer">Check for a specific channel<br>
+                                        <pre><code class="language-dss">.auto .test={init}
+:break unless channel.id=1254354135413541353
+Hey {/user} you types this command in #general channel.
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Check</h3>
+                                        <div class="answer">Check params for a word<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+:break unless params=Hello
+You said Hello!
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Starts With</h3>
+                                        <div class="answer">Check if params starts with a word<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+:break unless params.starts_with=Hello
+You said Hello!
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Ends With</h3>
+                                        <div class="answer">Check if params ends with a word<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+:break unless params.ends_with=Hello
+You said Hello!
+</code></pre>
+</div>
+                                    </div>
+
+
+                                    <div class="section-block">
+                                        <h3 class="question"><i class="icon icon_genius"></i> - Params Contains</h3>
+                                        <div class="answer">Check if params contains a word<br>
+                                        <pre><code class="language-dss">.auto &.test {params}={init}
+:break unless params.has=Hello
+You said Hello!
+</code></pre>
+</div>
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </section>
+
+
+
                             <section id="app-components" class="doc-section">
                                 <h2 class="section-title">Dynamic Statements</h2>
                                 <div id="dkl" class="section-block">
@@ -429,6 +590,7 @@ use | noob | hex | fudge
                                 <li>
                                     <a class="scrollto" href="#app-components">Statements List</a>
                                     <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#app-conditionals">Conditional Statements</a></li>
                                         <li><a class="scrollto" href="#app-components">Dynamic Statements</a></li>
                                         <li><a class="scrollto" href="#comp-statements">Complex Statements</a></li>
                                         <li><a class="scrollto" href="#simp-statements">Basic Statement</a></li>
