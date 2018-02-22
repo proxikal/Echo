@@ -110,8 +110,14 @@
                                         <tr><td><a href="#trucks">{trucks}</a></td><td>Shows random truck images</td></tr>
                                         <tr><td><a href="#protect">{protect}</a></td><td>Protect the key from being ran manually.</td></tr>
                                         <tr><td><a href="#timestamp">{timestamp}</a></td><td>displays timestamp</td></tr>
+                                        <tr><td><a href="#timestamp-ms">{timestamp:ms}</a></td><td>displays timestamp in miliseconds</td></tr>
+                                        <tr><td><a href="#timestamp-ns">{timestamp:ns}</a></td><td>displays timestamp in nanoseconds</td></tr>
                                         <tr><td><a href="#username">{usernick}</a></td><td>displays users nickname</td></tr>
                                         <tr><td><a href="#randlist">{randlist}</a></td><td>{randlist:What,Who,Where,How}</td></tr>
+                                        <tr><td><a href="#randuser">{randuser}</a></td><td>Randomly choose a username from your server.</td></tr>
+                                        <tr><td><a href="#randuserid">{randuserid}</a></td><td>Randomly choose a user id from your server.</td></tr>
+                                        <tr><td><a href="#randchannel">{randchannel}</a></td><td>Randomly choose a channel from your server.</td></tr>
+                                        <tr><td><a href="#randchannelid">{randchannelid}</a></td><td>Randomly choose a cannel id from your server.</td></tr>
                                         <tr><td><a href="#ownerid">{owner|id}</a></td><td>guild owner id</td></tr>
                                         <tr><td><a href="#ownername">{owner|name}</a></td><td>guild owner name</td></tr>
                                         <tr><td><a href="#owneravatar">{owner|avatar}</a></td><td>guild owner avatar</td></tr>
@@ -124,10 +130,13 @@
                                         <tr><td><a href="#guildname">{guild|name}</a></td><td>guild name</td></tr>
                                         <tr><td><a href="#guildid">{guild|id}</a></td><td>guild id</td></tr>
                                         <tr><td><a href="#guildregion">{guild|region}</a></td><td>us-south,us-east</td></tr>
-                                        <tr><td><a href="#membercount">{membercount}</a></td><td>guild member count</td></tr>
+                                        <tr><td><a href="#membercount">{membercount}</a></td><td>guild member count (Doesn't include bots)</td></tr>
+                                        <tr><td><a href="#botcount">{botcount}</a></td><td>guild bot count (Doesn't include members)</td></tr>
                                         <tr><td><a href="#rolecount">{rolecount}</a></td><td>guild role count</td></tr>
                                         <tr><td><a href="#channelcount">{channelcount}</a></td><td>guild channel count</td></tr>
                                         <tr><td><a href="#myperms">{myperms}</a></td><td>requesters permissions (bitwise)</td></tr>
+                                        <tr><td><a href="#trigger">{trigger}</a></td><td>Shows the trigger used for the rule.</td></tr>
+                                        <tr><td><a href="#expint">{expint}</a></td><td>Requires the params to be integer.</td></tr>
                                         <tr><td><a href="#pin">{pin}</a></td><td>Makes Echo pin a message to a channel.</td></tr>
                                         <tr><td><a href="#showchan">{showchan}</a></td><td>Gives user basic permissions to channel.</td></tr>
                                         <tr><td><a href="#hidechan">{hidechan}</a></td><td>Hides current channel from user.</td></tr>
@@ -143,7 +152,6 @@
                                         <tr><td><a href="#here">{here}</a></td><td>Echo will mention @here in his response.</td></tr>
                                         <tr><td><a href="#chanid">{chanid}</a></td><td>Gets the current channel ID</td></tr>
                                         <tr><td><a href="#params">{params}</a></td><td>if you have this key in your trigger and response you can catch their text!</td></tr>
-                                        <tr><td><a href="#checkurl">{checkurl}</a></td><td>Uses Virus Total to Scan links! this key is best used with pre regex triggers!</td></tr>
                                         <tr><td><a href="#jsonguild">{json|guild}</a></td><td>Sends your entire guild object to a site of your choice!</td></tr>
                                         <tr><td><a href="#jsonchannels">{json|channels}</a></td><td>Just sends your channel object to a site of your choice!</td></tr>
                                         <tr><td><a href="#jsonroles">{json|roles}</a></td><td>Just sends your roles object to a site of your choice!</td></tr>
@@ -161,7 +169,6 @@
                                         <tr><td><a href="#nickname">{nickname}</a></td><td>Changes the users nickname</td></tr>
                                         <tr><td><a href="#tclear">{tclear}</a></td><td>Deletes the person who triggers messages.</td></tr>
                                         <tr><td><a href="#clear">{clear}</a></td><td>Clears 5 messages</td></tr>
-                                        <tr><td><a href="#translate">{translate}</a></td><td>Translates content to another language.</td></tr>
                                         <tr><td><a href="#content">{content}</a></td><td>Displays the contents of the message.</td></tr>
                                         <tr><td><a href="#clean">{clean}</a></td><td>Cleans content of trigger</td></tr>
                                         <tr><td><a href="#contenttolower">{content|tolower}</a></td><td>Transforms the content to lowercase.</td></tr>
@@ -174,9 +181,10 @@
                                         <tr><td><a href="#non-mention">{-mentions}</a></td><td>Prevents keys from directing to mentioned user.</td></tr>
                                         <tr><td><a href="#mention">{mention}</a></td><td>Requires mention in an A.R.S Rule.</td></tr>
                                         <tr><td><a href="#botmaster">{botmaster}</a></td><td>Requires the user to be Bot Master.</td></tr>
-                                        <tr><td><a href="#find">{find}</a></td><td>Only works if a specific word is found.</td></tr>
                                         <tr><td><a href="#embed">{embed}</a></td><td>Have Echo post custom Embeds</td></tr>
                                         <tr><td><a href="#getapi">{getapi}</a></td><td>Custom JSON API System.</td></tr>
+                                        <tr><td><a href="#getapi">{addr|...}</a></td><td>Some intralink keys for your address info.</td></tr>
+                                        <tr><td><a href="#randars">{randars}</a></td><td>Randomly run a rule from a list (If it exists)</td></tr>
                                     </tbody>
                                 </table>
                             </section>
@@ -242,6 +250,7 @@ Hello {/user}</code></pre></div>
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {kick}</h3>
                                     <div class="answer">Echo will kick the user who triggered the response.<br>
                                     <pre><code class="language-ars">.auto &badword={init}
+{-mentions}
 {del}{kick}{/user} has been kicked for swearing.</code></pre></div>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Mentioning someone directs key to user." style="text-decoration:none;"><span class="label label-success">Compatible with Targeting</span></a>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Echo's role needs to be higher than the Users roles." style="text-decoration:none;"><span class="label label-warning">Requires Role Hierarchy</span></a>
@@ -250,6 +259,7 @@ Hello {/user}</code></pre></div>
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {ban}</h3>
                                     <div class="answer">Echo will ban the user who triggered the response.<br>
                                     <pre><code class="language-ars">.auto &badword={init}
+{-mentions}
 {del}{ban}{/user} has been banned for swearing.</code></pre></div>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Mentioning someone directs key to user." style="text-decoration:none;"><span class="label label-success">Compatible with Targeting</span></a>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Echo's role needs to be higher than the Users roles." style="text-decoration:none;"><span class="label label-warning">Requires Role Hierarchy</span></a>
@@ -258,6 +268,7 @@ Hello {/user}</code></pre></div>
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {role}</h3>
                                     <div class="answer">Echo will give the user who triggered the response a role.<br>
                                     <pre><code class="language-ars">.auto &Instinct={init}
+{-mentions}
 {role:Instinct}{/user} has been given the role Instinct.</code></pre></div>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Mentioning someone directs key to user." style="text-decoration:none;"><span class="label label-success">Compatible with Targeting</span></a>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Echo's role needs to be higher than the Users roles." style="text-decoration:none;"><span class="label label-warning">Requires Role Hierarchy</span></a>
@@ -266,6 +277,7 @@ Hello {/user}</code></pre></div>
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {take}</h3>
                                     <div class="answer">Echo will take a role from the user who triggered the response.<br>
                                     <pre><code class="language-ars">.auto &Valor={init}
+{-mentions}
 {take:Instinct}{role:Valor}{/user} has switched to Team Valor.</code></pre></div>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Mentioning someone directs key to user." style="text-decoration:none;"><span class="label label-success">Compatible with Targeting</span></a>
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Echo's role needs to be higher than the Users roles." style="text-decoration:none;"><span class="label label-warning">Requires Role Hierarchy</span></a>
@@ -452,6 +464,38 @@ Original Poster: {/rawid} /* Will always return the Author ID */</code></pre>
 {timestamp:Mon _03, 1987 4:05AM}</code></pre>
 </div>
                                 </div><!--//section-block-->
+                                <div class="section-block" id="timestamp-ms">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {timestamp:ms}</h3>
+                                    <div class="answer">Prints the current timestamp in miliseconds<br>
+                                    <pre><code class="language-ars">.auto .stamp={init}
+{timestamp:ms}</code></pre>
+</div>
+                                </div><!--//section-block-->
+                                <div class="section-block" id="timestamp-ns">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {timestamp:ns}</h3>
+                                    <div class="answer">Prints the current timestamp in nanoseconds<br>
+                                    <pre><code class="language-ars">.auto .stamp={init}
+{timestamp:ns}</code></pre>
+</div>
+                                </div><!--//section-block-->
+
+                                <div class="section-block" id="intralink-addr">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {addr|...}</h3>
+                                    <div class="answer">Prints the current intralink address info.<br>
+                                    <pre><code class="language-ars">:auto .info={init}
+Owner of this Address: `{addr|owner}`
+Address Name: `{addr|name}`
+Address Topic: `{addr|topic}`
+Address Desc: `{addr|desc}`
+Are you staff here? `{addr|staff}`
+Here is a list of people that are staff on this address:
+```
+{addr|stafflist}
+```
+<code></pre>
+</div>
+                                </div><!--//section-block-->
+
                                 <div class="section-block" id="usernick">
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {usernick}</h3>
                                     <div class="answer">Prints the users nickname or None if they don't have one.<br>
@@ -465,6 +509,32 @@ User Nick: `{usernick}`</code></pre></div>
                                     <pre><code class="language-ars">.auto .pick={init}
 I Choose: `{randlist:Rock,Paper,Scissors}`</code></pre></div>
                                 </div><!--//section-block-->
+                                <div class="section-block" id="randuser">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {randuser}</h3>
+                                    <div class="answer">Prints a random username from your server<br>
+                                    <pre><code class="language-ars">.auto .pick={init}
+I Choose: `{randuser}`</code></pre></div>
+                                </div><!--//section-block-->
+                                <div class="section-block" id="randuserid">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {randuserid}</h3>
+                                    <div class="answer">Prints a random user id from your server<br>
+                                    <pre><code class="language-ars">.auto .pick={init}
+I Choose: `{randuserid}`</code></pre></div>
+                                </div><!--//section-block-->
+                                <div class="section-block" id="randchannel">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {randchannel}</h3>
+                                    <div class="answer">Prints a random channel from your server<br>
+                                    <pre><code class="language-ars">.auto .pick={init}
+I Choose: `{randchannel}`</code></pre></div>
+                                </div><!--//section-block-->
+                                <div class="section-block" id="randchannelid">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {randchannelid}</h3>
+                                    <div class="answer">Prints a random channel id from your server<br>
+                                    <pre><code class="language-ars">.auto .pick={init}
+I Choose: `{randchannelid}`</code></pre></div>
+                                </div><!--//section-block-->
+
+
                                 <div class="section-block" id="ownerid">
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {owner|id}</h3>
                                     <div class="answer">Prints the server owners Discord ID.<br>
@@ -541,10 +611,22 @@ Server Region: `{guild|region}`</code></pre></div>
                                 </div><!--//section-block-->
                                 <div class="section-block" id="membercount">
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {membercount}</h3>
-                                    <div class="answer">Prints the member count for the server.<br>
+                                    <div class="answer">Prints the member count for the server. (Ignores all Bots)<br>
                                     <pre><code class="language-ars">.auto .tst={init}
-Server Members: `{membercount}`</code></pre></div>
+Server Members: `{membercount}`</code></pre>
+<b>Or from a specific role:</b>
+                                    <pre><code class="language-ars">.auto .tst={init}
+Server Admins: `{membercount:Admins}`</code></pre>
+</div>
                                 </div><!--//section-block-->
+                                <div class="section-block" id="botcount">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {botcount}</h3>
+                                    <div class="answer">Prints the bot count for the server.<br>
+                                    <pre><code class="language-ars">.auto .tst={init}
+Server Bots: `{botcount}`</code></pre>
+</div>
+                                </div><!--//section-block-->
+
                                 <div class="section-block" id="rolecount">
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {rolecount}</h3>
                                     <div class="answer">Prints the role count for the server.<br>
@@ -557,6 +639,30 @@ Server Roles: `{rolecount}`</code></pre></div>
                                     <pre><code class="language-ars">.auto .tst={init}
 Server Channels: `{channelcount}`</code></pre></div>
                                 </div><!--//section-block-->
+                                <div class="section-block" id="myperms">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {myperms}</h3>
+                                    <div class="answer">Prints the bitwise permissions of the user.<br>
+                                    <pre><code class="language-ars">.auto .tst={init}
+Perms: `{myperms}`</code></pre></div>
+                                </div><!--//section-block-->
+                                <div class="section-block" id="trigger">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {trigger}</h3>
+                                    <div class="answer">Prints the trigger used for the rule.<br>
+                                    <pre><code class="language-ars">.auto .tst={init}
+Trigger: `{trigger}`
+/* Prints out .tst */
+</code></pre></div>
+                                </div><!--//section-block-->
+                                <div class="section-block" id="expint">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {expint}</h3>
+                                    <div class="answer">Requires the params to have be an integer.<br>
+                                    <pre><code class="language-ars">.auto &.tst {params}={init}
+{expint:Sorry, you need to type an integer. No letters or special characters allowed.}
+Hey {/user} you typed out an integer: `{params}`
+</code></pre></div>
+                                </div><!--//section-block-->
+
+
                                 <div class="section-block" id="pin">
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {pin}</h3>
                                     <div class="answer">Echo will pin the message.<br>
@@ -897,7 +1003,14 @@ Verified: {print:verified}
 Image Code: {print:userImage}
 }</code></pre></div>
                                 </div><!--//section-block-->
-
+                                <div class="section-block" id="randars">
+                                    <h3 class="question"><i class="fa fa-cogs"></i> - {randars}</h3>
+                                    <div class="answer">Run a single rule out of a list.<br>
+                                    <pre><code class="language-ars">.auto .test={init}
+{randars:trigger1,trigger2,trigger3,trigger4}
+/* Will run one of the above rules if it exists */
+}</code></pre></div>
+                                </div><!--//section-block-->
 
                             </section>
                         </div><!--//content-inner-->
