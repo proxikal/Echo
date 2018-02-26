@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Easy Scripts</title>
+    <title>Snippets</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,15 +46,15 @@
                 </div><!--//branding-->
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Easy Scripts</li>
+                    <li class="active">Snippets</li>
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
         <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><span aria-hidden="true" class="icon fa fa-bolt"></span> Easy Scripts</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Mar 23rd, 2017</div>
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon fa fa-bolt"></span> Snippets</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Feb 26th, 2018</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
@@ -100,16 +100,6 @@
                                                 <td>An embed server info command</td>
                                             </tr>
                                             <tr>
-                                                <td>.joke</td>
-                                                <td><a href="https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.jokes.snippet.ars">Download!</a></td>
-                                                <td>An embed jokes command</td>
-                                            </tr>
-                                            <tr>
-                                                <td>.meme</td>
-                                                <td><a href="https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.meme.snippet.ars">Download!</a></td>
-                                                <td>An embed meme command</td>
-                                            </tr>
-                                            <tr>
                                                 <td>.whoami</td>
                                                 <td><a href="https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/embed.whoami.snippet.ars">Download!</a></td>
                                                 <td>An embed whoami command</td>
@@ -123,11 +113,6 @@
                                                 <td>.space</td>
                                                 <td><a href="https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/space.snippet.ars">Download!</a></td>
                                                 <td>Random space images</td>
-                                            </tr>
-                                            <tr>
-                                                <td>.cats</td>
-                                                <td><a href="https://raw.githubusercontent.com/proxikal/Echo/master/EasyScripts/cats.snippet.ars">Download!</a></td>
-                                                <td>Random cat images</td>
                                             </tr>
                                             <tr>
                                                 <td>.dbz</td>
@@ -163,6 +148,102 @@
                                     </table>
                                 </div>
                             </section><!--//doc-section-->
+
+
+                            <section id="app-info" class="doc-section">
+                            <h2 class="section-title">Information</h2>
+                                <div id="dkl" class="section-block">
+<pre>
+   _____       _                  _      _____           _                   ___    ___  
+  / ____|     (_)                | |    / ____|         | |                 |__ \  / _ \ 
+ | (___  _ __  _ _ __  _ __   ___| |_  | (___  _   _ ___| |_ ___ _ __ ___      ) || | | |
+  \___ \| '_ \| | '_ \| '_ \ / _ \ __|  \___ \| | | / __| __/ _ \ '_ ` _ \    / / | | | |
+  ____) | | | | | |_) | |_) |  __/ |_   ____) | |_| \__ \ ||  __/ | | | | |  / /_ | |_| |
+ |_____/|_| |_|_| .__/| .__/ \___|\__| |_____/ \__, |___/\__\___|_| |_| |_| |____(_)___/ 
+                | |   | |                       __/ |                                    
+                |_|   |_|                      |___/                                     
+</pre>
+<p>
+<i>
+All of the information inside of this snippet is designed to help you undertstand
+the new Snippet 2.0. And methods that will help you throughout this system.
+</i>
+<br>
+<h4>First lets look at the new Config system.</h4>
+This system will create variables inside of a snippet. I myself have made some huge snippets.<br>
+Some maxing out to 5k+ lines of code (Dragon Wars). What if there was a system to make everything easier?<br>
+The config system will hold "Variables" inside of the snippet, that you can use through all ARS Rule.<br>
+When the user drags the snippet over, echo will replace the variables with the value.<br>
+Lets take a look below to see how this works.<br>
+
+<pre><code class="language-css">
+[CONFIG]
+user=146105465516846686
+Message=What is up {/user}! Hope all is well!! :)
+[/CONFIG]
+
+.test={init}
+:break unless user.id=$user
+$Message
+</code></pre>
+
+Pretty neat huh? Basically we created 2 variables<br>
+user which holds the users id.<br>
+And message, which holds the message of the .test command<br>
+We can actually step it up, lets parse a variable inside of another variable.<br>
+
+<pre><code class="language-css">
+[CONFIG]
+user_id={/rawid}
+joinMessage=Welcome to {guild|name} <@$user_id>. We hope you enjoy your stay.
+[/CONFIG]
+
+jnEvent={init}
+{Event:Join}{pm}
+$joinMessage
+</code></pre>
+
+So basically (And for no real reason at all) we stored {/rawid} into the variable "user_id"<br>
+from there, we created a joinMessage and placed the variable inside "Waiting to be parsed".<br>
+Now, when users join your server. They will recieve the joinMessage with their name mentioned<br>
+within the message.
+<br>
+
+<h4>Snippet IF System (And why it will one day rule the world)</h4>
+<i>
+The cool thing about this internal IF system is you can give people the option of what to install.<br>
+Using the Config along with the IF system, you can make one snippet hold many things. And yet<br>
+give everyone the ability to pick what they want to do inside of their code.<br>
+</i>
+
+<pre><code class="language-css">
+[CONFIG]
+useFooter=True
+useFooterText=True
+useFooterImage=True
+embedTitle=Welcome {/user}!
+embedDescription=Testing some stuff out with the new snippet system!
+footerText=Hello, Have a good day!
+footerImage=https://proxikal.github.io/Echo/favicon-new.png
+[/CONFIG]
+
+
+.embed={init}
+{embed:
+    {title:$embedTitle}
+    {desc:$embedDescription}
+    [IF $useFooter == 'True']
+        [IF $useFooterText == 'True']{footer|text:$footerText}[/IF]
+        [IF $useFooterImage == 'True']{footer|icon:$footerImage}[/IF]
+    [/IF]
+}
+</code></pre>
+                                    </p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+
+
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                     <div class="doc-sidebar">
@@ -175,6 +256,7 @@
                                 <li>
                                     <a class="scrollto" href="#func-remote">Command List</a>
                                 </li>
+                                <li><a class="scrollto" href="#app-info">Information</a></li>
                             </ul><!--//doc-menu-->
                         </nav>
                     </div><!--//doc-sidebar-->
