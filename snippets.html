@@ -238,6 +238,48 @@ footerImage=https://proxikal.github.io/Echo/favicon-new.png
     [/IF]
 }
 </code></pre>
+<br>
+Pretty neat huh? Now currently since this system is early beta, the if statements
+can make your code look a little messy. but that will be cleaned up in time.
+<br>
+<h4>Database Manipulation (2.0)</h4>
+<i>Before we only had the option to create a database. Which was alright, but what if we wanted access to more..<br>
+With the new Database system, not only can you control how the database is being created, you also can install variables.<br>
+<br>
+We will start with the basic setup. This setup will create the database if it exists, or write to an existing database.<br>
+We will pretend to use the database <b>UserProfiles</b> and create 2 variables inside of it (OwnerID, OwnerName)
+<pre><code class="language-css">
+[TASK]
+for::UserProfiles
+OwnerID=1465561656835665665
+OwnerName=Proxy
+[/TASK]
+</code></pre>
+And, done.. When the snippet is installed Echo will make 1 Database (Unless it exists already) and then install 2 variables to the database.
+<br>
+But, what if you wanted more control? Say the user already has a database with that name, and you don't want to configure it.<br>
+Let's show you how to make a database (As long as it doesn't exist)
+
+<pre><code class="language-css">
+[TASK]
+for::UserProfiles::DEFUNCT
+OwnerID=1465561656835665665
+OwnerName=Proxy
+[/TASK]
+</code></pre>
+Notice how we added <b>::DEFUNCT</b> to the end of your database name?<br>
+This tells echo to only create the database if it doesn't exist.<br>
+Now we can do the same but, only install the variables if the database already exists<br>
+<pre><code class="language-css">
+[TASK]
+for::UserProfiles::EXISTS
+OwnerID=1465561656835665665
+OwnerName=Proxy
+[/TASK]
+</code></pre>
+Awesome! Now you know the three different modes inside of Database Manipulation.<br>
+For now that is all we have. We're not stopping though! We're thinking of much more to add<br>
+So don't forget to keep checking back for new updates!
                                     </p>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
