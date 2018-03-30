@@ -238,6 +238,69 @@ Response.nil?:{e?dbname:{rawid}(++)}A Warning has been added!
                             </section>
 
 
+                            <section id="ars-lists" class="doc-section">
+                                <h2 class="section-title">List Elements</h2>
+                                <div id="skl" class="section-block">
+                                    <div class="section-block">
+                                        <div class="answer">
+                                        We're going to show you how to manipulate arrays (Lists) through Echo ARS.<br>
+                                        First Step would be to make the variable.
+<pre><code class="language-cplx">
+.auto .tst={init}
+/* Check if variable exists in database */
+{m?Database:Varname} := 
+</code></pre>
+Now we need to populate the array. You can do this manually or as shown below with a command.
+<pre><code class="language-cplx">
+.auto &.addvar {params}={init}
+/* Check to see if the word exists in the array */
+String.{le?Database:Varname({params})}?:This word already exists in the array.
+Response.nil?:{la?Database:Varname({params})}The word has been added to the array.
+</code></pre>
+Ok, now let's create the delete command to remove words of the array.
+<pre><code class="language-cplx">
+.auto &.delvar {params}={init}
+/* Check to see if the word exists in the array */
+String.{le?Database:Varname({params})}?:This word doesn't exists in the array.
+Response.nil?:{ld?Database:Varname({params})}The word has been removed from the array.
+</code></pre>
+Awesome! Now you know how to Add\Delete & Check if a word exists inside of an array.
+But we do have some more, let's check out different ways to view the array.
+<pre><code class="language-cplx">
+.auto .viewall={init}
+/* We're going to use the \n as a seperator. This can be changed to anything */
+```
+{lr?Database:Varname(\n)}
+```
+</code></pre>
+Awesome, but what if you only want to view one item from the array?<br>
+This can be done using <b>Indexes</b> let's assume there are 3 items in the array<br>
+<u>morning,night,day</u><br>
+<pre><code class="language-cplx">
+.auto &.v {params}={init}
+```
+{lr?Database:Varname[{params}]}
+```
+</code></pre>
+Notice the above is using an index system not a seperation system.<br>
+So if you type <b>.v 2</b> echo will respond with <u>day</u><br>
+And if you type <b>.v 0</b> echo will respond with <u>morning</u>
+<br>
+Let's take a look at radomly choosing from an array
+<pre><code class="language-cplx">
+.auto .random={init}
+`{lrp?Database:Varname}`
+</code></pre>
+There you have it! All of the new array keys with tons of different possibilities.
+                                        </div>
+                                    </div><!--//section-block-->
+                                </div>
+                            </section>
+
+
+
+
+
                             <section id="ars-examples" class="doc-section">
                                 <h2 class="section-title">Some Examples</h2>
                                 <div id="skl" class="section-block">
@@ -384,6 +447,7 @@ You will need to remove the variable inside of the database in order for the A.R
                                         <li><a class="scrollto" href="#ars-edit">Edit Variable</a></li>
                                         <li><a class="scrollto" href="#ars-delete">Delete Variable</a></li>
                                         <li><a class="scrollto" href="#ars-use">Using Variables</a></li>
+                                        <li><a class="scrollto" href="#ars-lists">Using Arrays (Lists)</a></li>
                                     </ul><!--//nav-->
                                 </li>
                                 <li>
