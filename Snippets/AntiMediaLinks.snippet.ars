@@ -1,0 +1,52 @@
+[INFO]
+    _   _  _ _____ ___   __  __ ___ ___ ___   _     _    ___ _  _ _  _____ 
+   /_\ | \| |_   _|_ _| |  \/  | __|   \_ _| /_\   | |  |_ _| \| | |/ / __|
+  / _ \| .` | | |  | |  | |\/| | _|| |) | | / _ \  | |__ | || .` | ' <\__ \
+ /_/ \_\_|\_| |_| |___| |_|  |_|___|___/___/_/ \_\ |____|___|_|\_|_|\_\___/
+########################################
+// Created By: Doorstop
+- Just a simple Anti Media Links
+This snippet will install a new database called Advertising. all you have to do is install the script
+make sure Echo has permissions to manage messages in all the channels you want moderated.
+Also make sure to choose what type of Penalty you want to bring down. Kick after x warnings? Ban? etc..
+-Configure: Warning amounts before kick or ban,
+	The role to exclude (Usually your staff roles) it's currently: Management
+########################################
+[/INFO]
+[CREATE DB:Advertising]
+Adkick={init}
+{arslock}
+{-mentions}
+Count.{r?Advertising:{/rawid}} >= 3?:{kick}I have kicked {/user} for advertising media links.{e?Advertising:{/rawid}(+1)}
+Response.nil?:{/user} a warning has been added, please don't advertise media links in this channel.
+[#CONTINUE#]
+AdwarnNewUser={init}
+{arslock}
+{-mentions}
+{/user} don't advertise media links in this channel.
+{m?Advertising:{/rawid}} := 1
+[#CONTINUE#]
+advertiseHandler={init}
+{arslock}
+DB:Advertising.{/rawid}?:{ars:Adkick}
+Response.nil?:{ars:AdwarnNewUser}
+[#CONTINUE#]
+&{:}((http|https)(\:\/\/youtube\.com\/)((watch\?v\=(.{1,11}))|([^\s]{1,11})))={init}
+{exc:Management}
+{del}{ars:advertiseHandler}
+[#CONTINUE#]
+&{:}(http|https):\/\/youtu.be\/(.*)={init}
+{exc:Management}
+{del}{ars:advertiseHandler}
+[#CONTINUE#]
+&{:}(http|https):\/\/dai.ly\/(.*)={init}
+{exc:Management}
+{del}{ars:advertiseHandler}
+[#CONTINUE#]
+&{:}(http|https):\/\/dailymotion.com\/video\/(.*)={init}
+{exc:Management}
+{del}{ars:advertiseHandler}
+[#CONTINUE#]
+&{:}(http|https):\/\/twitch.tv\/(.*)={init}
+{exc:Management}
+{del}{ars:advertiseHandler}

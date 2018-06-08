@@ -1,0 +1,87 @@
+[INFO]
+## Welcome to the AntiDiscordLinks Snippet.
+## Before installing this snippet make sure to view all the information below.
+## As you see below, There are a few {redirect} keys that will need your attention.
+## We have the servers redirected to a specific channel and then we embed the message.
+## You can change all of this around however you like.
+## This snippet will automatically create the database: servlist
+- If you need any help visit our server: https://discord.gg/9PRs6xH
+[/INFO]
+
+[CONFIG]
+
+// ### CONFIGURATION BELOW: Make sure to change to your server!
+// You can change the database name if you wish.
+database=servlist
+
+// Put your channel id below.
+redirectChannel=263758073791905794
+
+// Use a footer with text?
+// True or False (Case Sensitive)
+useFooterText=True
+
+// Use a footer with icon?
+// True or False (Case Sensitive)
+useFooterIcon=True
+
+// Embed Footer Text
+footerText=Discord Servers List!
+
+// Embed Footer Icon
+footerIcon=https://proxikal.github.io/Echo/favicon-new.png
+
+// Embed Title:
+embedTitle={/user}'s Server
+
+// Set punishment for max invites
+// Punishment can be nothing, {kick} or {ban}
+// If you leave the punishment to nothing, it's basically just a warning.
+punishment={kick}
+
+// Set Max invites before kick/ban/warnin
+maxInvites=3
+
+// Set punishment message (warning etc..)
+punishMessage={/user} has been kicked for spamming server invites.
+
+// Warning Message (They don't have enough points for a kick/ban/etc..)
+warnMessage={/user} You have been warned not to abuse this system. You can always post your server on ars://Servers intralink to get the word out faster!
+[/CONFIG]
+
+[CREATE DB:$database]
+
+postServ={init}
+{arslock}
+{redirect:$redirectChannel}
+ {embed:
+    {title:$embedTitle}
+    {type:rich}
+    {author|name:{/user}}
+    {author|icon:{usericon}}
+    {author|url:{usericon}}
+    {color:
+        {randlist:
+             #ff0000,#00ff00,#ffffff,#4286f4,
+             #f45642,#262525,#e2d626,#87e226,
+             #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {desc:
+{content}
+    }
+    [IF $useFooterIcon == 'True']{footer|icon:$footerIcon}[/IF]
+    [IF $userFooterText == 'True']{footer|text:$footerText}[/IF]
+}
+{del}{msg:Your message has been redirected to: <#$redirectChannel>! Please don't abuse this system as it will result in a kick. And don't forget to add your server to the Intralink Address: `ars://Servers` to get the word out on multiple servers!}
+{m?$database:{rawid}} := 1
+[#CONTINUE#]
+warnRkick={init}
+{arslock}
+{-mentions}
+Count.{r?$database:{/rawid}} >= $maxInvites?:$punishment$punishMessage{del}
+Response.nil?:$warnMessage{e?$database:{/rawid}(+1)}{del}
+[#CONTINUE#]
+&{:}(https://|http://|www.|)(discord.gg/.*)={init}
+DB:$database.{/rawid}?:{ars:warnRkick}
+Response.nil?:{ars:postServ}

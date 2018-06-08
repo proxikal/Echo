@@ -1,0 +1,48 @@
+[INFO]
+           ______ _  __   _____       _                  _   
+     /\   |  ____| |/ /  / ____|     (_)                | |  
+    /  \  | |__  | ' /  | (___  _ __  _ _ __  _ __   ___| |_ 
+   / /\ \ |  __| |  <    \___ \| '_ \| | '_ \| '_ \ / _ \ __|
+  / ____ \| |    | . \   ____) | | | | | |_) | |_) |  __/ |_ 
+ /_/    \_\_|    |_|\_\ |_____/|_| |_|_| .__/| .__/ \___|\__|
+                                       | |   | |             
+                                       |_|   |_|             
+--------------------------------------------------------------
+Created by: JurrijnP
+
+This snippet will contain 4 triggers that will allow you to have an AFK System in your server!
+If you have installed the snippet type .afk or .AFK and echo will put [AFK] in front of your username, this system supports nicknames too!
+--------------------------------------------------------------
+[/INFO]
+
+[CONFIG]
+// You can change the database name if you wish.
+database=afk
+[/CONFIG]
+
+[TASK]
+for::$database
+[/TASK]
+
+makeAFK={init}
+{arslock}
+{m?$database:{/rawid}-on} := {usernick}
+{m?$database:{/rawid}} := true
+{ars:putAFK}
+[#CONTINUE#]
+putAFK={init}
+{arslock}
+{m?$database:{/rawid}} := true
+String.{r?$database:{/rawid}-on} == none?:{nickname:[AFK]{/user}}
+Response.nil?:{nickname:[AFK]{usernick}}
+[#CONTINUE#]
+.AFK={init}
+String.{r?$database:{/rawid}} == false?:{ars:putAFK}{m?$database:{/rawid}-on} := {usernick}
+String.{r?$database:{/rawid}} == true?:{ars:takeAFK}
+Response.nil?:{ars:makeAFK}
+[#CONTINUE#]
+takeAFK={init}
+{arslock}
+{m?$database:{/rawid}} := false
+String.{r?$database:{/rawid}-on} == none?:{nickname:{/user}}
+Response.nil?:{nickname:{r?$database:{/rawid}-on}}

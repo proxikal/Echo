@@ -1,0 +1,59 @@
+[INFO]
+  __  __                _                _____                  _   
+ |  \/  |              | |              / ____|                | |  
+ | \  / | ___ _ __ ___ | |__   ___ _ __| |     ___  _   _ _ __ | |_ 
+ | |\/| |/ _ \ '_ ` _ \| '_ \ / _ \ '__| |    / _ \| | | | '_ \| __|
+ | |  | |  __/ | | | | | |_) |  __/ |  | |___| (_) | |_| | | | | |_ 
+ |_|  |_|\___|_| |_| |_|_.__/ \___|_|   \_____\___/ \__,_|_| |_|\__|
+--------------------------------------------------------------------
+Created By: Jurrijnp & Spuddies101
+This snippet will contain 5 triggers that will allow you to log who left or joined
+and how many members your server currently has.
+There are a couple of steps you have to do before it is set up:
+
+--- If you do already have a logging channel skip this step and go to step 4
+- 1. If not, create a channel where you can log the messages.
+- 2. Set the channel by copying the channel id or do <Echo's Prefix>channelid to get to know what the channel id is.
+Then do .setchannel <Channel ID>.
+- 3. Do .startcount to set the amount of members that already are in your server.
+
+If you have followed the steps and installed the snippet just do .members and Echo will tell you how many members your server currently has.
+
+--------------------------------------------------------------------
+[/INFO]
+
+[CONFIG]
+// You can change the database name if you want.
+database=servercount
+[/CONFIG]
+[TASK]
+for::$database
+membercount=0
+[/TASK]
+
+&.setchannel {params}={init}
+{m?$database:channel} :={params}
+Redirect channel set.
+[#CONTINUE#]
+Jnevent={init}
+{protect}
+{Event:Join}
+{e?$database:membercount(+1)}
+{redirect:{r?$database:channel}}
+{/user} has joined the server!
+Member count is now `{r?$database:membercount}`.
+[#CONTINUE#]
+levent={init}
+{protect}
+{Event:Leave}
+{e?$database:membercount(-1)}
+{redirect:{r?$database:channel}}
+{/user} has left the server!
+Member count is now `{r?$database:membercount}`.
+[#CONTINUE#]
+.startcount={init}
+{m?$database:membercount} := {math:{membercount}+{botcount}}
+Member count has been started.
+[#CONTINUE#]
+.members={init}
+Current member count is `{r?$database:membercount}`.

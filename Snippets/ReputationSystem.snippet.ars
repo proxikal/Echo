@@ -1,0 +1,70 @@
+[INFO]
+  _____               _____           _                 
+ |  __ \             / ____|         | |                
+ | |__) |___ _ __   | (___  _   _ ___| |_ ___ _ __ ___  
+ |  _  // _ \ '_ \   \___ \| | | / __| __/ _ \ '_ ` _ \ 
+ | | \ \  __/ |_) |  ____) | |_| \__ \ ||  __/ | | | | |
+ |_|  \_\___| .__/  |_____/ \__, |___/\__\___|_| |_| |_|
+            | |              __/ |                      
+            |_|             |___/                       
+-------------------------------------------------------------
+Created By: JurrijnP
+
+This snippet will add a reputation system to your server.
+Make sure to check out the configuration below if you want to change the database name.
+If you installed the snippet all you have to do is type +rep <User>/-rep <User>/.viewrep <User> and it will automatically add you to the system. If you don't mention anyone when using the .viewrep trigger you can see your own reputation.
+-------------------------------------------------------------
+[/INFO]
+
+[CONFIG]
+// You can change the database name below if you want.
+database=rep
+[/CONFIG]
+
+
+&+rep={init}
+String.{rawid} == {/rawid}?:Mention the member you want to give +rep.
+String.{r?$database:{/rawid}-{rawid}} == +?:You have already given this user +rep!
+DB:$database.{rawid}?:{ars:addRep}
+Response.nil?:{ars:createUserRepP}
+[#CONTINUE#]
+&-rep={init}
+String.{rawid} == {/rawid}?:Mention the member you want to give -rep.
+String.{r?$database:{/rawid}-{rawid}} == -?:You have already given this user -rep!
+DB:$database.{rawid}?:{ars:takeRep}
+Response.nil?:{ars:createUserRepM}
+[#CONTINUE#]
+&.viewrep={init}
+DB:$database.{rawid}?:{ars:viewRep}
+Response.nil?:{ars:createUserRepView}
+[#CONTINUE#]
+createUserRepView={init}
+{arslock}
+{m?$database:{rawid}} := 0
+{ars:viewRep}
+[#CONTINUE#]
+createUserRepM={init}
+{arslock}
+{m?$database:{rawid}} := 0
+{ars:takeRep}
+[#CONTINUE#]
+createUserRepP={init}
+{arslock}
+{m?$database:{rawid}} := 0
+{ars:addRep}
+[#CONTINUE#]
+addRep={init}
+{arslock}
+{e?$database:{rawid}(+1)}
+{m?$database:{/rawid}-{rawid}} := +
+{self} I have added 1 to {/user}'s reputation.
+[#CONTINUE#]
+takeRep={init}
+{arslock}
+{e?$database:{rawid}(-1)}
+{m?$database:{/rawid}-{rawid}} := -
+{self} I have taken 1 from {/user}'s reputation.
+[#CONTINUE#]
+viewRep={init}
+{arslock}
+**{/user}'s Reputation:** *{r?$database:{rawid}}*

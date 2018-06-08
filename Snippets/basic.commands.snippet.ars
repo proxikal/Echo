@@ -1,0 +1,87 @@
+[INFO]
+Basic Fun Commands (NSFW Included)
+You can disable the NSFW commands using the config below.
+
+You can find all of these keys and information on this new snippet system at:
+http://proxikal.github.io/Echo/snippets.html
+[/INFO]
+
+[CONFIG]
+// Set to False to not install NSFW Commands: .boobs & .ass
+NSFW=False
+[/CONFIG]
+
+[IF $NSFW == True]
+.ass={init}{ass}
+[#CONTINUE#]
+.boobs={init}{boobs}
+[/IF]
+.space={init}{space}
+[#CONTINUE#]
+.cars={init}{cars}
+[#CONTINUE#]
+.cute={init}{cute}
+[#CONTINUE#]
+.dbz={init}{dbz}
+[#CONTINUE#]
+.server={init}
+{embed:
+    {title:Information for {guild|name}}
+    {type:rich}
+    {author|name:{owner|name}}
+    {author|icon:{owner|avatar}}
+    {author|url:{owner|avatar}}
+    {color:
+        {randlist:
+             #ff0000,#00ff00,#ffffff,#4286f4,
+             #f45642,#262525,#e2d626,#87e226,
+             #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {thumb|url:{guild|icon}}
+    {desc:
+───────────────────────
+× ID:                     {guild|id}
+× Region:             {guild|region}
+× OwnerID:        {owner|id}
+× Discord Icon:  [Click to view Guild Icon]({guild|icon})
+× Members:       {membercount}
+× Channels:        {channelcount}
+× Roles:               {rolecount}
+───────────────────────
+    }
+    {footer|icon:https://xtclabs.net/img/favicon-new.png}
+    {footer|text: Echo 2.0 A.R.S}
+}
+[#CONTINUE#]
+.sky={init}{sky}
+[#CONTINUE#]
+.whoami={init}
+{embed:
+    {title:User Information for {guild|name}}
+    {type:rich}
+    {author|icon:{usericon}}
+    {author|name:{/user}}
+    {color:
+        {randlist:
+             #ff0000,#00ff00,#ffffff,#4286f4,
+             #f45642,#262525,#e2d626,#87e226,
+             #26e2c0,#2633e2,#8126e2
+        }
+    }
+    {thumb|url:{guild|icon}}
+    {desc:
+Bot Master: *{ismaster}*
+Discord Icon: [Click here for Icon]({usericon})
+Discord ID: *{rawid}*
+Roles: *{listroles}*
+    }
+    {footer|icon:https://xtclabs.net/img/favicon-new.png}
+    {footer|text: Echo 2.0 A.R.S}
+}
+[#CONTINUE#]
+.space={init}{space}
+[#CONTINUE#]
+.cats={init}{cats}
+[#CONTINUE#]
+.dogs={init}{dogs}
