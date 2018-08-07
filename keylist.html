@@ -985,7 +985,19 @@ Name: {print:name:first}, {print:name:last}
 Gender: {print:gender}
 Verified: {print:verified}
 Image Code: {print:userImage}
-}</code></pre></div>
+}</code></pre>
+<br>
+<b><font color="red">New optional keys have been added for getapi to customize even more!</font></b>
+<pre><code class="language-ars">
+{getapi:
+{method:POST} /* All methods work; If no method key found it will default to GET */
+{header:Accept==>application/json}
+{header:Content-Type==>application/xml} /* You can have as many header keys as you want */
+body({"User": "Proxy", "Password": "noob."}) /* Only accepts JSON content (for now) */
+{src:your-address-here}
+}</code></pre>
+</div>
+
                                 </div><!--//section-block-->
                                 <div class="section-block" id="randars">
                                     <h3 class="question"><i class="fa fa-cogs"></i> - {randars}</h3>
